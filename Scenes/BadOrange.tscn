@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/Food.gd" type="Script" id=1]
+[ext_resource path="res://Assets/bad_orange/Orange1.PNG" type="Texture2D" id=2]
+[ext_resource path="res://Assets/bad_orange/Orange2.PNG" type="Texture2D" id=3]
+[ext_resource path="res://Assets/bad_orange/Orange7.PNG" type="Texture2D" id=4]
+[ext_resource path="res://Assets/bad_orange/Orange3.PNG" type="Texture2D" id=5]
+[ext_resource path="res://Assets/bad_orange/Orange5.PNG" type="Texture2D" id=6]
+[ext_resource path="res://Assets/bad_orange/Orange4.PNG" type="Texture2D" id=7]
+[ext_resource path="res://Assets/bad_orange/Orange6.PNG" type="Texture2D" id=8]
+[ext_resource path="res://Assets/bad_orange/Orange0.PNG" type="Texture2D" id=9]
+
+[sub_resource type="SphereShape3D" id=1]
+radius = 0.15
+
+[sub_resource type="SphereShape3D" id=2]
+radius = 0.15
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="Orange" type="CharacterBody3D" groups=["throwable"]]
+collision_layer = 32768
+collision_mask = 7
+script = ExtResource( 1 )
+splat_color = Color( 0.878431, 0.372549, 0.137255, 1 )
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+billboard = 1
+double_sided = false
+alpha_cut = 2
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2( 48, 48 )
+transparent_bg = true
+handle_input_locally = false
+render_target_v_flip = true
+
+[node name="FoodSprite" type="Node2D" parent="SubViewport"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SubViewport/FoodSprite"]
+frames = SubResource( 3 )
+centered = false
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_Area_body_exited"]

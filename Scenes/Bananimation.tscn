@@ -1,0 +1,24 @@
+[gd_scene load_steps=10 format=3 uid="uid://be2ij1cr8frrb"]
+
+[ext_resource type="Texture2D" uid="uid://cawh2s3iht00e" path="res://Assets/FoodSprites/betterbanana2.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://1xpit3elkhu0" path="res://Assets/FoodSprites/betterbanana5.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c3bqhspaqk7ug" path="res://Assets/FoodSprites/betterbanana4.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://5qsqmwfdxvq5" path="res://Assets/FoodSprites/betterbanana3.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://b4rjgnkxiw4kl" path="res://Assets/FoodSprites/betterbanana1.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://cyovul0p0frq7" path="res://Assets/FoodSprites/betterbanana6.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://r88ho3aqy8ys" path="res://Assets/FoodSprites/betterbanana7.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://c7tgplk74v4tt" path="res://Assets/FoodSprites/betterbanana0.png" id="8"]
+
+[sub_resource type="SpriteFrames" id="3"]
+resource_local_to_scene = true
+animations = [{
+"frames": [ExtResource("8"), ExtResource("5"), ExtResource("1"), ExtResource("4"), ExtResource("3"), ExtResource("2"), ExtResource("6"), ExtResource("7")],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+frames = SubResource("3")
+frame = 5
+centered = false

@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://rvl0o8layvqt"]
+
+[sub_resource type="ViewportTexture" id="10"]
+viewport_path = NodePath("SubViewport")
+
+[resource]
+resource_local_to_scene = true
+transparency = 4
+shading_mode = 0
+albedo_texture = SubResource("10")
+albedo_texture_force_srgb = true
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false

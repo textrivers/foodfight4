@@ -1,0 +1,46 @@
+[gd_scene load_steps=17 format=3 uid="uid://c2dgjx3q1tpae"]
+
+[ext_resource type="PackedScene" path="res://Scenes/Food.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dc7tmqph1wkre" path="res://Assets/FoodSprites/betterorange2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c3e7t5pkucv3q" path="res://Assets/FoodSprites/betterorange1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://do6jvqo6tery2" path="res://Assets/FoodSprites/betterorange5.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dnek8lbv2gma7" path="res://Assets/FoodSprites/betterorange3.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b8omwfoyunc8v" path="res://Assets/FoodSprites/betterorange0.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://qd4q1ngvei7j" path="res://Assets/FoodSprites/betterorange6a.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://ixbcgj2yyg1m" path="res://Assets/FoodSprites/betterorange9.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://brqx6cycuypv3" path="res://Assets/FoodSprites/betterorange7.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cv6uy3bhr6oot" path="res://Assets/FoodSprites/betterorange6.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://b5ysfkr2icxp5" path="res://Assets/FoodSprites/betterorange4.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://bn1wf2r72xw0h" path="res://Assets/FoodSprites/betterorange1a.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://cydxgotui36t1" path="res://Assets/FoodSprites/betterorange8.png" id="13"]
+
+[sub_resource type="ViewportTexture" id="2"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="3"]
+resource_local_to_scene = true
+transparency = 4
+albedo_texture = SubResource("2")
+albedo_texture_force_srgb = true
+billboard_mode = 1
+
+[sub_resource type="SpriteFrames" id="1"]
+resource_local_to_scene = true
+animations = [{
+"frames": [ExtResource("6"), ExtResource("3"), ExtResource("12"), ExtResource("2"), ExtResource("5"), ExtResource("11"), ExtResource("4"), ExtResource("10"), ExtResource("7"), ExtResource("9"), ExtResource("13"), ExtResource("8")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="GoodOrange" instance=ExtResource("1")]
+splat_colors = [Color(1, 0.533333, 0, 1), Color(0.72549, 0.384314, 0.0352941, 1), Color(1, 0.533333, 0, 1)]
+
+[node name="Sprite3D" parent="." index="2"]
+material_override = SubResource("3")
+
+[node name="SubViewport" parent="." index="3"]
+size = Vector2i(96, 96)
+
+[node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
+frames = SubResource("1")

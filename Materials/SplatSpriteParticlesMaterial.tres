@@ -1,0 +1,15 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=3 format=3 uid="uid://cjwanufrgvqyy"]
+
+[sub_resource type="Curve" id="1"]
+max_value = 2.0
+_data = [Vector2(0, 1.49059), 0.0, -0.0179864, 0, 0, Vector2(0.918478, 0), -3.16623, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="2"]
+curve = SubResource("1")
+
+[resource]
+direction = Vector3(0, 1, 0)
+spread = 60.0
+flatness = 0.5
+scale_curve = SubResource("2")

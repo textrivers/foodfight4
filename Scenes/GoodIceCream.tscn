@@ -1,0 +1,26 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/5.PNG" type="Texture2D" id=2]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/6.PNG" type="Texture2D" id=3]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/1.PNG" type="Texture2D" id=4]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/0.PNG" type="Texture2D" id=5]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/7.PNG" type="Texture2D" id=6]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/4.PNG" type="Texture2D" id=7]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/2.PNG" type="Texture2D" id=8]
+[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/3.PNG" type="Texture2D" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+resource_local_to_scene = true
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="GoodIceCream" instance=ExtResource( 1 )]
+splat_colors = [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.513726, 0.298039, 0.0313726, 1 ) ]
+
+[node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
+frames = SubResource( 1 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cc5qjveruqgqa"
+path="res://.godot/imported/beveled_tile_okay.obj-667909665d85566a3c3a3b82b2c02cce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/beveled_tile_okay.obj-667909665d85566a3c3a3b82b2c02cce.mesh"]
+
+source_file="res://Assets/Meshes/beveled_tile_okay.obj"
+dest_files=["res://.godot/imported/beveled_tile_okay.obj-667909665d85566a3c3a3b82b2c02cce.mesh", "res://.godot/imported/beveled_tile_okay.obj-667909665d85566a3c3a3b82b2c02cce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

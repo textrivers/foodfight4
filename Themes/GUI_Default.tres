@@ -1,0 +1,106 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c840ow6okr33r"]
+
+[ext_resource type="FontFile" uid="uid://bvepmbfm1dytu" path="res://Assets/Fonts/TCM_____.TTF" id="1"]
+
+[sub_resource type="FontFile" id="8"]
+fallbacks = [ExtResource("1")]
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+
+[sub_resource type="StyleBoxFlat" id="4"]
+content_margin_right = 0.0
+bg_color = Color(0.458824, 0.458824, 0.458824, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.819608, 0.819608, 0.819608, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="7"]
+bg_color = Color(0.556863, 0.815686, 0.878431, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="5"]
+bg_color = Color(0.0509804, 0.392157, 0.482353, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0784314, 0.270588, 0.321569, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxFlat" id="6"]
+bg_color = Color(0.192157, 0.133333, 0.266667, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.262745, 0.0980392, 0.466667, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_size = 2
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="Image" id="Image_k7k4i"]
+data = {
+"data": PackedByteArray(37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42, 37, 37, 42),
+"format": "RGB8",
+"height": 8,
+"mipmaps": false,
+"width": 8
+}
+
+[sub_resource type="ImageTexture" id="12"]
+image = SubResource("Image_k7k4i")
+
+[sub_resource type="StyleBoxTexture" id="13"]
+texture = SubResource("12")
+region_rect = Rect2(0, 0, 8, 8)
+
+[resource]
+resource_local_to_scene = true
+default_font = SubResource("8")
+Button/colors/font_color = Color(0.788235, 0.694118, 0.0666667, 1)
+Button/colors/font_color_disabled = Color(0.9, 0.9, 0.9, 0.2)
+Button/colors/font_color_focus = Color(1, 0.878431, 0.054902, 1)
+Button/colors/font_color_hover = Color(1, 0.878431, 0.054902, 1)
+Button/colors/font_color_pressed = Color(1, 1, 1, 1)
+Button/constants/hseparation = 0
+Button/fonts/font = SubResource("8")
+Button/styles/disabled = SubResource("4")
+Button/styles/focus = SubResource("7")
+Button/styles/hover = SubResource("5")
+Button/styles/normal = SubResource("6")
+Button/styles/pressed = SubResource("7")
+Panel/styles/panel = SubResource("13")

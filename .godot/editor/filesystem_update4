@@ -1,0 +1,10 @@
+res://Scenes/Main.tscn
+res://Materials/SplatSpriteParticlesMaterial.tres
+res://Materials/ParticleContainerMatOverrideMaterial.tres
+res://Themes/GUI_Default.tres
+res://Scenes/TransitionSquares.tscn
+res://Scenes/GoodOrange.tscn
+res://Scenes/GoodBanana.tscn
+res://Scenes/Level3D.tscn
+res://Scenes/TransitionSquares.gd
+res://Singletons/SceneManager.gd

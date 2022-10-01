@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/tile80x80.png" type="Texture2D" id=1]
+
+[node name="BaseTile" type="Sprite2D"]
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 1 )

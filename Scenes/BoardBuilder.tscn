@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/BoardBuilder.gd" type="Script" id=1]
+
+[node name="BoardBuilder" type="Node"]
+script = ExtResource( 1 )
+board_size = Vector2( 4, 10 )
