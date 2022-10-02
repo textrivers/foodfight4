@@ -1,43 +1,37 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cfciq0kt6kve7"]
 
-[ext_resource path="res://Scenes/Character3D.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Splatter.gd" type="Script" id=4]
+[ext_resource type="Script" path="res://Scenes/Character3D.gd" id="2"]
+[ext_resource type="Script" path="res://Scenes/Splatter.gd" id="4"]
 
-[sub_resource type="StandardMaterial3D" id=2]
-flags_transparent = true
-flags_albedo_tex_force_srgb = true
-params_depth_draw_mode = 3
-params_billboard_mode = 1
+[sub_resource type="StandardMaterial3D" id="2"]
+transparency = 4
+albedo_texture_force_srgb = true
+billboard_mode = 1
 
-[sub_resource type="CapsuleShape3D" id=1]
+[sub_resource type="CapsuleShape3D" id="1"]
 radius = 0.25
 height = 0.6
 
 [node name="Character3D" type="CharacterBody3D" groups=["character", "selectable"]]
 collision_layer = 2
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0 )
-material_override = SubResource( 2 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+material_override = SubResource("2")
 pixel_size = 0.005
 billboard = 1
 double_sided = false
 alpha_cut = 2
 
-[node name="Tween" type="Tween" parent="."]
-playback_process_mode = 0
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.6, 0 )
-shape = SubResource( 1 )
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.6, 0)
+shape = SubResource("1")
 
 [node name="SubViewport" type="SubViewport" parent="."]
-size = Vector2( 240, 240 )
 transparent_bg = true
 handle_input_locally = false
-keep_3d_linear = true
-render_target_v_flip = true
+size = Vector2i(240, 240)
 
 [node name="CharacterSprite" type="Node2D" parent="SubViewport"]
 
@@ -47,28 +41,27 @@ centered = false
 
 [node name="PointLight2D" type="PointLight2D" parent="SubViewport/CharacterSprite"]
 light_mask = 2
-offset = Vector2( 120, 120 )
-mode = 3
+offset = Vector2(120, 120)
 
 [node name="Splatter1" type="Sprite2D" parent="SubViewport/CharacterSprite"]
 rotation = 0.230383
 centered = false
-offset = Vector2( 100, 0 )
-script = ExtResource( 4 )
+offset = Vector2(100, 0)
+script = ExtResource("4")
 
 [node name="Splatter2" type="Sprite2D" parent="SubViewport/CharacterSprite"]
 centered = false
-script = ExtResource( 4 )
+script = ExtResource("4")
 my_splat_num = 1
 
 [node name="Splatter3" type="Sprite2D" parent="SubViewport/CharacterSprite"]
 centered = false
-offset = Vector2( 20, 10 )
-script = ExtResource( 4 )
+offset = Vector2(20, 10)
+script = ExtResource("4")
 my_splat_num = 2
 
 [node name="TargetPosition" type="Marker3D" parent="."]
-transform = Transform3D( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0 )
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [connection signal="input_event" from="." to="." method="_on_Character3D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Character3D_mouse_entered"]

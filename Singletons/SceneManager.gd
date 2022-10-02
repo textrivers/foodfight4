@@ -28,7 +28,7 @@ func goto_scene(current_scene, path):
 #		transition_squares.get_node("SquaresContainer/Sprite28/AnimatedSprite2D").frame = int(progress[0] * 8)
 		if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED: #Load_complete
 			var resource = ResourceLoader.load_threaded_get(path)
-			get_tree().get_root().call_deferred("add_child", resource.instantiate())
+			get_tree().get_root().get_node("Main").call_deferred("add_child", resource.instantiate())
 			current_scene.queue_free()
 			break
 		## old stuff from Godot 3

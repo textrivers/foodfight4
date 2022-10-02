@@ -79,6 +79,8 @@ var actions: Array = [
 	["wait", true, 25],
 	]
 var walk_speed: float = 0.02
+var walking: bool = false
+var red_light: bool = false
 var food_contacts: Array = []
 var throw_speed: float = 0.1
 var throw_apex: float = 1.5
@@ -86,7 +88,6 @@ var throw_start_height: float = 0.5
 var throw_clearance = 0.3 #avoid collision with parent
 var current_splat_num: int = 0
 var parent
-var tween
 var bullseye: Vector3
 
 var selecting: bool = false
@@ -99,7 +100,6 @@ signal give_on_select_info
 func _ready():
 	randomize()
 	parent = get_parent()
-	tween = $Tween
 	if player:
 		get_appearance_from_global()
 	else:
@@ -108,6 +108,12 @@ func _ready():
 	$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
 	$Sprite3D.texture = $SubViewport.get_texture()
 	$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
+
+func _physics_process(delta):
+	bullseye = Vector3(position.x, 0.6, position.z)
+	if walking && !red_light:
+		## TODO velocity here if navigating along a path
+		move_and_slide()
 
 func get_appearance_from_global():
 	$SubViewport/CharacterSprite/Sprite2D.modulate = Global.character_modulate
@@ -134,24 +140,20 @@ func generate_unique_name(name_prefix):
 		new_name = generate_unique_name(name_prefix)
 	return new_name
 
-func _physics_process(delta):
-	bullseye = Vector3(position.x, 0.6, position.z)
-
 func on_red_light():
-	tween.stop_all()
+	red_light = true
 
 func on_green_light():
 	selecting = false
 	$SubViewport/CharacterSprite/Sprite2D.modulate = revert_color
-	tween.resume_all()
+	red_light = false
 
 func handle_action(action):
-	tween.remove_all()
-	#$SubViewport/CharacterSprite/Sprite2D.texture = sprite_dict[action[0]]
-	#$SubViewport/CharacterSprite/PointLight2D.texture = mask_dict[action[0]]
 	if action[0] == "wait":
+		walking = false
 		pass
 	if action[0] == "pick_up":
+		walking = false
 		if food_contacts.size() > 0 && !self.has_node("MyFood"):
 			var my_food = food_contacts.pop_back()
 			my_food.get_parent().remove_child(my_food)
@@ -167,16 +169,16 @@ func handle_action(action):
 				my_food.name = "MyFood"
 				my_food.position = Vector3(0, 0.5, 0)
 	if action[0] == "throw":
+		walking = false
 		if self.has_node("MyFood"):
 			throw_food(action[1])
 		else:
 			throw_nothing()
 	if action[0] == "walk":
-		var dist_to_dest = position.distance_to(action[1])
-		var action_frames = dist_to_dest / walk_speed
-		var tween_dur = action_frames / 60
-		tween.interpolate_property(self, "position", position, action[1], tween_dur)
-		tween.start()
+		walking = true
+		var dir_to_dest = position.direction_to(action[1])
+		velocity = dir_to_dest * walk_speed
+		
 
 func add_to_food_contacts(floor_food):
 	if !food_contacts.has(floor_food):

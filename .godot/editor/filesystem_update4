@@ -1,6 +1,9 @@
 res://Scenes/TransitionSquares.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
-res://Singletons/SceneManager.gd
 res://Scenes/Main.tscn
 res://Scenes/TransitionSquares.gd
+res://Singletons/SceneManager.gd
+res://Scenes/Character3D.tscn
+res://Scenes/Character3D.gd
+res://Scenes/GoodBanana.tscn
