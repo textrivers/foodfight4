@@ -23,14 +23,15 @@ func goto_scene(current_scene, path):
 	while Time.get_ticks_msec() - load_time < max_time: 
 		scene_load_status = ResourceLoader.load_threaded_get_status(path, progress)
 		## TODO update anim here
-		print(progress[0])
-		transition_squares.get_node("SquaresContainer/Sprite50/AnimatedSprite2").frame = int(progress[0] * 12)
-		transition_squares.get_node("SquaresContainer/Sprite28/AnimatedSprite2D").frame = int(progress[0] * 8)
+#		print(progress[0])
+#		transition_squares.get_node("SquaresContainer/Sprite50/AnimatedSprite2").frame = int(progress[0] * 12)
+#		transition_squares.get_node("SquaresContainer/Sprite28/AnimatedSprite2D").frame = int(progress[0] * 8)
 		if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED: #Load_complete
 			var resource = ResourceLoader.load_threaded_get(path)
 			get_tree().get_root().call_deferred("add_child", resource.instantiate())
 			current_scene.queue_free()
 			break
+		## old stuff from Godot 3
 #		if err == ERR_FILE_EOF: #Load complete
 #			var resource = loader.get_resource()
 #			get_tree().get_root().call_deferred("add_child", resource.instantiate())

@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Foodfight"
-run/main_scene="res://Scenes/Level3D.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
