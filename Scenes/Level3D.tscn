@@ -73,6 +73,22 @@ player = true
 material_override = SubResource("StandardMaterial3D_r8ir1")
 texture = SubResource("ViewportTexture_b6gj3")
 
+[node name="Dave" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+player = false
+
+[node name="Sprite3D" parent="Dave" index="2"]
+material_override = SubResource("StandardMaterial3D_r8ir1")
+texture = SubResource("ViewportTexture_b6gj3")
+
+[node name="Bill" parent="." instance=ExtResource("1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8)
+player = false
+
+[node name="Sprite3D" parent="Bill" index="2"]
+material_override = SubResource("StandardMaterial3D_r8ir1")
+texture = SubResource("ViewportTexture_b6gj3")
+
 [node name="TurnMarker" parent="." instance=ExtResource("3")]
 
 [node name="Panel" type="Panel" parent="."]
@@ -272,6 +288,7 @@ visible = false
 shadow_enabled = true
 
 [node name="GoodBanana" parent="." instance=ExtResource("6_7e2y2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Walk" to="." method="_on_Walk_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/PickUp" to="." method="_on_PickUp_pressed"]
@@ -282,3 +299,5 @@ shadow_enabled = true
 [connection signal="pressed" from="GUI/Right/ProceedCancel/Cancel" to="." method="_on_Cancel_pressed"]
 
 [editable path="You"]
+[editable path="Dave"]
+[editable path="Bill"]

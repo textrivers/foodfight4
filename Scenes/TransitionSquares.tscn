@@ -3950,7 +3950,7 @@ Label/font_sizes/font_size = 60
 Label/fonts/font = SubResource("3")
 Label/styles/normal = null
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_j8qym"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4tn8k"]
 resource_local_to_scene = true
 animations = [{
 "frames": [ExtResource("21"), ExtResource("16"), ExtResource("9"), ExtResource("15"), ExtResource("14"), ExtResource("13"), ExtResource("19"), ExtResource("20")],
@@ -4267,7 +4267,7 @@ texture = ExtResource("1")
 
 [node name="AnimatedSprite2D" parent="SquaresContainer/Sprite28" instance=ExtResource("24")]
 rotation = -1.5708
-frames = SubResource("SpriteFrames_j8qym")
+frames = SubResource("SpriteFrames_4tn8k")
 frame = 0
 centered = true
 
