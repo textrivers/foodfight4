@@ -42,7 +42,7 @@ func do_fade(to_black):
 			tween.tween_property(square, "rotation", square.rotation + my_rot, 0.9).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD) #, Tween.TRANS_QUART, Tween.EASE_OUT, my_delay)
 			await get_tree().create_timer(my_delay).timeout
 		await get_tree().create_timer(0.915).timeout ## let last square finish
-		await get_tree().create_timer(2.0).timeout ## artifical loading time!
+		await get_tree().create_timer(1.0).timeout ## artifical loading time!
 		emit_signal("squares_finished")
 		fade_to_black = !fade_to_black
 		can_fade = true

@@ -6,7 +6,6 @@ var game_start: bool = false
 func _ready():
 	pass # Replace with function body.
 
-
 func _input(event):
 	if game_start == false:
 		if event is InputEventMouseButton || event is InputEventKey:

@@ -36,7 +36,7 @@ SceneManager="*res://Singletons/SceneManager.gd"
 window/size/viewport_width=1024
 window/size/viewport_height=600
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
+window/stretch/aspect="expand"
 
 [input]
 

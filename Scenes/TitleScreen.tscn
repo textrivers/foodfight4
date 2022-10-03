@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://c37k4vwbmc4ud"]
 
-[ext_resource path="res://Assets/Screens/TitleScreen01.png" type="Texture2D" id=1]
-[ext_resource path="res://Assets/Screens/pressanykey01.png" type="Texture2D" id=2]
-[ext_resource path="res://Scenes/TitleScreen.gd" type="Script" id=3]
+[ext_resource type="Texture2D" uid="uid://c4wjrvn6q54bv" path="res://Assets/Screens/TitleScreen01.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dg8727lhoue13" path="res://Assets/Screens/pressanykey01.png" id="2"]
+[ext_resource type="Script" path="res://Scenes/TitleScreen.gd" id="3"]
 
 [node name="TitleScreen" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="Screen" type="Sprite2D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource("1")
 centered = false
 
 [node name="AnyKey" type="Sprite2D" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 centered = false
 
 [node name="Timer" type="Timer" parent="."]

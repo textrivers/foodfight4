@@ -1,28 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfciq0kt6kve7"]
+[gd_scene load_steps=6 format=3 uid="uid://cfciq0kt6kve7"]
 
 [ext_resource type="Script" path="res://Scenes/Character3D.gd" id="2"]
 [ext_resource type="Script" path="res://Scenes/Splatter.gd" id="4"]
+
+[sub_resource type="CapsuleShape3D" id="1"]
+radius = 0.25
+height = 0.6
 
 [sub_resource type="StandardMaterial3D" id="2"]
 transparency = 4
 albedo_texture_force_srgb = true
 billboard_mode = 1
 
-[sub_resource type="CapsuleShape3D" id="1"]
-radius = 0.25
-height = 0.6
+[sub_resource type="ViewportTexture" id="ViewportTexture_51mu7"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Character3D" type="CharacterBody3D" groups=["character", "selectable"]]
 collision_layer = 2
 script = ExtResource("2")
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
-material_override = SubResource("2")
-pixel_size = 0.005
-billboard = 1
-double_sided = false
-alpha_cut = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.6, 0)
@@ -32,6 +27,7 @@ shape = SubResource("1")
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(240, 240)
+render_target_update_mode = 4
 
 [node name="CharacterSprite" type="Node2D" parent="SubViewport"]
 
@@ -59,6 +55,15 @@ centered = false
 offset = Vector2(20, 10)
 script = ExtResource("4")
 my_splat_num = 2
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+material_override = SubResource("2")
+pixel_size = 0.005
+billboard = 1
+double_sided = false
+alpha_cut = 2
+texture = SubResource("ViewportTexture_51mu7")
 
 [node name="TargetPosition" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)

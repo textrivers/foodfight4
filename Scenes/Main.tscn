@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cudtas1r8mwkk"]
 
 [ext_resource type="PackedScene" uid="uid://t184rp8qkmuf" path="res://Scenes/TransitionSquares.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://Scenes/TitleScreen.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://c37k4vwbmc4ud" path="res://Scenes/TitleScreen.tscn" id="2"]
 [ext_resource type="Texture2D" uid="uid://r88ho3aqy8ys" path="res://Assets/FoodSprites/betterbanana7.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://c7tgplk74v4tt" path="res://Assets/FoodSprites/betterbanana0.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cawh2s3iht00e" path="res://Assets/FoodSprites/betterbanana2.png" id="5"]

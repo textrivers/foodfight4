@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckwr0kmrt03mc"]
+
+[ext_resource type="Texture2D" uid="uid://c4wjrvn6q54bv" path="res://Assets/Screens/TitleScreen01.png" id="1_5vpv4"]
+[ext_resource type="Texture2D" uid="uid://dg8727lhoue13" path="res://Assets/Screens/pressanykey01.png" id="2_qfhdg"]
+
+[node name="TitleScreenBugfix" type="Node2D"]
+
+[node name="Screen" type="Sprite2D" parent="."]
+texture = ExtResource("1_5vpv4")
+centered = false
+
+[node name="AnyKey" type="Sprite2D" parent="."]
+texture = ExtResource("2_qfhdg")
+centered = false

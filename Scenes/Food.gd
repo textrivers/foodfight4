@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-var velocity
+#var velocity
 var moving: bool = false
 var thrown: bool = false
 var gravity
@@ -11,9 +11,9 @@ var floor_splat = preload("res://Scenes/FloorSplat.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
+	#$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
 	$Sprite3D.texture = $SubViewport.get_texture()
-	$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
+	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
 	get_parent().get_parent().connect("red_light",Callable(self,"on_red_light"))
 	get_parent().get_parent().connect("green_light",Callable(self,"on_green_light"))
 	$SubViewport/FoodSprite/AnimatedSprite2D.play("default", bool(randi() % 2))

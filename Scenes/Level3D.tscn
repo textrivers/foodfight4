@@ -1,13 +1,24 @@
-[gd_scene load_steps=13 format=3 uid="uid://drxpu7l676047"]
+[gd_scene load_steps=15 format=3 uid="uid://drxpu7l676047"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Character3D.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cfciq0kt6kve7" path="res://Scenes/Character3D.tscn" id="1"]
 [ext_resource type="Script" path="res://Scenes/Level3D.gd" id="2"]
 [ext_resource type="PackedScene" path="res://Scenes/TurnMarker.tscn" id="3"]
 [ext_resource type="Theme" uid="uid://c840ow6okr33r" path="res://Themes/GUI_Default.tres" id="4"]
-[ext_resource type="PackedScene" uid="uid://c2dgjx3q1tpae" path="res://Scenes/GoodOrange.tscn" id="5"]
-[ext_resource type="PackedScene" path="res://Scenes/GoodIceCream.tscn" id="6"]
-[ext_resource type="PackedScene" path="res://Scenes/GoodBlueberry.tscn" id="7"]
-[ext_resource type="PackedScene" uid="uid://qdn304udsvig" path="res://Scenes/GoodBanana.tscn" id="13"]
+[ext_resource type="Texture2D" uid="uid://b74kaye5g44c7" path="res://Assets/PanoramaSky/A_pano_FULL.png" id="5_5sfde"]
+[ext_resource type="PackedScene" uid="uid://qdn304udsvig" path="res://Scenes/GoodBanana.tscn" id="6_7e2y2"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b0fro"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r8ir1"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_b0fro")
+billboard_mode = 1
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b6gj3"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StyleBoxFlat" id="9"]
 bg_color = Color(0.329412, 0.384314, 0.505882, 0.784314)
@@ -24,7 +35,11 @@ corner_radius_bottom_left = 5
 [sub_resource type="Theme" id="10"]
 Panel/styles/panel = SubResource("9")
 
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rrbx8"]
+panorama = ExtResource("5_5sfde")
+
 [sub_resource type="Sky" id="2"]
+sky_material = SubResource("PanoramaSkyMaterial_rrbx8")
 
 [sub_resource type="Environment" id="1"]
 background_mode = 2
@@ -54,53 +69,9 @@ size = 10.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
 player = true
 
-[node name="Tween" parent="You" index="1"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-editor_description = ""
-script = null
-
-[node name="SubViewport" parent="You" index="3"]
-size = Vector2i(240, 240)
-
-[node name="Dave" parent="." instance=ExtResource("1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5)
-
-[node name="Tween" parent="Dave" index="1"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-editor_description = ""
-script = null
-
-[node name="SubViewport" parent="Dave" index="3"]
-size = Vector2i(240, 240)
-
-[node name="Mike" parent="." instance=ExtResource("1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 8)
-
-[node name="Tween" parent="Mike" index="1"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-editor_description = ""
-script = null
-
-[node name="SubViewport" parent="Mike" index="3"]
-size = Vector2i(240, 240)
-
-[node name="Character3D" parent="." instance=ExtResource("1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
-
-[node name="Character3D2" parent="." instance=ExtResource("1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 9)
-
-[node name="Character3D3" parent="." instance=ExtResource("1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 9)
+[node name="Sprite3D" parent="You" index="2"]
+material_override = SubResource("StandardMaterial3D_r8ir1")
+texture = SubResource("ViewportTexture_b6gj3")
 
 [node name="TurnMarker" parent="." instance=ExtResource("3")]
 
@@ -300,373 +271,7 @@ transform = Transform3D(0.824707, 0.300371, 0.479204, -0.534501, 0.690879, 0.486
 visible = false
 shadow_enabled = true
 
-[node name="LevelFood" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0.1)
-
-[node name="GoodBanana" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91693, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="GoodOrange" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.25, 1)
-
-[node name="GoodOrange2" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.25, 1.99581)
-
-[node name="GoodOrange3" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82789, 0.25, 1.99581)
-
-[node name="GoodOrange4" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.82789, 0.25, 1.03273)
-
-[node name="GoodOrange5" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.71693, 0.25, 1.03273)
-
-[node name="GoodOrange6" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89895, 0.25, 1.03273)
-
-[node name="GoodOrange7" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89895, 0.25, 1.17774)
-
-[node name="GoodOrange8" parent="LevelFood" instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89895, 0.25, 0.784404)
-
-[node name="LevelFood5" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, -0.1)
-
-[node name="GoodBanana" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91693, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood5" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="GoodIceCream" parent="LevelFood5" instance=ExtResource("6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88459, 0.25, 2)
-
-[node name="GoodIceCream2" parent="LevelFood5" instance=ExtResource("6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88459, 0.25, 1.70713)
-
-[node name="GoodIceCream3" parent="LevelFood5" instance=ExtResource("6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88459, 0.25, 2.25781)
-
-[node name="GoodIceCream4" parent="LevelFood5" instance=ExtResource("6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.71818, 0.25, 2)
-
-[node name="GoodIceCream5" parent="LevelFood5" instance=ExtResource("6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0243, 0.25, 2)
-
-[node name="LevelFood4" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0.1)
-
-[node name="GoodBanana" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91693, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood4" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="GoodBlueberry" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.08964, 0.25, 8.68002)
-
-[node name="GoodBlueberry2" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12088, 0.25, 8.68002)
-
-[node name="GoodBlueberry3" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12088, 0.25, 7.9138)
-
-[node name="GoodBlueberry4" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.067, 0.25, 7)
-
-[node name="GoodBlueberry5" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0.25, 6)
-
-[node name="GoodBlueberry6" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.25, 5)
-
-[node name="GoodBlueberry7" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.25, 4)
-
-[node name="GoodBlueberry8" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.25, 3)
-
-[node name="GoodBlueberry9" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.25, 2)
-
-[node name="GoodBlueberry10" parent="LevelFood4" instance=ExtResource("7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.25, 1)
-
-[node name="LevelFood3" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.1)
-
-[node name="GoodBanana" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91693, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood3" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="LevelFood2" type="Node3D" parent="."]
-
-[node name="GoodBanana" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91693, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood2" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="LevelFood6" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0.204)
-
-[node name="GoodBanana" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.99361, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.017, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood6" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="LevelFood7" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0.004)
-
-[node name="GoodBanana" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.00698, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.017, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood7" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="LevelFood8" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0.204)
-
-[node name="GoodBanana" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0261, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood8" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="LevelFood9" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1, 0, 0.004)
-
-[node name="GoodBanana" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88026, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood9" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
-
-[node name="LevelFood10" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0, 0.104)
-
-[node name="GoodBanana" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.922452, 0.25, 5.935)
-
-[node name="GoodBanana2" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02611, 0.25, 3.04989)
-
-[node name="GoodBanana3" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.01222, 0.25, 5.96714)
-
-[node name="GoodBanana4" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.00894, 0.25, 4.0341)
-
-[node name="GoodBanana5" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98967, 0.25, 4.0272)
-
-[node name="GoodBanana6" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06529, 0.25, 2)
-
-[node name="GoodBanana7" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95671, 0.25, 2)
-
-[node name="GoodBanana8" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 3.07178)
-
-[node name="GoodBanana9" parent="LevelFood10" instance=ExtResource("13")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
+[node name="GoodBanana" parent="." instance=ExtResource("6_7e2y2")]
 
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Walk" to="." method="_on_Walk_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/PickUp" to="." method="_on_PickUp_pressed"]
@@ -677,5 +282,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.948029, 0.25, 2)
 [connection signal="pressed" from="GUI/Right/ProceedCancel/Cancel" to="." method="_on_Cancel_pressed"]
 
 [editable path="You"]
-[editable path="Dave"]
-[editable path="Mike"]

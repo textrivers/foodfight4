@@ -1,9 +1,11 @@
-res://Scenes/TransitionSquares.tscn
+res://Scenes/Main.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
-res://Scenes/Main.tscn
-res://Scenes/TransitionSquares.gd
-res://Singletons/SceneManager.gd
-res://Scenes/Character3D.tscn
-res://Scenes/Character3D.gd
+res://Themes/GUI_Default.tres
+res://Scenes/TransitionSquares.tscn
+res://Scenes/TitleScreen.tscn
 res://Scenes/GoodBanana.tscn
+res://Scenes/Food.tscn
+res://Scenes/Character3D.tscn
+res://Scenes/Level3D.tscn
+res://Scenes/Food.gd

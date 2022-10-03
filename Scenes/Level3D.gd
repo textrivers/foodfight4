@@ -12,7 +12,7 @@ var cam_rig_rot_target: Vector2
 var cam_rig_zoom_target: float = 10.0
 var cam_rig_trans_target
 var cam_rig
-@export var mouse_sensitivity = 0.05
+@export var mouse_sensitivity = 0.02
 var GUI
 var current_action = []
 var AI_actions = [
@@ -37,7 +37,7 @@ func _ready():
 	cam_rig = $CameraRig
 	GUI = $GUI
 	turn_marker = $TurnMarker
-	cam_rig_rot_target = Vector2(cam_rig.rotation_degrees.y, cam_rig.rotation_degrees.x)
+	cam_rig_rot_target = Vector2(cam_rig.rotation.y, cam_rig.rotation.x)
 	cam_rig_zoom_target = $CameraRig/Camera3D.position.z
 	build()
 	for character in get_tree().get_nodes_in_group("character"):
@@ -48,8 +48,8 @@ func build():
 	var tot = board_size.x * board_size.y
 	var rando = randi() % int(tot) + 1
 	var rand_index = 0
-	for x in board_size.x:
-		for y in board_size.y: 
+	for x in int(board_size.x):
+		for y in int(board_size.y): 
 			rand_index += 1
 #			if rand_index == rando: ## randomly don't place this tile
 #				continue
@@ -236,12 +236,12 @@ func translate_cam_rig():
 
 func rotate_cam_rig():
 	# clamp value so you can only look so high or low
-	cam_rig_rot_target.y = clamp(cam_rig_rot_target.y, -30, 40)
-	if cam_rig.rotation_degrees.x != cam_rig_rot_target.y:
-		var new_rad_y = deg_to_rad(cam_rig_rot_target.y)
+	cam_rig_rot_target.y = clamp(cam_rig_rot_target.y, deg_to_rad(-30), deg_to_rad(40))
+	if cam_rig.rotation.x != cam_rig_rot_target.y:
+		var new_rad_y = cam_rig_rot_target.y
 		cam_rig.rotation.x = lerp_angle(cam_rig.rotation.x, new_rad_y, 0.1)
-	if cam_rig.rotation_degrees.y != cam_rig_rot_target.x:
-		var new_rad_x = deg_to_rad(cam_rig_rot_target.x)
+	if cam_rig.rotation.y != cam_rig_rot_target.x:
+		var new_rad_x = cam_rig_rot_target.x
 		cam_rig.rotation.y = lerp_angle(cam_rig.rotation.y, new_rad_x, 0.1)
 
 func display_character_options(_player):
@@ -265,7 +265,7 @@ func display_character_options(_player):
 		else:
 			$GUI/Right/PlayerOptions/Read.disabled = true
 	else: 
-		$GUI/Right/PlayerOptions/Label.text = "It is " + whose_turn.name + "'s turn"
+		$GUI/Right/PlayerOptions/Label.text = "It is " + str(whose_turn.name) + "'s turn"
 		for button in $GUI/Right/PlayerOptions.get_children():
 			if button is Button:
 				button.disabled = true
