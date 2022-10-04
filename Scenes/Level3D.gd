@@ -97,8 +97,6 @@ func register_character(_char):
 
 func _input(event):
 	if event is InputEventMouseMotion && Input.is_action_pressed("right_click"):
-		var mouse_x = (event.relative.x * mouse_sensitivity * -1)
-		print(mouse_x)
 		cam_rig_rot_target.x += (event.relative.x * mouse_sensitivity * -1)
 		cam_rig_rot_target.y += (event.relative.y * mouse_sensitivity * -1)
 	if Input.is_action_just_released("scroll_in"):
@@ -136,12 +134,12 @@ func prompt_turns():
 				turn_marker.position.z = turn.position.z
 				whose_turn = turn
 				display_character_options(turn.player)
-				show_turn_tracker()
 				if !turn.player:
 					AI_action_select()
+				else:
+					turn.walking = false
 				await self.GUI_action_taken
 				resolve_turn()
-				hide_turn_tracker()
 
 func AI_action_select():
 	await get_tree().create_timer(Global.AI_turn_delay).timeout
@@ -289,19 +287,6 @@ func hide_character_options():
 	$Panel.hide()
 	$GUI/Right.hide()
 
-func hide_turn_tracker():
-#	for child in $GUI/Left.get_children():
-#		child.hide()
-	pass
-
-func show_turn_tracker():
-#	for child in $GUI/Left.get_children():
-#		child.show()
-	pass
-
-#func update_turn(node, action):
-#	turn_tracker[node] += action[2]
-
 func _on_PickUp_pressed():
 	current_action[0] = "pick_up"
 	current_action[2] = 25
@@ -332,7 +317,7 @@ func _on_Walk_pressed():
 func calculate_walk_duration():
 	var walk_dur: float
 	var dist = whose_turn.position.distance_to(action_target)
-	walk_dur = dist / whose_turn.walk_speed
+	walk_dur = dist / whose_turn.walk_speed * 60
 	return walk_dur
 
 @warning_ignore(unused_parameter)

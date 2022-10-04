@@ -78,7 +78,7 @@ var actions: Array = [
 	["throw", true, 25],
 	["wait", true, 25],
 	]
-var walk_speed: float = 0.02
+var walk_speed: float = 3.0
 var walking: bool = false
 var red_light: bool = false
 var food_contacts: Array = []
@@ -111,9 +111,13 @@ func _ready():
 
 func _physics_process(_delta):
 	bullseye = Vector3(position.x, 0.6, position.z)
-	if walking && !red_light:
+	if walking:
+		if !red_light:
 		## TODO velocity here if navigating along a path
-		move_and_slide()
+			move_and_slide()
+		else:
+			if player: 
+				print("red light")
 
 func get_appearance_from_global():
 	$SubViewport/CharacterSprite/Sprite2D.modulate = Global.character_modulate
@@ -141,12 +145,12 @@ func generate_unique_name(name_prefix):
 	return new_name
 
 func on_red_light():
-	red_light = true
+	set_deferred("red_light", true)
 
 func on_green_light():
 	selecting = false
 	$SubViewport/CharacterSprite/Sprite2D.modulate = revert_color
-	red_light = false
+	set_deferred("red_light", false)
 
 func handle_action(action):
 	if action[0] == "wait":
