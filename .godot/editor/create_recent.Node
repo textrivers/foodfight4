@@ -1,7 +1,12 @@
+Marker3D
+Sprite3D
+PointLight2D
+Sprite2D
+Node2D
+SubViewport
+CollisionShape3D
+CharacterBody3D
 Node
 Camera3D
-Sprite3D
 AnimatedSprite2D
-SubViewport
 SubViewportContainer
-Sprite2D

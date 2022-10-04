@@ -105,9 +105,9 @@ func _ready():
 	else:
 		generate_unique_appearance()
 	revert_color = $SubViewport/CharacterSprite/Sprite2D.modulate
-	$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
+	#$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
 	$Sprite3D.texture = $SubViewport.get_texture()
-	$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
+	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
 
 func _physics_process(_delta):
 	bullseye = Vector3(position.x, 0.6, position.z)
