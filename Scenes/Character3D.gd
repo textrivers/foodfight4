@@ -109,7 +109,7 @@ func _ready():
 	$Sprite3D.texture = $SubViewport.get_texture()
 	$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	bullseye = Vector3(position.x, 0.6, position.z)
 	if walking && !red_light:
 		## TODO velocity here if navigating along a path
@@ -227,7 +227,7 @@ func on_target_selecting():
 func on_target_unselecting():
 	selecting = false
 
-func _on_Character3D_input_event(camera, event, position, normal, shape_idx):
+func _on_Character3D_input_event(_camera, _event, _position, _normal, _shape_idx):
 	if selecting:
 		if Input.is_action_just_pressed("left_click"):
 			if !player:

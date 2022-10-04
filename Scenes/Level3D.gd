@@ -12,7 +12,9 @@ var cam_rig_rot_target: Vector2
 var cam_rig_zoom_target: float = 10.0
 var cam_rig_trans_target
 var cam_rig
-@export var mouse_sensitivity = 0.02
+@export var mouse_sensitivity = 0.008
+
+
 var GUI
 var current_action = []
 var AI_actions = [
@@ -46,7 +48,9 @@ func _ready():
 
 func build():
 	var tot = board_size.x * board_size.y
+	@warning_ignore(unused_variable)
 	var rando = randi() % int(tot) + 1
+	@warning_ignore(unused_variable)
 	var rand_index = 0
 	for x in int(board_size.x):
 		for y in int(board_size.y): 
@@ -93,19 +97,21 @@ func register_character(_char):
 
 func _input(event):
 	if event is InputEventMouseMotion && Input.is_action_pressed("right_click"):
+		var mouse_x = (event.relative.x * mouse_sensitivity * -1)
+		print(mouse_x)
 		cam_rig_rot_target.x += (event.relative.x * mouse_sensitivity * -1)
 		cam_rig_rot_target.y += (event.relative.y * mouse_sensitivity * -1)
 	if Input.is_action_just_released("scroll_in"):
 		cam_rig_zoom_target -= 1.0
 	if Input.is_action_just_released("scroll_out"):
 		cam_rig_zoom_target += 1.0
-		cam_rig_zoom_target = clamp(cam_rig_zoom_target, 1.0, 15.0)
+	cam_rig_zoom_target = clamp(cam_rig_zoom_target, 1.0, 10.0)
 
 func _on_HSlider_value_changed(value):
 	Global.AI_turn_delay = value
 	$GUI/Left/TurnDelayLabel.text = "Opponent turn delay: " + str(value)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	advance_time()
 	prompt_turns()
 	translate_cam_rig()
@@ -219,7 +225,7 @@ func reorder_character_display():
 			if index >= display_array.size():
 				display_array.insert(index, [character.name, turn_tracker[character]])
 	## set text values of Left/labels 
-	var index = 0
+#	var index = 0
 #	for child in $GUI/Left.get_children():
 #		if "turn_disp_editable" in child:
 #			if !child.turn_disp_editable:
@@ -236,13 +242,13 @@ func translate_cam_rig():
 
 func rotate_cam_rig():
 	# clamp value so you can only look so high or low
-	cam_rig_rot_target.y = clamp(cam_rig_rot_target.y, deg_to_rad(-30), deg_to_rad(40))
+	cam_rig_rot_target.y = clamp(cam_rig_rot_target.y, deg_to_rad(-30), deg_to_rad(20))
 	if cam_rig.rotation.x != cam_rig_rot_target.y:
 		var new_rad_y = cam_rig_rot_target.y
 		cam_rig.rotation.x = lerp_angle(cam_rig.rotation.x, new_rad_y, 0.1)
 	if cam_rig.rotation.y != cam_rig_rot_target.x:
 		var new_rad_x = cam_rig_rot_target.x
-		cam_rig.rotation.y = lerp_angle(cam_rig.rotation.y, new_rad_x, 0.1)
+		cam_rig.rotation.y = lerp_angle(cam_rig.rotation.y, new_rad_x, 0.2)
 
 func display_character_options(_player):
 	reset_character_options()
@@ -329,7 +335,8 @@ func calculate_walk_duration():
 	walk_dur = dist / whose_turn.walk_speed
 	return walk_dur
 
-func on_action_target_selected(dest, desc):
+@warning_ignore(unused_parameter)
+func on_action_target_selected(dest, _desc):
 	action_target = dest
 	_on_Proceed_pressed()
 

@@ -72,6 +72,7 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+anti_aliasing/quality/msaa_3d=1
 quality/reflections/texture_array_reflections=false
 quality/filters/use_fxaa=true
 environment/default_environment="res://default_env.tres"

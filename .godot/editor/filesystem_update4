@@ -8,3 +8,8 @@ res://Scenes/GoodBanana.tscn
 res://Scenes/Food.tscn
 res://Scenes/Character3D.tscn
 res://Scenes/Level3D.tscn
+res://Scenes/TurnMarker.tscn
+res://Scenes/Character3D.gd
+res://Scenes/FloorTile3D.gd
+res://Scenes/Level3D.gd
+res://Scenes/TurnMarker.gd
