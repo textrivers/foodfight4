@@ -38,6 +38,10 @@ window/size/viewport_height=600
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/jpw331/Desktop/Jon Woodward/games/godot/foodfight4/Video/video.avi"
+
 [input]
 
 right_click={

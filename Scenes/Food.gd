@@ -11,15 +11,15 @@ var floor_splat = preload("res://Scenes/FloorSplat.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
-	#$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
-	$Sprite3D.texture = $SubViewport.get_texture()
-	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
 	get_parent().get_parent().connect("red_light",Callable(self,"on_red_light"))
 	get_parent().get_parent().connect("green_light",Callable(self,"on_green_light"))
+	call_deferred("finish_viewport_setup")
+
+func finish_viewport_setup():
+	$Sprite3D.texture = $SubViewport.get_texture()
 	$SubViewport/FoodSprite/AnimatedSprite2D.play("default", bool(randi() % 2))
 	$SubViewport/FoodSprite/AnimatedSprite2D.set_frame(0)
 	$SubViewport/FoodSprite/AnimatedSprite2D.playing = false
-	
 
 func _physics_process(delta):
 	if position.y < 0: 

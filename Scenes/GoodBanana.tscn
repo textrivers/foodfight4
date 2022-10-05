@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://qdn304udsvig"]
+[gd_scene load_steps=11 format=3 uid="uid://qdn304udsvig"]
 
 [ext_resource type="PackedScene" uid="uid://bkdb71brh53of" path="res://Scenes/Food.tscn" id="1"]
 [ext_resource type="Texture2D" uid="uid://5qsqmwfdxvq5" path="res://Assets/FoodSprites/betterbanana3.png" id="2"]
@@ -19,14 +19,8 @@ animations = [{
 "speed": 20.0
 }]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_ni0r5"]
-viewport_path = NodePath("SubViewport")
-
 [node name="GoodBanana" instance=ExtResource("1")]
 splat_colors = [Color(1, 0.878431, 0.054902, 1), Color(0.788235, 0.694118, 0.0666667, 1), Color(0.498039, 0.439216, 0.0313726, 1)]
 
 [node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
 frames = SubResource("1")
-
-[node name="Sprite3D" parent="." index="3"]
-texture = SubResource("ViewportTexture_ni0r5")

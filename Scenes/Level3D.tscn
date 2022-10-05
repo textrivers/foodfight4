@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://drxpu7l676047"]
+[gd_scene load_steps=13 format=3 uid="uid://drxpu7l676047"]
 
 [ext_resource type="Script" path="res://Scenes/Level3D.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://msr42fg3peff" path="res://Scenes/TurnMarker.tscn" id="3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://c840ow6okr33r" path="res://Themes/GUI_Default.tres" id="4"]
 [ext_resource type="Texture2D" uid="uid://b74kaye5g44c7" path="res://Assets/PanoramaSky/A_pano_FULL.png" id="5_5sfde"]
 [ext_resource type="PackedScene" uid="uid://qdn304udsvig" path="res://Scenes/GoodBanana.tscn" id="6_7e2y2"]
+[ext_resource type="PackedScene" uid="uid://c2dgjx3q1tpae" path="res://Scenes/GoodOrange.tscn" id="7_v5m4j"]
 
 [sub_resource type="StyleBoxFlat" id="9"]
 bg_color = Color(0.329412, 0.384314, 0.505882, 0.784314)
@@ -66,6 +67,7 @@ theme = ExtResource("4")
 alignment = 1
 
 [node name="Right" type="VBoxContainer" parent="GUI"]
+layout_mode = 2
 offset_left = 36.0
 offset_right = 212.0
 offset_bottom = 228.0
@@ -73,17 +75,20 @@ size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="PlayerOptions" type="VBoxContainer" parent="GUI/Right"]
+layout_mode = 2
 offset_right = 176.0
 offset_bottom = 177.0
 size_flags_horizontal = 4
 alignment = 1
 
 [node name="Label" type="Label" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_right = 176.0
 offset_bottom = 21.0
 text = "It is Derp's turn"
 
 [node name="Read" type="Button" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_left = 69.0
 offset_top = 25.0
 offset_right = 107.0
@@ -93,6 +98,7 @@ disabled = true
 text = "Read"
 
 [node name="Walk" type="Button" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_left = 68.0
 offset_top = 51.0
 offset_right = 108.0
@@ -101,6 +107,7 @@ size_flags_horizontal = 4
 text = "Move"
 
 [node name="PickUp" type="Button" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_left = 62.0
 offset_top = 77.0
 offset_right = 114.0
@@ -110,6 +117,7 @@ disabled = true
 text = "Pick Up"
 
 [node name="Throw" type="Button" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_left = 67.0
 offset_top = 103.0
 offset_right = 109.0
@@ -118,6 +126,7 @@ size_flags_horizontal = 4
 text = "Throw"
 
 [node name="Wait" type="Button" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_left = 70.0
 offset_top = 129.0
 offset_right = 106.0
@@ -126,6 +135,7 @@ size_flags_horizontal = 4
 text = "Wait"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GUI/Right/PlayerOptions"]
+layout_mode = 2
 offset_top = 155.0
 offset_right = 176.0
 offset_bottom = 177.0
@@ -134,6 +144,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="GUI/Right/PlayerOptions/HBoxContainer"]
 visible = false
+layout_mode = 2
 offset_top = 8.0
 offset_right = 149.0
 offset_bottom = 27.0
@@ -141,6 +152,7 @@ size_flags_horizontal = 7
 text = "Pause during all turns "
 
 [node name="CheckButton" type="CheckButton" parent="GUI/Right/PlayerOptions/HBoxContainer"]
+layout_mode = 2
 offset_right = 176.0
 offset_bottom = 22.0
 size_flags_horizontal = 7
@@ -148,12 +160,14 @@ text = "Pause during all turns"
 
 [node name="WalkOptions" type="VBoxContainer" parent="GUI/Right"]
 visible = false
+layout_mode = 2
 offset_right = 229.0
 offset_bottom = 49.0
 size_flags_horizontal = 4
 alignment = 1
 
 [node name="Label" type="Label" parent="GUI/Right/WalkOptions"]
+layout_mode = 2
 offset_left = 17.0
 offset_right = 212.0
 offset_bottom = 49.0
@@ -163,16 +177,19 @@ or click \"Cancel\""
 
 [node name="PickUpOptions" type="VBoxContainer" parent="GUI/Right"]
 visible = false
+layout_mode = 2
 offset_right = 200.0
 
 [node name="ThrowOptions" type="VBoxContainer" parent="GUI/Right"]
 visible = false
+layout_mode = 2
 offset_right = 229.0
 offset_bottom = 49.0
 size_flags_horizontal = 4
 alignment = 1
 
 [node name="Label" type="Label" parent="GUI/Right/ThrowOptions"]
+layout_mode = 2
 offset_left = 42.0
 offset_right = 186.0
 offset_bottom = 49.0
@@ -182,16 +199,19 @@ or \"Cancel\""
 
 [node name="WaitOptions" type="VBoxContainer" parent="GUI/Right"]
 visible = false
+layout_mode = 2
 offset_top = 142.0
 offset_right = 298.0
 offset_bottom = 184.0
 
 [node name="Label" type="Label" parent="GUI/Right/WaitOptions"]
+layout_mode = 2
 offset_right = 298.0
 offset_bottom = 14.0
 text = "Wait how long?"
 
 [node name="WaitDuration" type="SpinBox" parent="GUI/Right/WaitOptions"]
+layout_mode = 2
 offset_top = 18.0
 offset_right = 298.0
 offset_bottom = 42.0
@@ -202,18 +222,21 @@ value = 100.0
 
 [node name="ProceedCancel" type="HBoxContainer" parent="GUI/Right"]
 visible = false
+layout_mode = 2
 offset_top = 226.0
 offset_right = 229.0
 offset_bottom = 253.0
 alignment = 1
 
 [node name="Proceed" type="Button" parent="GUI/Right/ProceedCancel"]
+layout_mode = 2
 offset_left = 37.0
 offset_right = 112.0
 offset_bottom = 27.0
 text = "Proceed"
 
 [node name="Cancel" type="Button" parent="GUI/Right/ProceedCancel"]
+layout_mode = 2
 offset_left = 116.0
 offset_right = 191.0
 offset_bottom = 27.0
@@ -253,6 +276,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 2)
 
 [node name="GoodBanana6" parent="FoodContainer" instance=ExtResource("6_7e2y2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 1)
+
+[node name="GoodOrange" parent="FoodContainer" instance=ExtResource("7_v5m4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0.2, 3)
 
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Walk" to="." method="_on_Walk_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/PickUp" to="." method="_on_PickUp_pressed"]

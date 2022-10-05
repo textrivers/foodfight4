@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkdb71brh53of"]
+[gd_scene load_steps=5 format=3 uid="uid://bkdb71brh53of"]
 
 [ext_resource type="Script" path="res://Scenes/Food.gd" id="2"]
 
@@ -16,9 +16,6 @@ animations = [{
 "name": &"default",
 "speed": 20.0
 }]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_2wina"]
-viewport_path = NodePath("SubViewport")
 
 [node name="Food" type="CharacterBody3D" groups=["throwable"]]
 collision_layer = 32768
@@ -54,7 +51,6 @@ pixel_size = 0.005
 billboard = 1
 double_sided = false
 alpha_cut = 2
-texture = SubResource("ViewportTexture_2wina")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_Area_body_exited"]
