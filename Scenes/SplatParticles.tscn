@@ -22,14 +22,13 @@ height = 0.2
 [node name="SplatParticles" type="GPUParticles3D"]
 material_override = SubResource("4")
 emitting = false
-amount = 20
+amount = 12
 lifetime = 1.5
 one_shot = true
 explosiveness = 0.93
 randomness = 0.61
 fixed_fps = 0
 interpolate = false
-trail_enabled = true
 process_material = SubResource("3")
 draw_pass_1 = SubResource("5")
 script = ExtResource("1")
