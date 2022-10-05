@@ -26,22 +26,23 @@ func _physics_process(delta):
 		#spawn_splatter_particles(position)
 		call_deferred("queue_free")
 	if moving:
-		var coll = move_and_collide(velocity * delta, false, true, false)
+		var collided = move_and_slide()
 		velocity.y -= gravity * delta
-		if coll: 
+		if collided: 
+			var last_coll = get_last_slide_collision()
 			print("food collision")
 			for splat_col in splat_colors:
-				spawn_splatter_particles(coll.position, splat_col)
-			if coll.collider.is_in_group("character"):
-				coll.collider.add_splatter(splat_colors[randi() % splat_colors.size()])
+				spawn_splatter_particles(last_coll.get_position(), splat_col)
+			if last_coll.get_collider().is_in_group("character"):
+				last_coll.get_collider().add_splatter(splat_colors[randi() % splat_colors.size()])
 			for i in ((randi() % 3) + 1):
 				var new_floor_splat = floor_splat.instantiate()
 				new_floor_splat.modulate = splat_colors[randi() % splat_colors.size()]
-				new_floor_splat.position = coll.position
+				new_floor_splat.position = last_coll.get_position()
 				new_floor_splat.position.x += randf() - 0.5
 				new_floor_splat.position.y = 0.07
 				new_floor_splat.position.z += randf() - 0.5
-				new_floor_splat.rotation_degrees.y += randf() * 360
+				new_floor_splat.rotation.y += randf() * PI
 				get_parent().add_child(new_floor_splat)
 			call_deferred("queue_free")
 

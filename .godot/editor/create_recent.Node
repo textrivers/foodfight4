@@ -1,8 +1,9 @@
+Sprite2D
+CanvasGroup
 Node3D
 Marker3D
 Sprite3D
 PointLight2D
-Sprite2D
 Node2D
 SubViewport
 CollisionShape3D

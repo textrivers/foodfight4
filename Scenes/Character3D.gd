@@ -85,7 +85,7 @@ var food_contacts: Array = []
 var throw_speed: float = 0.1
 var throw_apex: float = 1.5
 var throw_start_height: float = 0.5
-var throw_clearance = 0.3 #avoid collision with parent
+var throw_clearance = 0.1 #avoid collision with parent
 var current_splat_num: int = 0
 var parent
 var bullseye: Vector3
@@ -104,7 +104,7 @@ func _ready():
 		get_appearance_from_global()
 	else:
 		generate_unique_appearance()
-	revert_color = $SubViewport/CharacterSprite/Sprite2D.modulate
+	revert_color = $SubViewport/Sprite2D.modulate
 	#$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
 	$Sprite3D.texture = $SubViewport.get_texture()
 	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
@@ -120,20 +120,20 @@ func _physics_process(_delta):
 				print("red light")
 
 func get_appearance_from_global():
-	$SubViewport/CharacterSprite/Sprite2D.modulate = Global.character_modulate
-	$SubViewport/CharacterSprite/Sprite2D.texture = load(Global.character_sprite)
-	$SubViewport/CharacterSprite/PointLight2D.texture = load(Global.character_light_mask)
+	$SubViewport/Sprite2D.modulate = Global.character_modulate
+	$SubViewport/Sprite2D.texture = load(Global.character_sprite)
+	$SubViewport/CharacterSprite/Mask.texture = load(Global.character_light_mask)
 
 func generate_unique_appearance():
 	## rand base color for char sprite
 	var my_key = Global.palette_dict.keys()[randi() % Global.palette_dict.size()]
-	$SubViewport/CharacterSprite/Sprite2D.modulate = Global.palette_dict[my_key]
-	if $SubViewport/CharacterSprite/Sprite2D.modulate == Color.BLACK:
-		$SubViewport/CharacterSprite/Sprite2D.modulate = Global.palette_dict["black_2"]
+	$SubViewport/Sprite2D.modulate = Global.palette_dict[my_key]
+	if $SubViewport/Sprite2D.modulate == Color.BLACK:
+		$SubViewport/Sprite2D.modulate = Global.palette_dict["black_2"]
 	var my_config = character_config[randi() % character_config.size()]
 	self.name = generate_unique_name(my_config[0])
-	$SubViewport/CharacterSprite/Sprite2D.texture = load(my_config[1])
-	$SubViewport/CharacterSprite/PointLight2D.texture = load(my_config[2])
+	$SubViewport/Sprite2D.texture = load(my_config[1])
+	$SubViewport/CharacterSprite/Mask.texture = load(my_config[2])
 
 func generate_unique_name(name_prefix):
 	if player: 
@@ -149,7 +149,7 @@ func on_red_light():
 
 func on_green_light():
 	selecting = false
-	$SubViewport/CharacterSprite/Sprite2D.modulate = revert_color
+	$SubViewport/Sprite2D.modulate = revert_color
 	set_deferred("red_light", false)
 
 func handle_action(action):
@@ -216,6 +216,7 @@ func throw_food(targ):
 		new_food.gravity = grav
 		new_food.position = start_pos
 		new_food.thrown = true
+		new_food.add_collision_exception_with(self)
 		new_food.set_collision_layer_value(2, true)
 		get_parent().add_child(new_food)
 
@@ -235,20 +236,20 @@ func _on_Character3D_input_event(_camera, _event, _position, _normal, _shape_idx
 	if selecting:
 		if Input.is_action_just_pressed("left_click"):
 			if !player:
-				$SubViewport/CharacterSprite/Sprite2D.modulate = Color.CRIMSON
+				$SubViewport/Sprite2D.modulate = Color.CRIMSON
 				emit_signal("give_on_select_info", to_global($TargetPosition.position), char_description)
 
 func _on_Character3D_mouse_entered():
 	if selecting == true && selected == false:
 		if !player:
-			$SubViewport/CharacterSprite/Sprite2D.modulate = Color.HOT_PINK
+			$SubViewport/Sprite2D.modulate = Color.HOT_PINK
 
 func _on_Character3D_mouse_exited():
 	if selecting == true && selected == false:
-		$SubViewport/CharacterSprite/Sprite2D.modulate = revert_color
+		$SubViewport/Sprite2D.modulate = revert_color
 
 func add_splatter(color):
-	for child in $SubViewport/CharacterSprite.get_children():
+	for child in $SubViewport/CharacterSprite/Mask.get_children():
 		if "my_splat_num" in child:
 			if child.my_splat_num == current_splat_num:
 				child.update_splatter(color)
