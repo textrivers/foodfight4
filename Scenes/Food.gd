@@ -4,7 +4,7 @@ extends CharacterBody3D
 var moving: bool = false
 var thrown: bool = false
 var gravity
-var splat = preload("res://Scenes/ParticleContainer.tscn")
+var splat = preload("res://Scenes/SplatParticles.tscn")
 var floor_splat = preload("res://Scenes/FloorSplat.tscn")
 @export var splat_colors: Array
 
@@ -49,14 +49,8 @@ func _physics_process(delta):
 func spawn_splatter_particles(pos, col):
 	var new_splat = splat.instantiate()
 	new_splat.position = pos
-	new_splat.get_node("SplatSpriteParticles").emitting = true
-	#new_splat.material_override.albedo_texture = new_splat.get_node("SubViewport").get_texture()
-	#new_splat.material_override.albedo_color = col
-	new_splat.get_node("SubViewport/PartSprite/Sprite2D").modulate = col
-	new_splat.get_node("SubViewport/PartSprite/Sprite2").modulate = splat_colors[randi() % 3]
-	new_splat.get_node("SubViewport/PartSprite/Sprite3").modulate = splat_colors[randi() % 3]
-	new_splat.get_node("SubViewport/PartSprite/Label").add_theme_color_override("font_color", splat_colors[randi() % 3])
-	new_splat.get_node("SubViewport/PartSprite/Label").add_theme_color_override("font_outline_modulate", splat_colors[randi() % 3])
+	new_splat.emitting = true
+	new_splat.material_override.albedo_color = col
 	get_parent().add_child(new_splat)
 
 func on_red_light():
