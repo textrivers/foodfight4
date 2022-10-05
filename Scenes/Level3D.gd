@@ -136,8 +136,8 @@ func prompt_turns():
 				display_character_options(turn.player)
 				if !turn.player:
 					AI_action_select()
-#				else:
-#					turn.walking = false
+				else:
+					turn.walking = false
 				await self.GUI_action_taken
 				resolve_turn()
 
