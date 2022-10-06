@@ -1,14 +1,7 @@
-res://Scenes/Food.tscn
+res://Scenes/Main.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
-res://Themes/GUI_Default.tres
-res://Scenes/Main.tscn
 res://Scenes/TitleScreen.tscn
-res://Scenes/Character3D.tscn
+res://Scenes/TitleScreen.gd
+res://Scenes/TitleScreen4.tscn
 res://Scenes/Character4.tscn
-res://Scenes/Level3D.tscn
-res://Scenes/ParticleContainer.tscn
-res://Scenes/SplatParticles.tscn
-res://Scenes/Food.gd
-res://Scenes/GoodBanana.tscn
-res://Scenes/GoodOrange.tscn
