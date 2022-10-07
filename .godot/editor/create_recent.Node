@@ -1,8 +1,10 @@
+NavigationAgent3D
+Node3D
+NavigationRegion3D
 Timer
 Sprite2D
 GPUParticles3D
 CanvasGroup
-Node3D
 Marker3D
 Sprite3D
 PointLight2D

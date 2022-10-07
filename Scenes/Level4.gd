@@ -28,6 +28,8 @@ var turn_marker
 var current_moment: int = 0
 var advancing: bool = true
 
+var map_rid
+
 signal red_light
 signal green_light
 signal GUI_action_taken
@@ -41,10 +43,32 @@ func _ready():
 	turn_marker = $TurnMarker
 	cam_rig_rot_target = Vector2(cam_rig.rotation.y, cam_rig.rotation.x)
 	cam_rig_zoom_target = $CameraRig/Camera3D.position.z
-	build()
+	#build()
+	## connect tile signals and checkerboard them
+	for new_tile in get_tree().get_nodes_in_group("tile"):
+		new_tile.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
+		self.connect("selecting_action_target",Callable(new_tile,"on_target_selecting"))
+		self.connect("done_selecting_action_target",Callable(new_tile,"on_target_unselecting"))
+		var new_mat = StandardMaterial3D.new()
+		var new_tile_color: Color
+		if (int(new_tile.global_position.x) + int(new_tile.global_position.z)) % 2 == 0:
+			new_tile_color = Color("#d1d1d1")
+		else: 
+			new_tile_color = Color("#719dff")
+		new_mat.albedo_color = new_tile_color
+		new_tile.set_material_override(new_mat)
+		new_tile.revert_color = new_tile_color
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
 	current_action.resize(3)
+	## Nav setup
+	map_rid = NavigationServer3D.map_create()
+	for region in get_tree().get_nodes_in_group("map_region"):
+		var region_rid = region.get_region_rid()
+		NavigationServer3D.region_set_map(region_rid, map_rid)
+	for agent in get_tree().get_nodes_in_group("nav_agent"):
+		var agent_rid = agent.get_rid()
+		NavigationServer3D.agent_set_map(agent_rid, map_rid)
 
 func build():
 	var tot = board_size.x * board_size.y
@@ -177,6 +201,7 @@ func AI_action_select():
 			action_target.y = 0
 			action_target.z = randi() % int(board_size.y)
 			current_action[1] = action_target
+		whose_turn.get_node("NavigationAgent3d").set_target_location(current_action[1])
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
@@ -317,8 +342,9 @@ func _on_Walk_pressed():
 
 func calculate_walk_duration():
 	var walk_dur: float
-	var dist = whose_turn.position.distance_to(action_target)
-	walk_dur = dist / whose_turn.walk_speed * 60
+#	var dist = whose_turn.position.distance_to(action_target)
+	var walk_dist = whose_turn.get_node("NavigationAgent3d").distance_to_target()
+	walk_dur = walk_dist / whose_turn.walk_speed * 60
 	return walk_dur
 
 @warning_ignore(unused_parameter)
@@ -337,7 +363,8 @@ func _on_Proceed_pressed():
 		current_action[1] = action_target
 	if current_action[0] == "walk": ## player character calculates duration
 		current_action[1] = action_target
-		## TODO calculate duration and assign it to current_action[2]
+		whose_turn.get_node("NavigationAgent3d").set_target_location(action_target)
+		print(NavigationServer3D.map_get_path(map_rid, whose_turn.global_position, action_target, false, 1))
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()

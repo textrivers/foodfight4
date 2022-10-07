@@ -1,0 +1,153 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv38qdbm2ifd5"]
+
+[ext_resource type="PackedScene" uid="uid://d1j5t2fieeagr" path="res://Scenes/FloorTile3D.tscn" id="1_siydv"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_fgpw4"]
+vertices = PackedVector3Array(-0.4, 0.07, 1, 0.4, 0.07, 1, 0.5, 0.07, 0.4, -0.4, 0.07, -0.4, 3.4, 0.07, 0.5, 4, 0.07, 0.4, 4, 0.07, -0.4, -0.4, 0.07, -0.4, 1.5, 0.07, 0.4, -0.4, 0.07, -0.4, 0.5, 0.07, 0.4, 1.5, 0.07, 0.4, 2.5, 0.07, 2.4, 3.2, 0.07, 2.4, 3.4, 0.07, 1.4, 3.4, 0.07, 0.5, 1.5, 0.07, 0.4, 1.6, 0.07, 1.5, 4, 0.07, -0.4, 4, 0.07, 0.4, 4.5, 0.07, 0.4, 5.5, 0.07, 1.4, 5.6, 0.07, 2, 6.4, 0.07, 2, 4.5, 0.07, 0.4, 4.6, 0.07, 1.4, 5.5, 0.07, 1.4, 5.5, 0.07, 1.4, 6.4, 0.07, 2, 6.4, 0.07, -0.4, 4, 0.07, -0.4, 4.5, 0.07, 0.4, 2.5, 0.07, 4.4, 2.6, 0.07, 4.6, 2.8, 0.07, 3.6, 2.5, 0.07, 4.4, 2.8, 0.07, 3.6, 2.4, 0.07, 3.5, 1.5, 0.07, 3.4, 1.6, 0.07, 4.4, -0.4, 0.07, 1, -0.4, 0.07, 4, 0.4, 0.07, 4, 0.5, 0.07, 3.4, 0.5, 0.07, 1.6, 0.4, 0.07, 1, 1.5, 0.07, 3.4, 2.4, 0.07, 3.5, 2.5, 0.07, 2.4, 1.5, 0.07, 3.4, 2.5, 0.07, 2.4, 1.6, 0.07, 1.5, 0.5, 0.07, 1.6, 0.5, 0.07, 3.4, 3.5, 0.07, 1.6, 3.4, 0.07, 1.4, 3.2, 0.07, 2.4, 3.5, 0.07, 1.6, 3.2, 0.07, 2.4, 3.6, 0.07, 2.5, 4.5, 0.07, 2.6, 4.4, 0.07, 1.6, 5.5, 0.07, 2.6, 5.5, 0.07, 4.4, 5.6, 0.07, 5, 6.4, 0.07, 5, 6.4, 0.07, 2, 5.6, 0.07, 2, 4.5, 0.07, 2.6, 3.6, 0.07, 2.5, 3.6, 0.07, 3.5, 4.5, 0.07, 2.6, 3.6, 0.07, 3.5, 4.5, 0.07, 4.4, 5.5, 0.07, 4.4, 5.5, 0.07, 2.6, 2.6, 0.07, 5.5, 2, 0.07, 5.6, 2, 0.07, 6.4, 6.4, 0.07, 6.4, 4.5, 0.07, 5.6, 6.4, 0.07, 5, 5.6, 0.07, 5, 5.5, 0.07, 5.6, 6.4, 0.07, 6.4, 6.4, 0.07, 6.4, 5.5, 0.07, 5.6, 4.5, 0.07, 5.6, 3.6, 0.07, 3.5, 2.8, 0.07, 3.6, 2.6, 0.07, 4.6, 2.6, 0.07, 5.5, 4.5, 0.07, 5.6, 4.5, 0.07, 4.4, 0.4, 0.07, 4.5, 0.4, 0.07, 4, -0.4, 0.07, 4, 2, 0.07, 6.4, 2, 0.07, 5.6, 1.4, 0.07, 5.5, 1.4, 0.07, 5.5, 1.4, 0.07, 4.6, 0.4, 0.07, 4.5, -0.4, 0.07, 6.4, 2, 0.07, 6.4, 1.4, 0.07, 5.5, 0.4, 0.07, 4.5, -0.4, 0.07, 4)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 8), PackedInt32Array(6, 8, 7), PackedInt32Array(11, 10, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 17), PackedInt32Array(15, 17, 16), PackedInt32Array(20, 19, 18), PackedInt32Array(23, 22, 21), PackedInt32Array(24, 26, 25), PackedInt32Array(31, 30, 27), PackedInt32Array(27, 30, 29), PackedInt32Array(27, 29, 28), PackedInt32Array(34, 33, 32), PackedInt32Array(36, 35, 37), PackedInt32Array(37, 35, 39), PackedInt32Array(37, 39, 38), PackedInt32Array(45, 44, 40), PackedInt32Array(40, 44, 43), PackedInt32Array(40, 43, 42), PackedInt32Array(40, 42, 41), PackedInt32Array(48, 47, 46), PackedInt32Array(51, 50, 52), PackedInt32Array(52, 50, 49), PackedInt32Array(52, 49, 53), PackedInt32Array(56, 55, 54), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 61), PackedInt32Array(59, 61, 60), PackedInt32Array(64, 63, 65), PackedInt32Array(65, 63, 62), PackedInt32Array(65, 62, 67), PackedInt32Array(65, 67, 66), PackedInt32Array(70, 69, 68), PackedInt32Array(72, 71, 73), PackedInt32Array(73, 71, 75), PackedInt32Array(73, 75, 74), PackedInt32Array(77, 76, 78), PackedInt32Array(78, 76, 80), PackedInt32Array(78, 80, 79), PackedInt32Array(82, 81, 83), PackedInt32Array(83, 81, 84), PackedInt32Array(87, 86, 85), PackedInt32Array(89, 88, 90), PackedInt32Array(90, 88, 91), PackedInt32Array(91, 88, 93), PackedInt32Array(91, 93, 92), PackedInt32Array(96, 95, 94), PackedInt32Array(99, 98, 97), PackedInt32Array(102, 101, 100), PackedInt32Array(106, 105, 107), PackedInt32Array(107, 105, 103), PackedInt32Array(103, 105, 104)]
+cell_size = 0.1
+cell_height = 0.01
+agent_height = 1.0
+agent_radius = 0.1
+
+[node name="MapBase" type="NavigationRegion3D" groups=["map_region"]]
+navmesh = SubResource("NavigationMesh_fgpw4")
+
+[node name="Row" type="Node3D" parent="."]
+
+[node name="FloorTile3D" parent="Row" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D2" parent="Row" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="FloorTile3D3" parent="Row" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorTile3D4" parent="Row" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="FloorTile3D5" parent="Row" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3D6" parent="Row" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="FloorTile3D7" parent="Row" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Row2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="FloorTile3D" parent="Row2" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D3" parent="Row2" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorTile3D4" parent="Row2" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="FloorTile3D6" parent="Row2" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="FloorTile3D7" parent="Row2" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Row3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="FloorTile3D" parent="Row3" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D2" parent="Row3" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="FloorTile3D3" parent="Row3" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorTile3D4" parent="Row3" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="FloorTile3D5" parent="Row3" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3D7" parent="Row3" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Row4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="FloorTile3D" parent="Row4" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D2" parent="Row4" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="FloorTile3D3" parent="Row4" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorTile3D5" parent="Row4" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3D6" parent="Row4" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="FloorTile3D7" parent="Row4" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Row5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="FloorTile3D" parent="Row5" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D3" parent="Row5" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorTile3D4" parent="Row5" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="FloorTile3D5" parent="Row5" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3D6" parent="Row5" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="FloorTile3D7" parent="Row5" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Row6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="FloorTile3D" parent="Row6" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D2" parent="Row6" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="FloorTile3D4" parent="Row6" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="FloorTile3D5" parent="Row6" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3D7" parent="Row6" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Row7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="FloorTile3D" parent="Row7" instance=ExtResource("1_siydv")]
+
+[node name="FloorTile3D2" parent="Row7" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="FloorTile3D3" parent="Row7" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="FloorTile3D4" parent="Row7" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="FloorTile3D5" parent="Row7" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="FloorTile3D6" parent="Row7" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="FloorTile3D7" parent="Row7" instance=ExtResource("1_siydv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)

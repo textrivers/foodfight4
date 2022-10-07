@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1j5t2fieeagr"]
+[gd_scene load_steps=6 format=3 uid="uid://d1j5t2fieeagr"]
 
 [ext_resource type="ArrayMesh" uid="uid://c5081we10o86s" path="res://Assets/Meshes/floortilebevel.obj" id="1"]
 [ext_resource type="Script" path="res://Scenes/FloorTile3D.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://dwf4e44ur7ioj" path="res://Assets/tile3d_black_rim.png" id="3"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_754sp"]
+albedo_color = Color(0.819608, 0.819608, 0.819608, 1)
+
 [sub_resource type="BoxShape3D" id="2"]
 size = Vector3(1, 0.06, 1)
 
-[node name="FloorTile3D" type="MeshInstance3D" groups=["selectable"]]
+[node name="FloorTile3D" type="MeshInstance3D" groups=["selectable", "tile"]]
+material_override = SubResource("StandardMaterial3D_754sp")
 mesh = ExtResource("1")
 script = ExtResource("2")
 

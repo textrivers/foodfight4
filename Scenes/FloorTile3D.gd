@@ -38,4 +38,4 @@ func _on_StaticBody_input_event(_camera, _event, _position, _normal, _shape_idx)
 						child.material_override.albedo_color = child.revert_color
 			selected = true
 			material_override.albedo_color = Color.CRIMSON
-			emit_signal("give_on_select_info", position, tile_description)
+			emit_signal("give_on_select_info", global_position, tile_description)

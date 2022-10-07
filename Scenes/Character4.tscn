@@ -76,6 +76,11 @@ alpha_cut = 2
 [node name="TargetPosition" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 
+[node name="NavigationAgent3d" type="NavigationAgent3D" parent="." groups=["nav_agent"]]
+path_desired_distance = 0.1
+target_desired_distance = 0.1
+path_max_distance = 1.0
+
 [connection signal="input_event" from="." to="." method="_on_Character3D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Character3D_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Character3D_mouse_exited"]

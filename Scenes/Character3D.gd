@@ -80,6 +80,7 @@ var actions: Array = [
 	]
 var walk_speed: float = 3.0
 var walking: bool = false
+var agent_rid
 var red_light: bool = false
 var food_contacts: Array = []
 var throw_speed: float = 0.1
@@ -108,16 +109,22 @@ func _ready():
 	#$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
 	$Sprite3D.texture = $SubViewport.get_texture()
 	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
+	agent_rid = $NavigationAgent3d.get_rid()
 
 func _physics_process(_delta):
 	bullseye = $TargetPosition.get_global_position()
+	var next_loc = $NavigationAgent3d.get_next_location()
 	if walking:
 		if !red_light:
-		## TODO velocity here if navigating along a path
+			## TODO velocity here if navigating along a path
+			velocity = position.direction_to(next_loc) * walk_speed
+			$NavigationAgent3d.set_velocity(velocity)
+#			if !$NavigationAgent3d.is_target_reached():
 			move_and_slide()
 		else:
-			if player: 
-				print("red light")
+#			if player: 
+#				print("red light")
+			pass
 
 func get_appearance_from_global():
 	$SubViewport/Sprite2D.modulate = Global.character_modulate
@@ -180,9 +187,8 @@ func handle_action(action):
 			throw_nothing()
 	if action[0] == "walk":
 		walking = true
-		var dir_to_dest = position.direction_to(action[1])
-		velocity = dir_to_dest * walk_speed
-		
+		if $NavigationAgent3d.get_target_location() != action[1]:
+			$NavigationAgent3d.set_target_location(action[1])
 
 func add_to_food_contacts(floor_food):
 	if !food_contacts.has(floor_food):
@@ -256,3 +262,4 @@ func add_splatter(color):
 				break
 	current_splat_num += 1
 	current_splat_num = current_splat_num % 3
+
