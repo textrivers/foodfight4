@@ -131,6 +131,7 @@ func prompt_turns():
 				emit_signal("red_light")
 				turn_marker.show()
 				turn_marker.position.x = turn.position.x
+				turn_marker.position.y = turn.position.y + 0.6
 				turn_marker.position.z = turn.position.z
 				whose_turn = turn
 				display_character_options(turn.player)

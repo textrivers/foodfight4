@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://eorxh1mojqqi"]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Texture2D" uid="uid://b8jdsdq0fvksw" path="res://Assets/inv_white_dot_mask.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dwpaf0p05r1gy" path="res://Assets/white_dot.png" id="2"]
 [ext_resource type="Material" uid="uid://cjwanufrgvqyy" path="res://Materials/SplatSpriteParticlesMaterial.tres" id="3"]
-[ext_resource type="Script" path="res://Scenes/ParticleContainer.gd" id="4"]
+[ext_resource type="Script" path="res://Scenes/Cruft/ParticleContainer.gd" id="4"]
 [ext_resource type="Material" uid="uid://rvl0o8layvqt" path="res://Materials/ParticleContainerMatOverrideMaterial.tres" id="5"]
 [ext_resource type="FontFile" uid="uid://bvepmbfm1dytu" path="res://Assets/Fonts/TCM_____.TTF" id="6"]
 

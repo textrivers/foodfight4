@@ -1,7 +1,12 @@
-res://Scenes/Main.tscn
+res://Scenes/Level3D.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
+res://Themes/GUI_Default.tres
+res://Scenes/Main.tscn
 res://Scenes/TitleScreen.tscn
-res://Scenes/TitleScreen.gd
-res://Scenes/TitleScreen4.tscn
 res://Scenes/Character4.tscn
+res://Scenes/FloorTile3D.tscn
+res://Scenes/Character3D.gd
+res://Scenes/Level3D.gd
+res://Scenes/Food.tscn
+res://Scenes/SplatParticles.tscn

@@ -110,7 +110,7 @@ func _ready():
 	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
 
 func _physics_process(_delta):
-	bullseye = Vector3(position.x, 0.6, position.z)
+	bullseye = $TargetPosition.get_global_position()
 	if walking:
 		if !red_light:
 		## TODO velocity here if navigating along a path
@@ -203,9 +203,9 @@ func throw_food(targ):
 	new_vel = targ - start_pos
 	var diffXZ: Vector3 = Vector3(new_vel.x, 0, new_vel.z)
 	## set throw_apex higher for longer throws
-	throw_apex = throw_start_height + (diffXZ.length() * 0.1)
+	throw_apex = throw_start_height + abs(start_pos.y - targ.y) + (diffXZ.length() * 0.1)
 	var t = diffXZ.length() / throw_speed
-	t = t / 60 ## adjust this so it's in seconds, not frames
+	t = t / 60 ## seconds, not frames
 	new_vel = diffXZ.normalized() * throw_speed * 60
 	if t != 0:
 		var grav = -4 * (start_pos.y - (2 * throw_apex) + targ.y) / (t * t)

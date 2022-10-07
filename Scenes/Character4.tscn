@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ceq8u62gbl5kk"]
+[gd_scene load_steps=9 format=3 uid="uid://ceq8u62gbl5kk"]
 
 [ext_resource type="Script" path="res://Scenes/Character3D.gd" id="1_eppbd"]
 [ext_resource type="Script" path="res://Scenes/Splatter.gd" id="1_v8awd"]
 [ext_resource type="Texture2D" uid="uid://cg1uaudh18kep" path="res://Assets/CharacterSprites/Cho_Mask.png" id="2_2kdyf"]
 [ext_resource type="Texture2D" uid="uid://drstbks1fqtk" path="res://Assets/CharacterSprites/Cho_Halo.png" id="2_3vqfx"]
-[ext_resource type="Texture2D" uid="uid://xigictiy2fsb" path="res://Assets/splat_5.png" id="6_gbj0m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_0cw7d"]
 radius = 0.25
@@ -49,7 +48,6 @@ offset = Vector2(120, 120)
 [node name="Splatter1" type="Sprite2D" parent="SubViewport/CharacterSprite/Mask"]
 light_mask = 2
 material = SubResource("CanvasItemMaterial_1h7po")
-texture = ExtResource("6_gbj0m")
 centered = false
 offset = Vector2(80, 0)
 script = ExtResource("1_v8awd")
@@ -76,7 +74,7 @@ double_sided = false
 alpha_cut = 2
 
 [node name="TargetPosition" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 
 [connection signal="input_event" from="." to="." method="_on_Character3D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Character3D_mouse_entered"]
