@@ -80,7 +80,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 path_desired_distance = 0.1
 target_desired_distance = 0.1
 path_max_distance = 1.0
+avoidance_enabled = true
+radius = 0.25
+neighbor_distance = 10.0
 
 [connection signal="input_event" from="." to="." method="_on_Character3D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Character3D_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Character3D_mouse_exited"]
+[connection signal="navigation_finished" from="NavigationAgent3d" to="." method="_on_navigation_agent_3d_navigation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent3d" to="." method="_on_navigation_agent_3d_velocity_computed"]

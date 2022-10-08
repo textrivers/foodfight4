@@ -45,6 +45,7 @@ func _ready():
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
 	current_action.resize(3)
+	print(NavigationServer3D.get_maps().size())
 
 func build():
 	var tot = board_size.x * board_size.y

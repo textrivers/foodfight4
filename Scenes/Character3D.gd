@@ -119,8 +119,6 @@ func _physics_process(_delta):
 			## TODO velocity here if navigating along a path
 			velocity = position.direction_to(next_loc) * walk_speed
 			$NavigationAgent3d.set_velocity(velocity)
-#			if !$NavigationAgent3d.is_target_reached():
-			move_and_slide()
 		else:
 #			if player: 
 #				print("red light")
@@ -263,3 +261,9 @@ func add_splatter(color):
 	current_splat_num += 1
 	current_splat_num = current_splat_num % 3
 
+func _on_navigation_agent_3d_velocity_computed(safe_velocity):
+	velocity = safe_velocity
+	move_and_slide()
+
+func _on_navigation_agent_3d_navigation_finished():
+	walking = false

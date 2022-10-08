@@ -62,13 +62,22 @@ func _ready():
 		register_character(character)
 	current_action.resize(3)
 	## Nav setup
-	map_rid = NavigationServer3D.map_create()
-	for region in get_tree().get_nodes_in_group("map_region"):
-		var region_rid = region.get_region_rid()
-		NavigationServer3D.region_set_map(region_rid, map_rid)
-	for agent in get_tree().get_nodes_in_group("nav_agent"):
-		var agent_rid = agent.get_rid()
-		NavigationServer3D.agent_set_map(agent_rid, map_rid)
+#	var region_id = $MapBase.get_region_rid()
+#	var all_maps = NavigationServer3D.get_maps()
+#	print(all_maps.size())
+#	for map in all_maps:
+#		var map_regions = NavigationServer3D.map_get_regions(map)
+#		for region in map_regions:
+#			if region == region_id:
+#				NavigationServer3D.map_set_active(map, true)
+#				map_rid = map
+#				print("active map")
+#				break
+#		map_rid = all_maps[0]
+#		print("map[0]")
+#	for agent in get_tree().get_nodes_in_group("nav_agent"):
+#		var agent_rid = agent.get_rid()
+#		NavigationServer3D.agent_set_map(agent_rid, map_rid)
 
 func build():
 	var tot = board_size.x * board_size.y
@@ -202,6 +211,7 @@ func AI_action_select():
 			action_target.z = randi() % int(board_size.y)
 			current_action[1] = action_target
 		whose_turn.get_node("NavigationAgent3d").set_target_location(current_action[1])
+		await whose_turn.get_node("NavigationAgent3d").path_changed
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
@@ -343,7 +353,13 @@ func _on_Walk_pressed():
 func calculate_walk_duration():
 	var walk_dur: float
 #	var dist = whose_turn.position.distance_to(action_target)
-	var walk_dist = whose_turn.get_node("NavigationAgent3d").distance_to_target()
+	var walk_dist: float = 0.0
+	var walk_path = whose_turn.get_node("NavigationAgent3d").get_nav_path()
+	print(walk_path.size())
+	for point in walk_path.size() - 1:
+		if point == walk_path.size() - 1:
+			break
+		walk_dist += walk_path[point].distance_to(walk_path[point + 1])
 	walk_dur = walk_dist / whose_turn.walk_speed * 60
 	return walk_dur
 
@@ -364,7 +380,7 @@ func _on_Proceed_pressed():
 	if current_action[0] == "walk": ## player character calculates duration
 		current_action[1] = action_target
 		whose_turn.get_node("NavigationAgent3d").set_target_location(action_target)
-		print(NavigationServer3D.map_get_path(map_rid, whose_turn.global_position, action_target, false, 1))
+		await whose_turn.get_node("NavigationAgent3d").path_changed
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()

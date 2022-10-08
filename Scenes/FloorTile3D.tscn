@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dwf4e44ur7ioj" path="res://Assets/tile3d_black_rim.png" id="3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_754sp"]
-albedo_color = Color(0.819608, 0.819608, 0.819608, 1)
+albedo_color = Color(0.458824, 0.458824, 0.458824, 1)
 
 [sub_resource type="BoxShape3D" id="2"]
 size = Vector3(1, 0.06, 1)
