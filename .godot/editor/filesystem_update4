@@ -10,6 +10,9 @@ res://Scenes/SplatParticles.tscn
 res://Scenes/MapBase.tscn
 res://Scenes/Character4.tscn
 res://Scenes/Level4.tscn
-res://Scenes/Character3D.gd
-res://Scenes/Level3D.gd
-res://Scenes/Level3D.tscn
+res://Scenes/Food.gd
+res://Scenes/MapDQ1.tscn
+res://Scenes/WallTile3D.tscn
+res://Scenes/BananaCluster.tscn
+res://Scenes/ClusterOrange.tscn
+res://Scenes/ClusterBanana.tscn

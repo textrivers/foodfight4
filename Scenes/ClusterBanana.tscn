@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv0tqn7uunqws"]
+
+[ext_resource type="PackedScene" uid="uid://qdn304udsvig" path="res://Scenes/GoodBanana.tscn" id="1_usles"]
+
+[node name="ClusterBanana" type="Node3D"]
+
+[node name="GoodBanana" parent="." instance=ExtResource("1_usles")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="GoodBanana2" parent="." instance=ExtResource("1_usles")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+
+[node name="GoodBanana3" parent="." instance=ExtResource("1_usles")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.2, 0)
+
+[node name="GoodBanana4" parent="." instance=ExtResource("1_usles")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.1)
+
+[node name="GoodBanana5" parent="." instance=ExtResource("1_usles")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.2, 0)

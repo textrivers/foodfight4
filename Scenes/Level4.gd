@@ -3,7 +3,11 @@ extends Node3D
 @export var board_size: Vector2 = Vector2(5, 5)
 @export var tile_size: float = 1
 var tile = preload("res://Scenes/FloorTile3D.tscn")
-
+var food_palettes: Dictionary = {
+	"all_bananas": [preload("res://Scenes/ClusterBanana.tscn"), preload("res://Scenes/ClusterBanana.tscn")],
+	"all_oranges": [preload("res://Scenes/ClusterOrange.tscn"), preload("res://Scenes/ClusterOrange.tscn")],
+	"orange_you_glad": [preload("res://Scenes/ClusterOrange.tscn"), preload("res://Scenes/ClusterBanana.tscn")]
+}
 var characters: Array = []
 var turn_tracker: Dictionary = {}
 var whose_turn = null
@@ -44,6 +48,7 @@ func _ready():
 	cam_rig_rot_target = Vector2(cam_rig.rotation.y, cam_rig.rotation.x)
 	cam_rig_zoom_target = $CameraRig/Camera3D.position.z
 	#build()
+	place_objects()
 	## connect tile signals and checkerboard them
 	for new_tile in get_tree().get_nodes_in_group("tile"):
 		new_tile.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
@@ -61,23 +66,24 @@ func _ready():
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
 	current_action.resize(3)
-	## Nav setup
-#	var region_id = $MapBase.get_region_rid()
-#	var all_maps = NavigationServer3D.get_maps()
-#	print(all_maps.size())
-#	for map in all_maps:
-#		var map_regions = NavigationServer3D.map_get_regions(map)
-#		for region in map_regions:
-#			if region == region_id:
-#				NavigationServer3D.map_set_active(map, true)
-#				map_rid = map
-#				print("active map")
-#				break
-#		map_rid = all_maps[0]
-#		print("map[0]")
-#	for agent in get_tree().get_nodes_in_group("nav_agent"):
-#		var agent_rid = agent.get_rid()
-#		NavigationServer3D.agent_set_map(agent_rid, map_rid)
+
+func place_objects():
+	## place food
+	var all_tiles = get_tree().get_nodes_in_group("tile")
+	@warning_ignore(integer_division)
+	var food_count: int = ceili(all_tiles.size() / 5)
+	var food_arr: Array = []
+	for i in food_count:
+		var new_food_number = randi() % (all_tiles.size() - 1)
+		if !food_arr.has(new_food_number):
+			food_arr.append(new_food_number)
+	for j in food_arr:
+		var this_lvl_palette = food_palettes.keys()[randi() % food_palettes.keys().size()]
+		var new_food = food_palettes[this_lvl_palette][randi() % food_palettes[this_lvl_palette].size()]
+		var food_child = new_food.instantiate()
+		add_child(food_child)
+		food_child.global_position = all_tiles[j].global_position
+	## TODO place poems?
 
 func build():
 	var tot = board_size.x * board_size.y
@@ -355,12 +361,12 @@ func calculate_walk_duration():
 #	var dist = whose_turn.position.distance_to(action_target)
 	var walk_dist: float = 0.0
 	var walk_path = whose_turn.get_node("NavigationAgent3d").get_nav_path()
-	print(walk_path.size())
 	for point in walk_path.size() - 1:
 		if point == walk_path.size() - 1:
 			break
 		walk_dist += walk_path[point].distance_to(walk_path[point + 1])
 	walk_dur = walk_dist / whose_turn.walk_speed * 60
+	walk_dur = ceilf(walk_dur)
 	return walk_dur
 
 @warning_ignore(unused_parameter)

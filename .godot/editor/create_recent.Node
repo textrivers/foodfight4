@@ -1,5 +1,6 @@
-NavigationAgent3D
 Node3D
+CSGMesh3D
+NavigationAgent3D
 NavigationRegion3D
 Timer
 Sprite2D

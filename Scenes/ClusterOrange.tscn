@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6htb55l2cxgx"]
+
+[ext_resource type="PackedScene" uid="uid://c2dgjx3q1tpae" path="res://Scenes/GoodOrange.tscn" id="1_5wsef"]
+
+[node name="ClusterOrange" type="Node3D"]
+
+[node name="GoodOrange" parent="." instance=ExtResource("1_5wsef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="GoodOrange2" parent="." instance=ExtResource("1_5wsef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+
+[node name="GoodOrange3" parent="." instance=ExtResource("1_5wsef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.2, 0)
+
+[node name="GoodOrange4" parent="." instance=ExtResource("1_5wsef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.1)
+
+[node name="GoodOrange5" parent="." instance=ExtResource("1_5wsef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.2, 0)

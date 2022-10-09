@@ -30,7 +30,6 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 		if collided: 
 			var last_coll = get_last_slide_collision()
-			print("food collision")
 			for splat_col in splat_colors:
 				spawn_splatter_particles(last_coll.get_position(), splat_col)
 			if last_coll.get_collider().is_in_group("character"):
