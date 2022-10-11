@@ -81,7 +81,7 @@ path_desired_distance = 0.1
 target_desired_distance = 0.1
 path_max_distance = 1.0
 avoidance_enabled = true
-radius = 0.25
+radius = 0.1
 neighbor_distance = 10.0
 
 [connection signal="input_event" from="." to="." method="_on_Character3D_input_event"]

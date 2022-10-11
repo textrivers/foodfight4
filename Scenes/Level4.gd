@@ -34,6 +34,8 @@ var advancing: bool = true
 
 var map_rid
 
+var debug: bool = false
+
 signal red_light
 signal green_light
 signal GUI_action_taken
@@ -66,6 +68,7 @@ func _ready():
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
 	current_action.resize(3)
+	print("there are " + str(NavigationServer3D.get_maps().size()) + " maps")
 
 func place_objects():
 	## place food
@@ -149,6 +152,9 @@ func _on_HSlider_value_changed(value):
 	$GUI/Left/TurnDelayLabel.text = "Opponent turn delay: " + str(value)
 
 func _physics_process(_delta):
+	if Input.is_action_just_pressed("debug"):
+		debug = !debug
+		print("debug is " + str(debug))
 	advance_time()
 	prompt_turns()
 	translate_cam_rig()
@@ -218,6 +224,9 @@ func AI_action_select():
 			current_action[1] = action_target
 		whose_turn.get_node("NavigationAgent3d").set_target_location(current_action[1])
 		await whose_turn.get_node("NavigationAgent3d").path_changed
+		if debug:
+			display_debug_path()
+			await get_tree().create_timer(3.0).timeout
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
@@ -374,6 +383,19 @@ func on_action_target_selected(dest, _desc):
 	action_target = dest
 	_on_Proceed_pressed()
 
+func display_debug_path():
+	remove_debug_path()
+	var path = whose_turn.get_node("NavigationAgent3d").get_nav_path()
+	var sphere = load("res://Scenes/DebugSphere.tscn")
+	for point in path:
+		var new_sphere = sphere.instantiate()
+		add_child(new_sphere)
+		new_sphere.global_position = point
+
+func remove_debug_path():
+	for sphere in get_tree().get_nodes_in_group("debug"):
+		sphere.queue_free()
+	
 func _on_Proceed_pressed():
 	emit_signal("done_selecting_action_target")
 	if current_action[0] == "wait":
@@ -385,8 +407,13 @@ func _on_Proceed_pressed():
 		current_action[1] = action_target
 	if current_action[0] == "walk": ## player character calculates duration
 		current_action[1] = action_target
-		whose_turn.get_node("NavigationAgent3d").set_target_location(action_target)
-		await whose_turn.get_node("NavigationAgent3d").path_changed
+		var nav_agent = whose_turn.get_node("NavigationAgent3d")
+		nav_agent.set_target_location(action_target)
+		await nav_agent.path_changed
+		print("target reachable is " + str(nav_agent.is_target_reachable()))
+		if debug:
+			display_debug_path()
+			await get_tree().create_timer(3.0).timeout
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
