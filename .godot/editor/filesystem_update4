@@ -1,9 +1,9 @@
+res://Scenes/Main.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
 res://Themes/GUI_Default.tres
-res://Scenes/Level4.tscn
-res://Scenes/Level4.gd
-res://Scenes/Main.tscn
 res://Scenes/MapDQ1.tscn
 res://Scenes/DebugSphere.tscn
 res://Scenes/Character4.tscn
+res://Scenes/Level4.tscn
+res://Scenes/Level4.gd

@@ -413,7 +413,7 @@ func _on_Proceed_pressed():
 		print("target reachable is " + str(nav_agent.is_target_reachable()))
 		if debug:
 			display_debug_path()
-			await get_tree().create_timer(3.0).timeout
+			#await get_tree().create_timer(3.0).timeout
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()

@@ -79,7 +79,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 [node name="NavigationAgent3d" type="NavigationAgent3D" parent="." groups=["nav_agent"]]
 path_desired_distance = 0.1
 target_desired_distance = 0.1
-path_max_distance = 1.0
+path_max_distance = 0.5
 avoidance_enabled = true
 radius = 0.1
 neighbor_distance = 10.0
