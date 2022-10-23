@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://btjnl5wr4oc27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_te8wy"]
+
+[node name="CSGBox3D" type="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_te8wy")
