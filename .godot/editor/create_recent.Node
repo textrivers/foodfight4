@@ -1,9 +1,9 @@
+Node3D
+NavigationRegion3D
 MeshInstance3D
 GridMap
-NavigationRegion3D
 CSGBox3D
 CSGSphere3D
-Node3D
 CSGMesh3D
 NavigationAgent3D
 Timer
