@@ -68,7 +68,7 @@ func _ready():
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
 	current_action.resize(3)
-	print("there are " + str(NavigationServer3D.get_maps().size()) + " maps")
+	#print("there are " + str(NavigationServer3D.get_maps().size()) + " maps")
 
 func place_objects():
 	## place food
@@ -376,6 +376,7 @@ func calculate_walk_duration():
 		walk_dist += walk_path[point].distance_to(walk_path[point + 1])
 	walk_dur = walk_dist / whose_turn.walk_speed * 60
 	walk_dur = ceilf(walk_dur)
+	#walk_dur += 1 ## add one frame to allow character to reach destination
 	return walk_dur
 
 @warning_ignore(unused_parameter)
@@ -405,7 +406,7 @@ func _on_Proceed_pressed():
 			current_action[2] = (randi() % 101) + 25
 	if current_action[0] == "throw":
 		current_action[1] = action_target
-	if current_action[0] == "walk": ## player character calculates duration
+	if current_action[0] == "walk": 
 		current_action[1] = action_target
 		var nav_agent = whose_turn.get_node("NavigationAgent3d")
 		nav_agent.set_target_location(action_target)

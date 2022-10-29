@@ -5,7 +5,7 @@
 [ext_resource type="Theme" uid="uid://c840ow6okr33r" path="res://Themes/GUI_Default.tres" id="3_ybgpg"]
 [ext_resource type="PackedScene" uid="uid://dxdnc7jngsb0o" path="res://Scenes/EnviroIceCream.tscn" id="4_1xvgj"]
 [ext_resource type="PackedScene" uid="uid://ceq8u62gbl5kk" path="res://Scenes/Character4.tscn" id="5_fj7h1"]
-[ext_resource type="PackedScene" uid="uid://cxk1w1mqfwfjn" path="res://Scenes/MapDQ3.tscn" id="6_ui2c0"]
+[ext_resource type="PackedScene" uid="uid://cu8cq40i7724o" path="res://Scenes/MapDQ4.tscn" id="6_wa3ox"]
 
 [sub_resource type="StyleBoxFlat" id="9"]
 bg_color = Color(0.329412, 0.384314, 0.505882, 0.784314)
@@ -234,11 +234,17 @@ shadow_enabled = true
 [node name="Bill" parent="." instance=ExtResource("5_fj7h1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
+[node name="NavigationAgent3d" parent="Bill" index="4"]
+navigation_layers = 1
+
 [node name="You" parent="." instance=ExtResource("5_fj7h1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5)
 player = true
 
-[node name="NavigationRegion3D" parent="." instance=ExtResource("6_ui2c0")]
+[node name="NavigationAgent3d" parent="You" index="4"]
+navigation_layers = 1
+
+[node name="MapDQ4" parent="." instance=ExtResource("6_wa3ox")]
 
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Walk" to="." method="_on_Walk_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/PickUp" to="." method="_on_PickUp_pressed"]
@@ -247,3 +253,6 @@ player = true
 [connection signal="toggled" from="GUI/Right/PlayerOptions/HBoxContainer/CheckButton" to="." method="_on_CheckButton_toggled"]
 [connection signal="pressed" from="GUI/Right/ProceedCancel/Proceed" to="." method="_on_Proceed_pressed"]
 [connection signal="pressed" from="GUI/Right/ProceedCancel/Cancel" to="." method="_on_Cancel_pressed"]
+
+[editable path="Bill"]
+[editable path="You"]

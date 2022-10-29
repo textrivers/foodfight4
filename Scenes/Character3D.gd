@@ -118,7 +118,8 @@ func _physics_process(_delta):
 		if !red_light:
 			## TODO velocity here if navigating along a path
 			velocity = position.direction_to(next_loc) * walk_speed
-			$NavigationAgent3d.set_velocity(velocity)
+			#$NavigationAgent3d.set_velocity(velocity)
+			move_and_slide()
 		else:
 #			if player: 
 #				print("red light")
@@ -266,4 +267,5 @@ func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	move_and_slide()
 
 func _on_navigation_agent_3d_navigation_finished():
-	walking = false
+	pass
+	#walking = false
