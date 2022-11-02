@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ceq8u62gbl5kk"]
+[gd_scene load_steps=10 format=3 uid="uid://ceq8u62gbl5kk"]
 
 [ext_resource type="Script" path="res://Scenes/Character3D.gd" id="1_eppbd"]
 [ext_resource type="Script" path="res://Scenes/Splatter.gd" id="1_v8awd"]
@@ -16,7 +16,11 @@ blend_mode = 3
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1h7po"]
 
-[node name="Character4" type="CharacterBody3D" groups=["character", "selectable"]]
+[sub_resource type="SphereShape3D" id="SphereShape3D_8cybm"]
+radius = 5.0
+
+[node name="Character4" type="CharacterBody3D" groups=["character", "proximity", "selectable"]]
+visible = false
 collision_layer = 2
 script = ExtResource("1_eppbd")
 
@@ -85,8 +89,17 @@ avoidance_enabled = true
 radius = 0.1
 neighbor_distance = 10.0
 
+[node name="Area3D" type="Area3D" parent="." groups=["proximity"]]
+collision_mask = 15
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_8cybm")
+
 [connection signal="input_event" from="." to="." method="_on_Character3D_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_Character3D_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_Character3D_mouse_exited"]
 [connection signal="navigation_finished" from="NavigationAgent3d" to="." method="_on_navigation_agent_3d_navigation_finished"]
 [connection signal="velocity_computed" from="NavigationAgent3d" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

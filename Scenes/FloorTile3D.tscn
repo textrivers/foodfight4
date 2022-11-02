@@ -11,11 +11,13 @@ albedo_color = Color(0.458824, 0.458824, 0.458824, 1)
 size = Vector3(1, 0.06, 1)
 
 [node name="FloorTile3D" type="MeshInstance3D" groups=["selectable", "tile"]]
+visible = false
 material_override = SubResource("StandardMaterial3D_754sp")
 mesh = ExtResource("1")
 script = ExtResource("2")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="." groups=["proximity"]]
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("2")

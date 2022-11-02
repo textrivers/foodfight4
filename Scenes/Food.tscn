@@ -17,8 +17,9 @@ animations = [{
 "speed": 20.0
 }]
 
-[node name="Food" type="CharacterBody3D" groups=["throwable"]]
-collision_layer = 32768
+[node name="Food" type="CharacterBody3D" groups=["proximity", "throwable"]]
+visible = false
+collision_layer = 32776
 collision_mask = 7
 script = ExtResource("2")
 splat_colors = [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1)]

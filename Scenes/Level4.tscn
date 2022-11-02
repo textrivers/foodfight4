@@ -39,6 +39,7 @@ size = 10.0
 [node name="Panel" type="Panel" parent="."]
 offset_right = 250.0
 offset_bottom = 229.0
+mouse_filter = 2
 theme = SubResource("10")
 
 [node name="GUI" type="HBoxContainer" parent="."]

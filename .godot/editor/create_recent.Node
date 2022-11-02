@@ -1,3 +1,5 @@
+CollisionShape3D
+Area3D
 MeshInstance3D
 Node3D
 NavigationRegion3D
@@ -15,7 +17,6 @@ Sprite3D
 PointLight2D
 Node2D
 SubViewport
-CollisionShape3D
 CharacterBody3D
 Node
 Camera3D
