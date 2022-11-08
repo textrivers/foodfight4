@@ -1,13 +1,6 @@
+res://Scenes/Character3D.gd
 res://Scenes/Character4.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
 res://Themes/GUI_Default.tres
-res://Scenes/FloorTile3D.tscn
-res://Scenes/Character3D.gd
-res://Scenes/Level4.tscn
-res://Scenes/MapDQ4.tscn
-res://Scenes/DebugSphere.tscn
-res://Scenes/WallTile3D2.tscn
-res://Scenes/MapDQ3.tscn
-res://Scenes/WallTile3D.tscn
-res://Scenes/Food.tscn
+res://Scenes/FloorSplat.tscn

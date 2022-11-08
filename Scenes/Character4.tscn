@@ -101,5 +101,6 @@ shape = SubResource("SphereShape3D_8cybm")
 [connection signal="mouse_exited" from="." to="." method="_on_Character3D_mouse_exited"]
 [connection signal="navigation_finished" from="NavigationAgent3d" to="." method="_on_navigation_agent_3d_navigation_finished"]
 [connection signal="velocity_computed" from="NavigationAgent3d" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

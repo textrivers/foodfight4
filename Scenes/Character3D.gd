@@ -297,3 +297,7 @@ func _on_area_3d_body_exited(body):
 			body.visible = false
 			##TODO queue_free this body (enemy, food, whatever), needs spawn-in logic on body entered for tiles
 			##body.call_deferred("queue_free")
+
+func _on_area_3d_area_exited(area):
+	if player && area.is_in_group("proximity"):
+		area.get_parent().call_deferred("queue_free")
