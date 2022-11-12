@@ -89,7 +89,7 @@ avoidance_enabled = true
 radius = 0.1
 neighbor_distance = 10.0
 
-[node name="Area3D" type="Area3D" parent="." groups=["proximity"]]
+[node name="Area3D" type="Area3D" parent="."]
 collision_mask = 15
 input_ray_pickable = false
 
