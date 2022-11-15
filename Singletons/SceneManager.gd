@@ -17,7 +17,7 @@ func _ready():
 
 func goto_scene(current_scene, path):
 	emit_signal("fade_to_black", true)
-	await get_node("/root/Main/TransitionSquares").squares_finished
+	await transition_squares.squares_finished
 	ResourceLoader.load_threaded_request(path)
 	var load_time = Time.get_ticks_msec()
 	while Time.get_ticks_msec() - load_time < max_time: 
