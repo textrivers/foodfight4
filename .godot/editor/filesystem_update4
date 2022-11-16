@@ -1,12 +1,13 @@
-res://Scenes/Level4.tscn
+res://Scenes/WallTile3D2.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
 res://Themes/GUI_Default.tres
 res://Themes/ThumbsTheme.tres
+res://Scenes/Level4.tscn
 res://Scenes/Character4.tscn
 res://Scenes/MapDQ4.tscn
-res://Scenes/WallTile3D2.tscn
 res://Scenes/CharacterSelection.tscn
 res://Scenes/TitleScreen.tscn
 res://Scenes/Main.tscn
-res://Scenes/TitleScreen.gd
+res://Singletons/SceneManager.gd
+res://Scenes/TransitionSquares.gd

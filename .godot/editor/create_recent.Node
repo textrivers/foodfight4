@@ -1,3 +1,4 @@
+Sprite3D
 PointLight2D
 Sprite2D
 Node2D
@@ -16,7 +17,6 @@ Timer
 GPUParticles3D
 CanvasGroup
 Marker3D
-Sprite3D
 SubViewport
 CharacterBody3D
 Node

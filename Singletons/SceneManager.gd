@@ -27,9 +27,10 @@ func goto_scene(current_scene, path):
 #		transition_squares.get_node("SquaresContainer/Sprite50/AnimatedSprite2").frame = int(progress[0] * 12)
 #		transition_squares.get_node("SquaresContainer/Sprite28/AnimatedSprite2D").frame = int(progress[0] * 8)
 		if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED: #Load_complete
+			print("done loading")
 			var resource = ResourceLoader.load_threaded_get(path)
 			get_tree().get_root().get_node("Main").call_deferred("add_child", resource.instantiate())
-			current_scene.queue_free()
+			current_scene.call_deferred("queue_free")
 			break
 		## old stuff from Godot 3
 #		if err == ERR_FILE_EOF: #Load complete
@@ -50,8 +51,11 @@ func goto_scene(current_scene, path):
 		#await get_tree().idle_frame
 	
 	await get_tree().create_timer(0.1).timeout
+	print("done loading 2")
 #	var new_scene = load(path).instantiate()
 #	current_scene.get_parent().add_child(new_scene)
 #	current_scene.get_parent().remove_child(current_scene)
 	emit_signal("fade_to_black", false)
+	print("done loading 3")
+	
 

@@ -11,12 +11,6 @@ func _ready():
 	for square in $SquaresContainer.get_children():
 		square.scale = Vector2(float(!fade_to_black), float(!fade_to_black))
 
-func _process(_delta):
-#	if Input.is_action_just_pressed("fade"):
-#		if can_fade:
-#			do_fade(fade_to_black)
-	pass
-
 func do_fade(to_black):
 	fade_to_black = to_black
 	if can_fade:
