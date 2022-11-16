@@ -1,15 +1,58 @@
-[gd_scene load_steps=4 format=3 uid="uid://c37k4vwbmc4ud"]
+[gd_scene load_steps=9 format=3 uid="uid://c37k4vwbmc4ud"]
 
 [ext_resource type="Texture2D" uid="uid://c4wjrvn6q54bv" path="res://Assets/Screens/TitleScreen01.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dg8727lhoue13" path="res://Assets/Screens/pressanykey01.png" id="2"]
 [ext_resource type="Script" path="res://Scenes/TitleScreen.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://dtgrfhpc2s1i4" path="res://Assets/PanoramaSky/A_pano_1.png" id="3_p5dlm"]
+[ext_resource type="Texture2D" uid="uid://temjuvqe556" path="res://Assets/PanoramaSky/A_pano_2.png" id="4_kw41l"]
+[ext_resource type="Texture2D" uid="uid://dshm56h0odu5g" path="res://Assets/PanoramaSky/A_pano_3.png" id="5_48le4"]
+
+[sub_resource type="Gradient" id="Gradient_0tks5"]
+interpolation_mode = 2
+colors = PackedColorArray(0.262745, 0.0980392, 0.466667, 1, 0.0509804, 0.392157, 0.482353, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wj8qd"]
+gradient = SubResource("Gradient_0tks5")
+width = 1024
+height = 600
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 1)
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("3")
 
 [node name="Screen" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1")
 centered = false
+
+[node name="Screen2" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_wj8qd")
+centered = false
+
+[node name="IceCreamLights" type="Node2D" parent="."]
+
+[node name="IceCreams1" type="PointLight2D" parent="IceCreamLights"]
+clip_children = true
+energy = 4.2
+texture = ExtResource("3_p5dlm")
+offset = Vector2(-492, 300)
+texture_scale = 0.5
+
+[node name="IceCreams2" type="PointLight2D" parent="IceCreamLights"]
+clip_children = true
+energy = 3.5
+texture = ExtResource("4_kw41l")
+offset = Vector2(532, 300)
+texture_scale = 0.5
+
+[node name="IceCreams3" type="PointLight2D" parent="IceCreamLights"]
+clip_children = true
+energy = 4.2
+texture = ExtResource("5_48le4")
+offset = Vector2(1556, 300)
+texture_scale = 0.5
 
 [node name="AnyKey" type="Sprite2D" parent="."]
 texture = ExtResource("2")

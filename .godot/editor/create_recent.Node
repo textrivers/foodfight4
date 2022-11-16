@@ -1,3 +1,6 @@
+PointLight2D
+Sprite2D
+Node2D
 HBoxContainer
 CollisionShape3D
 Area3D
@@ -10,13 +13,10 @@ CSGSphere3D
 CSGMesh3D
 NavigationAgent3D
 Timer
-Sprite2D
 GPUParticles3D
 CanvasGroup
 Marker3D
 Sprite3D
-PointLight2D
-Node2D
 SubViewport
 CharacterBody3D
 Node
