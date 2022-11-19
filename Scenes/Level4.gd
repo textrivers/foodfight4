@@ -185,6 +185,8 @@ func prompt_turns():
 				else:
 					turn.set_deferred("walking", false)
 				await self.GUI_action_taken
+				if whose_turn.player == false:
+					print(current_action[0])
 				resolve_turn()
 
 func AI_action_select():
@@ -226,7 +228,6 @@ func AI_action_select():
 		await whose_turn.get_node("NavigationAgent3d").path_changed
 		if debug:
 			display_debug_path()
-			await get_tree().create_timer(3.0).timeout
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
