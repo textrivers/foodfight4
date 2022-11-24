@@ -14,6 +14,7 @@ script = ExtResource("2")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Area3D" type="Area3D" parent="." groups=["proximity"]]
+collision_mask = 17
 input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

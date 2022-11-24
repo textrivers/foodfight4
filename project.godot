@@ -75,6 +75,13 @@ debug={
 ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Terrain"
+3d_physics/layer_2="Player"
+3d_physics/layer_4="Food"
+3d_physics/layer_5="Player Proximity"
+
 [physics]
 
 common/enable_pause_aware_picking=true

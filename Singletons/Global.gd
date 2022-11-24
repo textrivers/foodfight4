@@ -69,6 +69,7 @@ var light_mask_lookup: Dictionary = {
 	"res://Assets/CharacterSprites/Cho_Horns.png" : "res://Assets/CharacterSprites/Cho_Mask.png",
 	"res://Assets/CharacterSprites/Cho_HaloHorns.png" : "res://Assets/CharacterSprites/Cho_Mask.png" 
 }
+var character_proximity_radius: float = 5.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
