@@ -34,21 +34,21 @@ centered = false
 [node name="IceCreamLights" type="Node2D" parent="."]
 
 [node name="IceCreams1" type="PointLight2D" parent="IceCreamLights"]
-clip_children = true
+clip_children = 1
 energy = 4.2
 texture = ExtResource("3_p5dlm")
 offset = Vector2(-492, 300)
 texture_scale = 0.5
 
 [node name="IceCreams2" type="PointLight2D" parent="IceCreamLights"]
-clip_children = true
+clip_children = 1
 energy = 3.5
 texture = ExtResource("4_kw41l")
 offset = Vector2(532, 300)
 texture_scale = 0.5
 
 [node name="IceCreams3" type="PointLight2D" parent="IceCreamLights"]
-clip_children = true
+clip_children = 1
 energy = 4.2
 texture = ExtResource("5_48le4")
 offset = Vector2(1556, 300)

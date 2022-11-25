@@ -58,17 +58,37 @@ func _ready():
 		self.connect("done_selecting_action_target",Callable(new_tile,"on_target_unselecting"))
 		var new_mat = StandardMaterial3D.new()
 		var new_tile_color: Color
-		if (int(new_tile.global_position.x) + int(new_tile.global_position.z)) % 2 == 0:
+		if (int(new_tile.position.x) + int(new_tile.position.z)) % 2 == 0:
 			new_tile_color = Color("#d1d1d1")
 		else: 
 			new_tile_color = Color("#719dff")
 		new_mat.albedo_color = new_tile_color
 		new_tile.set_material_override(new_mat)
 		new_tile.revert_color = new_tile_color
+	## connect wall signals
+	for new_wall in get_tree().get_nodes_in_group("wall"):
+		new_wall.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
+		self.connect("selecting_action_target",Callable(new_wall,"on_target_selecting"))
+		self.connect("done_selecting_action_target",Callable(new_wall,"on_target_unselecting"))
+		var new_mat = StandardMaterial3D.new()
+		var new_wall_color = Color(0.8, 0.8, 0.8, 0.8)
+#		if new_wall.is_in_group("debug_wall"):
+#			print(str(new_wall.name) + " = " + str((roundi(new_wall.position.x) + roundi(new_wall.position.y) + roundi(new_wall.position.z + 0.5))))
+#		if (roundi(new_wall.position.x) + roundi(new_wall.position.y) + roundi(new_wall.position.z + 0.5)) % 2 == 0:
+#			new_wall_color = Color("#d1d1d1")
+#		else: 
+#			new_wall_color = Color("#719dff")
+#		new_wall_color.a = 0.8
+		new_mat.albedo_color = new_wall_color
+		new_mat.distance_fade_mode = BaseMaterial3D.DISTANCE_FADE_PIXEL_ALPHA
+		new_mat.distance_fade_min_distance = 0.5
+		new_mat.distance_fade_max_distance = 8.0
+		new_wall.set_material_override(new_mat)
+		new_wall.revert_color = new_wall_color
+	## register characters
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
 	current_action.resize(3)
-	#print("there are " + str(NavigationServer3D.get_maps().size()) + " maps")
 
 func place_objects():
 	## place food
@@ -199,7 +219,17 @@ func AI_action_select():
 		current_action = AI_actions[3].duplicate(false) ## walk somewhere
 	else:
 		if whose_turn.has_node("MyFood"):
-			current_action = AI_actions[2].duplicate(false) ## throw
+			for i in get_tree().get_nodes_in_group("character"):
+				if i.player:
+					var ray_cast = whose_turn.get_node("RayCast3D")
+					ray_cast.target_position = i.position
+					if ray_cast.is_colliding():
+						print(ray_cast.get_collider())
+						if ray_cast.get_collider() == i:
+							current_action = AI_actions[2].duplicate(false) ## throw
+						else:
+							current_action = AI_actions[3].duplicate(false) ## walk
+					break
 		else:
 			if whose_turn.food_contacts.size() > 0:
 				current_action = AI_actions[1].duplicate(false) ## pick up
@@ -216,7 +246,11 @@ func AI_action_select():
 		var throw_target = targets[randi() % targets.size()]
 		current_action[1] = throw_target.bullseye
 	if current_action[0] == "walk":
-		if get_tree().get_nodes_in_group("throwable").size() > 0:
+		if whose_turn.has_node("MyFood"):
+			for i in get_tree().get_nodes_in_group("character"):
+				if i.player:
+					current_action[1] = i.position
+		elif get_tree().get_nodes_in_group("throwable").size() > 0:
 			action_target = find_closest_food()
 			current_action[1] = action_target
 		else:

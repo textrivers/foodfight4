@@ -44,7 +44,7 @@ centered = false
 light_mask = 2
 
 [node name="Mask" type="Sprite2D" parent="SubViewport/CharacterSprite"]
-clip_children = true
+clip_children = 1
 light_mask = 2
 material = SubResource("CanvasItemMaterial_hsahn")
 texture = ExtResource("2_2kdyf")
@@ -89,6 +89,8 @@ navigation_layers = 0
 avoidance_enabled = true
 radius = 0.1
 neighbor_distance = 10.0
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 16

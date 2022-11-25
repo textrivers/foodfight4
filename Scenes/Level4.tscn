@@ -247,6 +247,9 @@ navigation_layers = 1
 
 [node name="MapDQ4" parent="." instance=ExtResource("6_wa3ox")]
 
+[node name="WallTileFade" parent="MapDQ4/Room1" index="24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, -0.51)
+
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Walk" to="." method="_on_Walk_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/PickUp" to="." method="_on_PickUp_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Throw" to="." method="_on_Throw_pressed"]
@@ -257,3 +260,4 @@ navigation_layers = 1
 
 [editable path="Bill"]
 [editable path="You"]
+[editable path="MapDQ4"]

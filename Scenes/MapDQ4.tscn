@@ -1,12 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu8cq40i7724o"]
+[gd_scene load_steps=4 format=3 uid="uid://cu8cq40i7724o"]
 
 [ext_resource type="PackedScene" uid="uid://d1j5t2fieeagr" path="res://Scenes/FloorTile3D.tscn" id="1_fequm"]
 [ext_resource type="PackedScene" uid="uid://bbbohaepesp4j" path="res://Scenes/WallTile3D2.tscn" id="2_144js"]
-[ext_resource type="Texture2D" uid="uid://qxduolmdt6n0" path="res://Assets/FoodSprites/bettericecreamcone/0.PNG" id="3_4hndk"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1nrgp"]
-vertices = PackedVector3Array(24.295, 0.07, -11.6, 24.495, 0.07, -11.8, 24.495, 0.07, -12.1, 23.895, 0.07, -12.1, 9.295, 0.07, 1.4, 9.495, 0.07, 1.2, 9.495, 0.07, 0.900002, 8.895, 0.07, 0.900002, 39.295, 0.07, -24.6, 39.495, 0.07, -24.8, 39.495, 0.07, -25.1, 38.895, 0.07, -25.1, 15.695, 0.07, -8.9, 15.895, 0.07, -8.7, 16.195, 0.07, -8.7, 16.395, 0.07, -8.9, 17.495, 0.07, -10.2, 17.295, 0.07, -10.4, 0.695, 0.07, 4.1, 0.895, 0.07, 4.3, 1.195, 0.07, 4.3, 1.395, 0.07, 4.1, 2.495, 0.07, 2.8, 2.295, 0.07, 2.6, 30.695, 0.07, -21.9, 30.895, 0.07, -21.7, 31.195, 0.07, -21.7, 31.395, 0.07, -21.9, 32.495, 0.07, -23.2, 32.295, 0.07, -23.4, 25.795, 0.07, -11.6, 25.795, 0.07, -10.4, 26.795, 0.07, -7.7, 27.195, 0.07, -7.6, 27.495, 0.07, -7.9, 28.195, 0.07, -12.1, 32.795, 0.07, -28.2, 33.295, 0.07, -27.6, 33.495, 0.07, -27.8, 38.595, 0.07, -28.2, 32.795, 0.07, -28.2, 33.495, 0.07, -27.8, 39.595, 0.07, -27.8, 32.895, 0.07, -26.3, 33.195, 0.07, -26.3, 33.295, 0.07, -27.6, 32.795, 0.07, -28.2, 33.395, 0.07, -26.1, 33.195, 0.07, -26.3, 32.895, 0.07, -26.3, 33.595, 0.07, -24.8, 33.795, 0.07, -24.6, 18.895, 0.07, -1.6, 18.895, 0.07, -0.9, 23.095, 0.07, -0.9, 24.895, 0.07, -12.4, 24.495, 0.07, -12.1, 24.495, 0.07, -11.8, 25.595, 0.07, -11.8, 25.395, 0.07, -12.1, 25.195, 0.07, -12.3, 9.895, 0.07, 0.600002, 9.495, 0.07, 0.900002, 9.495, 0.07, 1.2, 10.595, 0.07, 1.2, 10.395, 0.07, 0.900002, 10.195, 0.07, 0.700001, 39.895, 0.07, -25.4, 39.495, 0.07, -25.1, 39.495, 0.07, -24.8, 40.595, 0.07, -24.8, 40.395, 0.07, -25.1, 40.195, 0.07, -25.3, 33.695, 0.07, -15.1, 33.695, 0.07, -14.8, 38.095, 0.07, -15.7, 38.295, 0.07, -15.9, 38.395, 0.07, -16.2, 36.595, 0.07, -16.2, 18.695, 0.07, -2.1, 18.695, 0.07, -1.8, 23.095, 0.07, -2.7, 23.295, 0.07, -2.9, 23.395, 0.07, -3.2, 21.595, 0.07, -3.2, 3.695, 0.07, 10.9, 3.695, 0.07, 11.2, 8.095, 0.07, 10.3, 8.295, 0.07, 10.1, 8.395, 0.07, 9.8, 6.595, 0.07, 9.8, 17.295, 0.07, -11.6, 17.495, 0.07, -11.8, 17.695, 0.07, -13.1, 14.895, 0.07, -13.1, 2.295, 0.07, 1.4, 2.495, 0.07, 1.2, 2.695, 0.07, -0.1, -0.105, 0.07, -0.1, 32.295, 0.07, -24.6, 32.495, 0.07, -24.8, 32.695, 0.07, -26.1, 29.895, 0.07, -26.1, 17.895, 0.07, -13.3, 17.695, 0.07, -13.1, 17.495, 0.07, -11.8, 18.595, 0.07, -11.8, 2.895, 0.07, -0.299999, 2.695, 0.07, -0.1, 2.495, 0.07, 1.2, 3.595, 0.07, 1.2, 32.895, 0.07, -26.3, 32.695, 0.07, -26.1, 32.495, 0.07, -24.8, 33.595, 0.07, -24.8, 33.895, 0.07, -18.1, 35.295, 0.07, -17.6, 35.495, 0.07, -17.8, 3.895, 0.07, 7.9, 5.295, 0.07, 8.4, 5.495, 0.07, 8.2, 18.895, 0.07, -5.1, 20.295, 0.07, -4.5, 20.495, 0.07, -4.7, 39.495, 0.07, -30.8, 45.195, 0.07, -30.8, 45.195, 0.07, -31.2, 38.795, 0.07, -31.2, 24.295, 0.07, -15.4, 23.795, 0.07, -15.5, 23.595, 0.07, -15.3, 24.595, 0.07, -14.8, 24.495, 0.07, -15.2, 3.695, 0.07, 11.2, 3.695, 0.07, 10.9, 1.495, 0.07, 10.8, 0.795, 0.07, 11.2, 24.295, 0.07, -10.4, 24.295, 0.07, -11.6, 23.895, 0.07, -12.1, 23.895, 0.07, -7.9, 9.295, 0.07, 2.6, 9.295, 0.07, 1.4, 8.895, 0.07, 0.900002, 8.895, 0.07, 5.1, 39.295, 0.07, -23.4, 39.295, 0.07, -24.6, 38.895, 0.07, -25.1, 38.895, 0.07, -20.9, 17.895, 0.07, -13.3, 18.595, 0.07, -11.8, 18.795, 0.07, -11.6, 18.395, 0.07, -13.1, 18.195, 0.07, -13.3, 2.895, 0.07, -0.299999, 3.595, 0.07, 1.2, 3.795, 0.07, 1.4, 3.395, 0.07, -0.1, 3.195, 0.07, -0.299999, 33.795, 0.07, -24.6, 34.195, 0.07, -26.1, 33.395, 0.07, -26.1, 35.295, 0.07, -16.4, 35.295, 0.07, -17.6, 33.895, 0.07, -18.1, 33.895, 0.07, -15.3, 23.695, 0.07, -2.9, 26.595, 0.07, -3.2, 23.395, 0.07, -3.2, 23.295, 0.07, -2.9, 35.495, 0.07, -16.2, 35.295, 0.07, -16.4, 33.895, 0.07, -15.3, 35.495, 0.07, -16.2, 33.895, 0.07, -15.3, 33.695, 0.07, -15.1, 36.595, 0.07, -16.2, 20.295, 0.07, -3.4, 20.295, 0.07, -4.5, 18.895, 0.07, -5.1, 18.895, 0.07, -2.3, 30.795, 0.07, -17.6, 30.795, 0.07, -14.8, 31.295, 0.07, -15.4, 20.495, 0.07, -3.2, 20.295, 0.07, -3.4, 18.895, 0.07, -2.3, 20.495, 0.07, -3.2, 18.895, 0.07, -2.3, 18.695, 0.07, -2.1, 21.595, 0.07, -3.2, 5.295, 0.07, 9.6, 5.295, 0.07, 8.4, 3.895, 0.07, 7.9, 3.895, 0.07, 10.7, 30.795, 0.07, -14.8, 31.495, 0.07, -15.2, 31.295, 0.07, -15.4, 5.495, 0.07, 9.8, 5.295, 0.07, 9.6, 3.895, 0.07, 10.7, 5.495, 0.07, 9.8, 3.895, 0.07, 10.7, 3.695, 0.07, 10.9, 6.595, 0.07, 9.8, 10.795, 0.07, 1.4, 10.795, 0.07, 2.6, 11.795, 0.07, 5.3, 12.195, 0.07, 5.4, 12.495, 0.07, 5.1, 13.195, 0.07, 0.900002, 24.495, 0.07, -10.2, 24.295, 0.07, -10.4, 23.895, 0.07, -7.9, 24.295, 0.07, -17.6, 24.495, 0.07, -17.8, 23.795, 0.07, -18.2, 9.495, 0.07, 2.8, 9.295, 0.07, 2.6, 8.895, 0.07, 5.1, 40.195, 0.07, -25.3, 40.295, 0.07, -28.2, 39.795, 0.07, -27.6, 39.895, 0.07, -25.4, 39.495, 0.07, -23.2, 39.295, 0.07, -23.4, 38.895, 0.07, -20.9, 38.095, 0.07, -18.1, 33.895, 0.07, -18.1, 35.495, 0.07, -17.8, 36.595, 0.07, -17.8, 9.495, 0.07, -2.2, 9.595, 0.07, -1.8, 9.795, 0.07, -1.6, 10.295, 0.07, -2.2, 38.095, 0.07, -18.1, 36.595, 0.07, -17.8, 36.795, 0.07, -17.6, 38.095, 0.07, -16.7, 38.095, 0.07, -18.1, 36.795, 0.07, -17.6, 36.795, 0.07, -16.4, 39.795, 0.07, -27.6, 40.295, 0.07, -28.2, 39.495, 0.07, -28.2, 39.595, 0.07, -27.8, 38.095, 0.07, -16.7, 36.795, 0.07, -16.4, 36.595, 0.07, -16.2, 38.395, 0.07, -16.2, 10.195, 0.07, 0.700001, 10.295, 0.07, -2.2, 9.795, 0.07, -1.6, 9.895, 0.07, 0.600002, 8.095, 0.07, 7.9, 3.895, 0.07, 7.9, 5.495, 0.07, 8.2, 6.595, 0.07, 8.2, 9.295, 0.07, -2.4, 8.795, 0.07, -2.4, 8.595, 0.07, -2.2, 9.595, 0.07, -1.8, 9.495, 0.07, -2.2, 8.095, 0.07, 7.9, 6.595, 0.07, 8.2, 6.795, 0.07, 8.4, 8.095, 0.07, 9.3, 8.095, 0.07, 7.9, 6.795, 0.07, 8.4, 6.795, 0.07, 9.6, 39.595, 0.07, -27.8, 39.495, 0.07, -28.2, 39.295, 0.07, -28.4, 38.795, 0.07, -28.4, 38.595, 0.07, -28.2, 8.095, 0.07, 9.3, 6.795, 0.07, 9.6, 6.595, 0.07, 9.8, 8.395, 0.07, 9.8, 18.895, 0.07, -1.6, 23.095, 0.07, -0.9, 23.095, 0.07, -2.7, 18.695, 0.07, -1.8, 23.095, 0.07, -5.1, 18.895, 0.07, -5.1, 20.495, 0.07, -4.7, 21.595, 0.07, -4.7, 24.795, 0.07, -14.6, 24.895, 0.07, -12.4, 25.195, 0.07, -12.3, 25.295, 0.07, -15.2, 23.095, 0.07, -5.1, 21.595, 0.07, -4.7, 21.795, 0.07, -4.5, 23.095, 0.07, -3.7, 23.095, 0.07, -5.1, 21.795, 0.07, -4.5, 21.795, 0.07, -3.4, 23.595, 0.07, -15.3, 17.795, 0.07, -15.3, 18.495, 0.07, -14.8, 24.595, 0.07, -14.8, 23.095, 0.07, -3.7, 21.795, 0.07, -3.4, 21.595, 0.07, -3.2, 23.395, 0.07, -3.2, 0.795, 0.07, 11.2, 1.495, 0.07, 10.8, 1.295, 0.07, 10.6, 39.295, 0.07, -30.6, 38.795, 0.07, -31.2, 38.795, 0.07, -28.4, 39.295, 0.07, -28.4, 39.295, 0.07, -30.6, 39.495, 0.07, -30.8, 38.795, 0.07, -31.2, 30.795, 0.07, -18.4, 30.595, 0.07, -18.2, 30.595, 0.07, -17.8, 30.795, 0.07, -17.6, 25.595, 0.07, -10.2, 24.495, 0.07, -10.2, 23.895, 0.07, -7.9, 26.595, 0.07, -7.9, 27.295, 0.07, -2.7, 26.795, 0.07, -3.4, 26.595, 0.07, -3.2, 25.795, 0.07, -10.4, 25.595, 0.07, -10.2, 26.595, 0.07, -7.9, 26.795, 0.07, -7.7, 10.595, 0.07, 2.8, 9.495, 0.07, 2.8, 8.895, 0.07, 5.1, 11.595, 0.07, 5.1, 1.295, 0.07, 10.6, 1.195, 0.07, 4.3, 0.895, 0.07, 4.3, 0.795, 0.07, 11.2, 10.795, 0.07, 2.6, 10.595, 0.07, 2.8, 11.595, 0.07, 5.1, 11.795, 0.07, 5.3, 40.595, 0.07, -23.2, 39.495, 0.07, -23.2, 38.895, 0.07, -20.9, 41.595, 0.07, -20.9, 27.195, 0.07, -7.6, 26.795, 0.07, -7.7, 26.795, 0.07, -3.4, 27.295, 0.07, -2.7, 40.795, 0.07, -23.4, 40.595, 0.07, -23.2, 41.595, 0.07, -20.9, 41.795, 0.07, -20.7, 23.795, 0.07, -15.5, 24.295, 0.07, -15.4, 24.295, 0.07, -17.6, 23.795, 0.07, -18.2, 24.795, 0.07, -14.6, 25.295, 0.07, -15.2, 24.495, 0.07, -15.2, 24.595, 0.07, -14.8, 3.895, 0.07, 11.4, 8.095, 0.07, 12.1, 8.095, 0.07, 10.3, 3.695, 0.07, 11.2, 38.295, 0.07, -15.9, 42.295, 0.07, -15.8, 41.595, 0.07, -16.2, 38.395, 0.07, -16.2, 42.295, 0.07, -15.8, 41.795, 0.07, -16.4, 41.595, 0.07, -16.2, 9.295, 0.07, -4.5, 9.495, 0.07, -4.7, 8.795, 0.07, -5.2, 31.295, 0.07, -15.4, 31.195, 0.07, -21.7, 30.895, 0.07, -21.7, 30.795, 0.07, -18.4, 30.795, 0.07, -17.6, 18.695, 0.07, -1.8, 18.695, 0.07, -2.1, 16.495, 0.07, -2.2, 15.795, 0.07, -1.7, 16.295, 0.07, -2.4, 16.195, 0.07, -8.7, 15.895, 0.07, -8.7, 15.795, 0.07, -5.4, 15.795, 0.07, -4.6, 9.295, 0.07, -4.5, 8.795, 0.07, -5.2, 8.795, 0.07, -2.4, 9.295, 0.07, -2.4, 23.695, 0.07, -2.9, 23.795, 0.07, -2.7, 27.295, 0.07, -2.7, 26.595, 0.07, -3.2, 17.295, 0.07, -10.4, 17.295, 0.07, -11.6, 14.895, 0.07, -13.1, 14.895, 0.07, -8.9, 15.695, 0.07, -8.9, 24.495, 0.07, -17.8, 30.595, 0.07, -17.8, 30.595, 0.07, -18.2, 23.795, 0.07, -18.2, 11.795, 0.07, 9.6, 12.295, 0.07, 10.2, 12.195, 0.07, 5.4, 11.795, 0.07, 5.3, 15.595, 0.07, -4.8, 15.795, 0.07, -4.6, 15.795, 0.07, -5.4, 15.595, 0.07, -5.2, 40.795, 0.07, -24.6, 43.195, 0.07, -25.1, 40.395, 0.07, -25.1, 40.595, 0.07, -24.8, 17.495, 0.07, -10.2, 16.395, 0.07, -8.9, 19.195, 0.07, -8.9, 18.595, 0.07, -10.2, 33.895, 0.07, -14.6, 38.095, 0.07, -13.9, 38.095, 0.07, -15.7, 33.695, 0.07, -14.8, 18.795, 0.07, -10.4, 18.595, 0.07, -10.2, 19.195, 0.07, -8.9, 18.795, 0.07, -11.6, 18.795, 0.07, -10.4, 19.195, 0.07, -8.9, 19.195, 0.07, -13.1, 25.395, 0.07, -12.1, 25.595, 0.07, -11.8, 25.795, 0.07, -11.6, 28.195, 0.07, -12.1, 18.795, 0.07, -11.6, 19.195, 0.07, -13.1, 18.395, 0.07, -13.1, 42.195, 0.07, -20.6, 41.795, 0.07, -20.7, 41.795, 0.07, -16.4, 42.295, 0.07, -15.8, 3.895, 0.07, 11.4, 3.895, 0.07, 12.1, 8.095, 0.07, 12.1, 17.895, 0.07, -13.3, 18.195, 0.07, -13.3, 18.295, 0.07, -14.6, 17.795, 0.07, -15.3, 8.595, 0.07, -2.2, 2.795, 0.07, -2.2, 3.495, 0.07, -1.8, 9.595, 0.07, -1.8, 17.795, 0.07, -15.3, 18.295, 0.07, -14.6, 18.495, 0.07, -14.8, 2.295, 0.07, 2.6, 2.295, 0.07, 1.4, -0.105, 0.07, -0.1, -0.105, 0.07, 4.1, 0.695, 0.07, 4.1, 15.795, 0.07, -4.6, 15.795, 0.07, -1.7, 16.295, 0.07, -2.4, 40.795, 0.07, -24.6, 40.795, 0.07, -23.4, 41.795, 0.07, -20.7, 42.195, 0.07, -20.6, 42.495, 0.07, -20.9, 43.195, 0.07, -25.1, 9.495, 0.07, -4.7, 15.595, 0.07, -4.8, 15.595, 0.07, -5.2, 8.795, 0.07, -5.2, 42.495, 0.07, -20.9, 43.195, 0.07, -20.9, 43.195, 0.07, -25.1, 2.495, 0.07, 2.8, 1.395, 0.07, 4.1, 4.195, 0.07, 4.1, 3.595, 0.07, 2.8, 33.795, 0.07, -23.4, 33.595, 0.07, -23.2, 34.195, 0.07, -21.9, 3.795, 0.07, 2.6, 3.595, 0.07, 2.8, 4.195, 0.07, 4.1, 3.795, 0.07, 1.4, 3.795, 0.07, 2.6, 4.195, 0.07, 4.1, 4.195, 0.07, -0.1, 10.795, 0.07, 1.4, 13.195, 0.07, 0.900002, 10.395, 0.07, 0.900002, 10.595, 0.07, 1.2, 3.795, 0.07, 1.4, 4.195, 0.07, -0.1, 3.395, 0.07, -0.1, 33.695, 0.07, -14.8, 33.695, 0.07, -15.1, 31.495, 0.07, -15.2, 30.795, 0.07, -14.8, 33.795, 0.07, -24.6, 33.795, 0.07, -23.4, 34.195, 0.07, -21.9, 34.195, 0.07, -26.1, 2.895, 0.07, -0.299999, 3.195, 0.07, -0.299999, 3.295, 0.07, -1.6, 2.795, 0.07, -2.2, 12.295, 0.07, 10.2, 11.795, 0.07, 9.6, 11.595, 0.07, 9.8, 2.795, 0.07, -2.2, 3.295, 0.07, -1.6, 3.495, 0.07, -1.8, 32.295, 0.07, -23.4, 32.295, 0.07, -24.6, 29.895, 0.07, -26.1, 29.895, 0.07, -21.9, 30.695, 0.07, -21.9, 15.795, 0.07, -1.7, 16.495, 0.07, -2.2, 16.295, 0.07, -2.4, 33.895, 0.07, -14.6, 33.895, 0.07, -13.9, 38.095, 0.07, -13.9, 12.495, 0.07, 5.1, 13.195, 0.07, 5.1, 13.195, 0.07, 0.900002, 27.495, 0.07, -7.9, 28.195, 0.07, -7.9, 28.195, 0.07, -12.1, 32.495, 0.07, -23.2, 31.395, 0.07, -21.9, 34.195, 0.07, -21.9, 33.595, 0.07, -23.2, 8.295, 0.07, 10.1, 12.295, 0.07, 10.2, 11.595, 0.07, 9.8, 8.395, 0.07, 9.8)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(5, 4, 6), PackedInt32Array(6, 4, 7), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(16, 12, 17), PackedInt32Array(19, 18, 20), PackedInt32Array(20, 18, 21), PackedInt32Array(21, 18, 22), PackedInt32Array(22, 18, 23), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 27), PackedInt32Array(27, 24, 28), PackedInt32Array(28, 24, 29), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 31), PackedInt32Array(34, 31, 30), PackedInt32Array(34, 30, 35), PackedInt32Array(36, 38, 37), PackedInt32Array(40, 39, 41), PackedInt32Array(41, 39, 42), PackedInt32Array(44, 43, 45), PackedInt32Array(45, 43, 46), PackedInt32Array(48, 47, 49), PackedInt32Array(49, 47, 50), PackedInt32Array(50, 47, 51), PackedInt32Array(54, 53, 52), PackedInt32Array(60, 59, 55), PackedInt32Array(55, 59, 58), PackedInt32Array(55, 58, 56), PackedInt32Array(56, 58, 57), PackedInt32Array(66, 65, 61), PackedInt32Array(61, 65, 64), PackedInt32Array(61, 64, 62), PackedInt32Array(62, 64, 63), PackedInt32Array(72, 71, 67), PackedInt32Array(67, 71, 70), PackedInt32Array(67, 70, 68), PackedInt32Array(68, 70, 69), PackedInt32Array(76, 75, 77), PackedInt32Array(77, 75, 78), PackedInt32Array(78, 75, 73), PackedInt32Array(73, 75, 74), PackedInt32Array(82, 81, 83), PackedInt32Array(83, 81, 84), PackedInt32Array(84, 81, 79), PackedInt32Array(79, 81, 80), PackedInt32Array(88, 87, 89), PackedInt32Array(89, 87, 90), PackedInt32Array(90, 87, 85), PackedInt32Array(85, 87, 86), PackedInt32Array(92, 91, 93), PackedInt32Array(93, 91, 94), PackedInt32Array(96, 95, 97), PackedInt32Array(97, 95, 98), PackedInt32Array(100, 99, 101), PackedInt32Array(101, 99, 102), PackedInt32Array(104, 103, 105), PackedInt32Array(105, 103, 106), PackedInt32Array(108, 107, 109), PackedInt32Array(109, 107, 110), PackedInt32Array(112, 111, 113), PackedInt32Array(113, 111, 114), PackedInt32Array(117, 116, 115), PackedInt32Array(120, 119, 118), PackedInt32Array(123, 122, 121), PackedInt32Array(125, 124, 126), PackedInt32Array(126, 124, 127), PackedInt32Array(132, 131, 128), PackedInt32Array(128, 131, 129), PackedInt32Array(129, 131, 130), PackedInt32Array(134, 133, 135), PackedInt32Array(135, 133, 136), PackedInt32Array(138, 137, 139), PackedInt32Array(139, 137, 140), PackedInt32Array(142, 141, 143), PackedInt32Array(143, 141, 144), PackedInt32Array(146, 145, 147), PackedInt32Array(147, 145, 148), PackedInt32Array(153, 152, 149), PackedInt32Array(149, 152, 150), PackedInt32Array(150, 152, 151), PackedInt32Array(158, 157, 154), PackedInt32Array(154, 157, 155), PackedInt32Array(155, 157, 156), PackedInt32Array(161, 160, 159), PackedInt32Array(163, 162, 164), PackedInt32Array(164, 162, 165), PackedInt32Array(169, 168, 166), PackedInt32Array(166, 168, 167), PackedInt32Array(172, 171, 170), PackedInt32Array(174, 173, 175), PackedInt32Array(175, 173, 176), PackedInt32Array(178, 177, 179), PackedInt32Array(179, 177, 180), PackedInt32Array(183, 182, 181), PackedInt32Array(186, 185, 184), PackedInt32Array(188, 187, 189), PackedInt32Array(189, 187, 190), PackedInt32Array(192, 191, 193), PackedInt32Array(193, 191, 194), PackedInt32Array(196, 195, 197), PackedInt32Array(198, 200, 199), PackedInt32Array(202, 201, 203), PackedInt32Array(203, 201, 204), PackedInt32Array(208, 207, 209), PackedInt32Array(209, 207, 206), PackedInt32Array(209, 206, 205), PackedInt32Array(209, 205, 210), PackedInt32Array(211, 213, 212), PackedInt32Array(215, 214, 216), PackedInt32Array(219, 218, 217), PackedInt32Array(223, 222, 220), PackedInt32Array(220, 222, 221), PackedInt32Array(226, 225, 224), PackedInt32Array(230, 229, 227), PackedInt32Array(227, 229, 228), PackedInt32Array(232, 231, 233), PackedInt32Array(233, 231, 234), PackedInt32Array(237, 236, 235), PackedInt32Array(241, 240, 238), PackedInt32Array(238, 240, 239), PackedInt32Array(245, 244, 242), PackedInt32Array(242, 244, 243), PackedInt32Array(247, 246, 248), PackedInt32Array(248, 246, 249), PackedInt32Array(253, 252, 250), PackedInt32Array(250, 252, 251), PackedInt32Array(257, 256, 254), PackedInt32Array(254, 256, 255), PackedInt32Array(262, 261, 258), PackedInt32Array(258, 261, 259), PackedInt32Array(259, 261, 260), PackedInt32Array(265, 264, 263), PackedInt32Array(269, 268, 266), PackedInt32Array(266, 268, 267), PackedInt32Array(271, 270, 272), PackedInt32Array(272, 270, 273), PackedInt32Array(273, 270, 274), PackedInt32Array(276, 275, 277), PackedInt32Array(277, 275, 278), PackedInt32Array(279, 282, 280), PackedInt32Array(280, 282, 281), PackedInt32Array(286, 285, 283), PackedInt32Array(283, 285, 284), PackedInt32Array(288, 287, 289), PackedInt32Array(289, 287, 290), PackedInt32Array(291, 293, 292), PackedInt32Array(297, 296, 294), PackedInt32Array(294, 296, 295), PackedInt32Array(299, 298, 300), PackedInt32Array(300, 298, 301), PackedInt32Array(303, 302, 304), PackedInt32Array(304, 302, 305), PackedInt32Array(306, 308, 307), PackedInt32Array(312, 311, 309), PackedInt32Array(309, 311, 310), PackedInt32Array(315, 314, 313), PackedInt32Array(317, 316, 318), PackedInt32Array(318, 316, 319), PackedInt32Array(321, 320, 322), PackedInt32Array(322, 320, 323), PackedInt32Array(326, 325, 324), PackedInt32Array(328, 327, 329), PackedInt32Array(329, 327, 330), PackedInt32Array(332, 331, 333), PackedInt32Array(333, 331, 334), PackedInt32Array(336, 335, 337), PackedInt32Array(337, 335, 338), PackedInt32Array(340, 339, 341), PackedInt32Array(341, 339, 342), PackedInt32Array(344, 343, 345), PackedInt32Array(345, 343, 346), PackedInt32Array(348, 347, 349), PackedInt32Array(349, 347, 350), PackedInt32Array(352, 351, 353), PackedInt32Array(353, 351, 354), PackedInt32Array(356, 355, 357), PackedInt32Array(357, 355, 358), PackedInt32Array(362, 361, 359), PackedInt32Array(359, 361, 360), PackedInt32Array(363, 366, 364), PackedInt32Array(364, 366, 365), PackedInt32Array(370, 369, 367), PackedInt32Array(367, 369, 368), PackedInt32Array(373, 372, 371), PackedInt32Array(376, 375, 374), PackedInt32Array(381, 380, 377), PackedInt32Array(377, 380, 379), PackedInt32Array(377, 379, 378), PackedInt32Array(383, 382, 384), PackedInt32Array(384, 382, 385), PackedInt32Array(390, 389, 386), PackedInt32Array(386, 389, 388), PackedInt32Array(386, 388, 387), PackedInt32Array(394, 393, 391), PackedInt32Array(391, 393, 392), PackedInt32Array(395, 398, 396), PackedInt32Array(396, 398, 397), PackedInt32Array(403, 402, 399), PackedInt32Array(399, 402, 400), PackedInt32Array(400, 402, 401), PackedInt32Array(405, 404, 406), PackedInt32Array(406, 404, 407), PackedInt32Array(411, 410, 408), PackedInt32Array(408, 410, 409), PackedInt32Array(412, 415, 413), PackedInt32Array(413, 415, 414), PackedInt32Array(419, 418, 416), PackedInt32Array(416, 418, 417), PackedInt32Array(423, 422, 420), PackedInt32Array(420, 422, 421), PackedInt32Array(424, 427, 425), PackedInt32Array(425, 427, 426), PackedInt32Array(430, 429, 428), PackedInt32Array(431, 434, 432), PackedInt32Array(432, 434, 433), PackedInt32Array(436, 435, 437), PackedInt32Array(437, 435, 438), PackedInt32Array(441, 440, 439), PackedInt32Array(443, 442, 444), PackedInt32Array(444, 442, 445), PackedInt32Array(448, 447, 446), PackedInt32Array(450, 449, 451), PackedInt32Array(451, 449, 452), PackedInt32Array(454, 453, 455), PackedInt32Array(455, 453, 456), PackedInt32Array(459, 458, 457), PackedInt32Array(464, 463, 460), PackedInt32Array(460, 463, 461), PackedInt32Array(461, 463, 462), PackedInt32Array(467, 466, 465), PackedInt32Array(471, 470, 472), PackedInt32Array(472, 470, 469), PackedInt32Array(472, 469, 468), PackedInt32Array(472, 468, 473), PackedInt32Array(475, 474, 476), PackedInt32Array(476, 474, 477), PackedInt32Array(480, 479, 478), PackedInt32Array(484, 483, 481), PackedInt32Array(481, 483, 482), PackedInt32Array(485, 487, 486), PackedInt32Array(490, 489, 488), PackedInt32Array(492, 491, 493), PackedInt32Array(493, 491, 494), PackedInt32Array(498, 497, 495), PackedInt32Array(495, 497, 496), PackedInt32Array(501, 500, 499), PackedInt32Array(503, 502, 504), PackedInt32Array(504, 502, 505), PackedInt32Array(506, 509, 507), PackedInt32Array(507, 509, 508), PackedInt32Array(511, 510, 512), PackedInt32Array(512, 510, 513), PackedInt32Array(516, 515, 514), PackedInt32Array(519, 518, 517), PackedInt32Array(524, 523, 520), PackedInt32Array(520, 523, 521), PackedInt32Array(521, 523, 522), PackedInt32Array(527, 526, 525), PackedInt32Array(530, 529, 528), PackedInt32Array(533, 532, 531), PackedInt32Array(536, 535, 534), PackedInt32Array(540, 539, 537), PackedInt32Array(537, 539, 538), PackedInt32Array(544, 543, 541), PackedInt32Array(541, 543, 542)]
+vertices = PackedVector3Array(0.695, 0.07, 4.1, 0.895, 0.07, 4.3, 1.195, 0.07, 4.3, 1.395, 0.07, 4.1, 2.495, 0.07, 2.8, 2.295, 0.07, 2.6, 10.795, 0.07, 1.5, 11.695, 0.07, 5.1, 11.895, 0.07, 5.7, 12.195, 0.07, 5.3, 9.695, 0.07, 0.899999, 8.895, 0.07, 0.899999, 9.295, 0.07, 1.5, 9.495, 0.07, 1.3, 10.395, 0.07, 0.899999, 10.195, 0.07, 0.699999, 9.895, 0.07, 0.699999, 9.695, 0.07, 0.899999, 9.495, 0.07, 1.3, 10.595, 0.07, 1.3, 12.395, 0.07, 5.1, 13.195, 0.07, 5.1, 13.195, 0.07, 0.899999, 8.395, 0.07, 10.2, 8.395, 0.07, 9.9, 5.495, 0.07, 9.8, 3.695, 0.07, 10.9, 3.695, 0.07, 11.2, 8.195, 0.07, 10.4, 2.295, 0.07, 1.5, 2.495, 0.07, 1.3, 2.695, 0.07, -0.100001, -0.105, 0.07, -0.100001, 3.895, 0.07, 7.9, 5.295, 0.07, 8.4, 5.495, 0.07, 8.2, 2.895, 0.07, -0.300001, 2.695, 0.07, -0.100001, 2.495, 0.07, 1.3, 3.595, 0.07, 1.3, 1.295, 0.07, 10.6, 1.195, 0.07, 4.3, 0.895, 0.07, 4.3, 0.795, 0.07, 11.3, 9.295, 0.07, 2.6, 9.295, 0.07, 1.5, 8.895, 0.07, 0.899999, 8.895, 0.07, 5.1, 2.895, 0.07, -0.300001, 3.595, 0.07, 1.3, 3.795, 0.07, 1.5, 3.395, 0.07, -0.100001, 3.195, 0.07, -0.300001, 5.295, 0.07, 9.6, 5.295, 0.07, 8.4, 3.895, 0.07, 7.9, 3.895, 0.07, 10.7, 8.595, 0.07, -2.2, 2.795, 0.07, -2.2, 3.495, 0.07, -1.8, 9.595, 0.07, -1.8, 5.495, 0.07, 9.8, 5.295, 0.07, 9.6, 3.895, 0.07, 10.7, 3.695, 0.07, 10.9, 9.295, 0.07, -2.4, 8.795, 0.07, -2.4, 8.595, 0.07, -2.2, 9.595, 0.07, -1.8, 9.495, 0.07, -2.2, 9.295, 0.07, -4.5, 8.795, 0.07, -5.2, 8.795, 0.07, -2.4, 9.295, 0.07, -2.4, 9.495, 0.07, 2.8, 9.295, 0.07, 2.6, 8.895, 0.07, 5.1, 8.195, 0.07, 7.9, 3.895, 0.07, 7.9, 5.495, 0.07, 8.2, 6.595, 0.07, 8.2, 10.795, 0.07, 1.5, 13.195, 0.07, 0.899999, 10.395, 0.07, 0.899999, 10.595, 0.07, 1.3, 8.195, 0.07, 7.9, 6.595, 0.07, 8.2, 6.795, 0.07, 8.4, 8.195, 0.07, 9.7, 8.195, 0.07, 7.9, 6.795, 0.07, 8.4, 6.795, 0.07, 9.6, 3.895, 0.07, 11.4, 8.195, 0.07, 12.1, 8.195, 0.07, 10.4, 3.695, 0.07, 11.2, 8.195, 0.07, 9.7, 6.795, 0.07, 9.6, 6.595, 0.07, 9.8, 8.395, 0.07, 9.9, 9.495, 0.07, -4.7, 15.195, 0.07, -4.7, 15.195, 0.07, -5.2, 8.795, 0.07, -5.2, 10.595, 0.07, 2.8, 9.495, 0.07, 2.8, 8.895, 0.07, 5.1, 11.695, 0.07, 5.1, 12.195, 0.07, 5.3, 11.895, 0.07, 5.7, 11.795, 0.07, 9.6, 12.295, 0.07, 10.2, 10.795, 0.07, 2.6, 10.595, 0.07, 2.8, 11.695, 0.07, 5.1, 9.295, 0.07, -4.5, 9.495, 0.07, -4.7, 8.795, 0.07, -5.2, 8.395, 0.07, 9.9, 6.595, 0.07, 9.8, 5.495, 0.07, 9.8, 2.295, 0.07, 2.6, 2.295, 0.07, 1.5, -0.105, 0.07, -0.100001, -0.105, 0.07, 4.1, 0.695, 0.07, 4.1, 12.295, 0.07, 10.2, 11.795, 0.07, 9.6, 11.595, 0.07, 9.8, 1.495, 0.07, 10.8, 0.795, 0.07, 11.3, 3.695, 0.07, 11.2, 3.695, 0.07, 10.9, 12.195, 0.07, 5.3, 12.395, 0.07, 5.1, 13.195, 0.07, 0.899999, 10.795, 0.07, 1.5, 10.195, 0.07, 0.699999, 10.295, 0.07, -2.2, 9.795, 0.07, -1.6, 9.895, 0.07, 0.699999, 2.495, 0.07, 2.8, 1.395, 0.07, 4.1, 4.195, 0.07, 4.1, 3.595, 0.07, 2.8, 9.795, 0.07, -1.6, 10.295, 0.07, -2.2, 9.495, 0.07, -2.2, 9.595, 0.07, -1.8, 3.795, 0.07, 2.6, 3.595, 0.07, 2.8, 4.195, 0.07, 4.1, 3.795, 0.07, 1.5, 3.795, 0.07, 2.6, 4.195, 0.07, 4.1, 4.195, 0.07, -0.100001, 11.595, 0.07, 9.8, 8.395, 0.07, 9.9, 8.395, 0.07, 10.2, 12.295, 0.07, 10.2, 3.795, 0.07, 1.5, 4.195, 0.07, -0.100001, 3.395, 0.07, -0.100001, 3.895, 0.07, 11.4, 3.895, 0.07, 12.1, 8.195, 0.07, 12.1, 10.795, 0.07, 1.5, 10.795, 0.07, 2.6, 11.695, 0.07, 5.1, 2.895, 0.07, -0.300001, 3.195, 0.07, -0.300001, 3.295, 0.07, -1.6, 2.795, 0.07, -2.2, 0.795, 0.07, 11.3, 1.495, 0.07, 10.8, 1.295, 0.07, 10.6, 2.795, 0.07, -2.2, 3.295, 0.07, -1.6, 3.495, 0.07, -1.8)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Array(3, 0, 4), PackedInt32Array(4, 0, 5), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 6), PackedInt32Array(13, 12, 10), PackedInt32Array(10, 12, 11), PackedInt32Array(15, 14, 16), PackedInt32Array(16, 14, 17), PackedInt32Array(17, 14, 19), PackedInt32Array(17, 19, 18), PackedInt32Array(22, 21, 20), PackedInt32Array(23, 28, 24), PackedInt32Array(24, 28, 25), PackedInt32Array(25, 28, 26), PackedInt32Array(26, 28, 27), PackedInt32Array(30, 29, 31), PackedInt32Array(31, 29, 32), PackedInt32Array(35, 34, 33), PackedInt32Array(37, 36, 38), PackedInt32Array(38, 36, 39), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(45, 44, 46), PackedInt32Array(46, 44, 47), PackedInt32Array(52, 51, 48), PackedInt32Array(48, 51, 49), PackedInt32Array(49, 51, 50), PackedInt32Array(54, 53, 55), PackedInt32Array(55, 53, 56), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 64), PackedInt32Array(69, 68, 65), PackedInt32Array(65, 68, 66), PackedInt32Array(66, 68, 67), PackedInt32Array(73, 72, 70), PackedInt32Array(70, 72, 71), PackedInt32Array(76, 75, 74), PackedInt32Array(80, 79, 77), PackedInt32Array(77, 79, 78), PackedInt32Array(84, 83, 81), PackedInt32Array(81, 83, 82), PackedInt32Array(87, 86, 85), PackedInt32Array(91, 90, 88), PackedInt32Array(88, 90, 89), PackedInt32Array(92, 95, 93), PackedInt32Array(93, 95, 94), PackedInt32Array(97, 96, 98), PackedInt32Array(98, 96, 99), PackedInt32Array(101, 100, 102), PackedInt32Array(102, 100, 103), PackedInt32Array(105, 104, 106), PackedInt32Array(106, 104, 107), PackedInt32Array(109, 108, 110), PackedInt32Array(110, 108, 111), PackedInt32Array(114, 113, 112), PackedInt32Array(117, 116, 115), PackedInt32Array(120, 119, 118), PackedInt32Array(125, 124, 121), PackedInt32Array(121, 124, 122), PackedInt32Array(122, 124, 123), PackedInt32Array(128, 127, 126), PackedInt32Array(132, 131, 129), PackedInt32Array(129, 131, 130), PackedInt32Array(133, 136, 134), PackedInt32Array(134, 136, 135), PackedInt32Array(140, 139, 137), PackedInt32Array(137, 139, 138), PackedInt32Array(144, 143, 141), PackedInt32Array(141, 143, 142), PackedInt32Array(148, 147, 145), PackedInt32Array(145, 147, 146), PackedInt32Array(149, 151, 150), PackedInt32Array(153, 152, 154), PackedInt32Array(154, 152, 155), PackedInt32Array(157, 156, 158), PackedInt32Array(158, 156, 159), PackedInt32Array(162, 161, 160), PackedInt32Array(165, 164, 163), PackedInt32Array(168, 167, 166), PackedInt32Array(170, 169, 171), PackedInt32Array(171, 169, 172), PackedInt32Array(175, 174, 173), PackedInt32Array(178, 177, 176)]
 sample_partition_type = 2
 cell_size = 0.1
 cell_height = 0.01
@@ -115,147 +114,147 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 visible = false
 
-[node name="MeshInstance3D" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade" parent="Room1" groups=["debug_wall"] instance=ExtResource("2_144js")]
 visible = false
 
-[node name="MeshInstance3D2" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade2" parent="Room1" instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 0.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D3" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade3" parent="Room1" instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D4" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade5" parent="Room1" instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D5" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 4.00317, 0.5, 4.5)
+[node name="WallTileFade4" parent="Room1" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D6" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 3.00317, 0.5, 4.5)
+[node name="WallTileFade11" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 0.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D7" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 2.00317, 0.5, 4.5)
+[node name="WallTileFade12" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D8" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 0.00317383, 0.5, 4.5)
+[node name="WallTileFade13" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D9" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade6" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 0)
+visible = false
+
+[node name="WallTileFade7" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 1)
+visible = false
+
+[node name="WallTileFade8" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 2)
+visible = false
+
+[node name="WallTileFade9" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 3)
+visible = false
+
+[node name="WallTileFade10" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 4)
+visible = false
+
+[node name="WallTileFade14" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 0)
+visible = false
+
+[node name="WallTileFade15" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 1)
+visible = false
+
+[node name="WallTileFade16" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 2)
+visible = false
+
+[node name="WallTileFade17" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 3)
+visible = false
+
+[node name="WallTileFade18" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 4)
+visible = false
+
+[node name="WallTileFade19" parent="Room1" groups=["debug_wall"] instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D10" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade20" parent="Room1" instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 1.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D11" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade21" parent="Room1" instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D12" parent="Room1" instance=ExtResource("2_144js")]
+[node name="WallTileFade22" parent="Room1" instance=ExtResource("2_144js")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, -0.5)
 visible = false
 
-[node name="MeshInstance3D13" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 4.00317, 1.5, 4.5)
+[node name="WallTileFade23" parent="Room1" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D14" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 3.00317, 1.5, 4.5)
+[node name="WallTileFade24" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 1.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D15" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 2.00317, 1.5, 4.5)
+[node name="WallTileFade25" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D16" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 0.00317383, 1.5, 4.5)
+[node name="WallTileFade26" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, 4.5)
 visible = false
 
-[node name="MeshInstance3D17" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 0)
+[node name="WallTileFade27" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 0)
 visible = false
 
-[node name="MeshInstance3D18" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 1)
+[node name="WallTileFade28" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 1)
 visible = false
 
-[node name="MeshInstance3D19" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 2)
+[node name="WallTileFade29" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 2)
 visible = false
 
-[node name="MeshInstance3D20" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 3)
+[node name="WallTileFade30" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 3)
 visible = false
 
-[node name="MeshInstance3D21" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 4)
+[node name="WallTileFade31" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 4)
 visible = false
 
-[node name="MeshInstance3D22" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 0)
+[node name="WallTileFade32" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 0)
 visible = false
 
-[node name="MeshInstance3D23" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 1)
+[node name="WallTileFade33" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 1)
 visible = false
 
-[node name="MeshInstance3D24" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 2)
+[node name="WallTileFade34" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 2)
 visible = false
 
-[node name="MeshInstance3D25" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 3)
+[node name="WallTileFade35" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 3)
 visible = false
 
-[node name="MeshInstance3D26" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 4)
-visible = false
-
-[node name="MeshInstance3D27" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 0)
-visible = false
-
-[node name="MeshInstance3D28" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 1)
-visible = false
-
-[node name="MeshInstance3D29" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 2)
-visible = false
-
-[node name="MeshInstance3D30" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 3)
-visible = false
-
-[node name="MeshInstance3D31" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 4)
-visible = false
-
-[node name="MeshInstance3D32" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 0)
-visible = false
-
-[node name="MeshInstance3D33" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 1)
-visible = false
-
-[node name="MeshInstance3D34" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 2)
-visible = false
-
-[node name="MeshInstance3D35" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 3)
-visible = false
-
-[node name="MeshInstance3D36" parent="Room1" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 4)
+[node name="WallTileFade36" parent="Room1" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 4)
 visible = false
 
 [node name="Room2" type="Node3D" parent="."]
@@ -356,149 +355,184 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 visible = false
 
-[node name="WallTileFade" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 0.5, -0.5)
+[node name="WallTileFade37" parent="Room2" groups=["debug_wall"] instance=ExtResource("2_144js")]
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade2" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 0.5, -0.5)
+[node name="WallTileFade38" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade3" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 0.5, -0.5)
+[node name="WallTileFade39" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade4" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 0.5, -0.5)
+[node name="WallTileFade40" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade5" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 0.5, 4.5)
+[node name="WallTileFade41" parent="Room2" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade6" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 0.5, 4.5)
+[node name="WallTileFade42" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade7" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 0.5, 4.5)
+[node name="WallTileFade43" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade8" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 0.5, 4.5)
+[node name="WallTileFade44" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade9" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 0)
+[node name="WallTileFade45" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade10" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 1)
+[node name="WallTileFade46" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade11" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 2)
+[node name="WallTileFade47" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 2)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade12" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 3)
+[node name="WallTileFade48" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 3)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade13" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 4)
+[node name="WallTileFade49" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade14" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 0)
+[node name="WallTileFade50" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade15" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 1)
+[node name="WallTileFade51" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade16" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 2)
+[node name="WallTileFade52" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 2)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade17" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 3)
+[node name="WallTileFade53" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 3)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade18" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 4)
+[node name="WallTileFade54" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade19" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 1.5, -0.5)
+[node name="WallTileFade55" parent="Room2" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade20" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 1.5, -0.5)
+[node name="WallTileFade56" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade21" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 1.5, -0.5)
+[node name="WallTileFade57" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade22" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 1.5, -0.5)
+[node name="WallTileFade58" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade23" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 1.5, 4.5)
+[node name="WallTileFade59" parent="Room2" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade24" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 1.5, 4.5)
+[node name="WallTileFade60" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade25" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 1.5, 4.5)
+[node name="WallTileFade61" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade26" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 1.5, 4.5)
+[node name="WallTileFade62" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade27" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 0)
+[node name="WallTileFade63" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade28" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 1)
+[node name="WallTileFade64" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade29" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 2)
+[node name="WallTileFade65" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 2)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade30" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 3)
+[node name="WallTileFade66" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 3)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade31" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 4)
+[node name="WallTileFade67" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade32" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 0)
+[node name="WallTileFade68" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade33" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 1)
+[node name="WallTileFade69" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade34" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 2)
+[node name="WallTileFade70" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 2)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade35" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 3)
+[node name="WallTileFade71" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 3)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade36" parent="Room2" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 4)
+[node name="WallTileFade72" parent="Room2" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
 [node name="Room3" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
@@ -598,149 +632,184 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
 visible = false
 
-[node name="WallTileFade" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 0.5, -0.5)
+[node name="WallTileFade73" parent="Room3" groups=["debug_wall"] instance=ExtResource("2_144js")]
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade2" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 1, 0.5, -0.5)
+[node name="WallTileFade74" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade3" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 0.5, -0.5)
+[node name="WallTileFade75" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade4" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 0.5, -0.5)
+[node name="WallTileFade76" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade5" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 0.5, -0.5)
+[node name="WallTileFade77" parent="Room3" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade6" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 0.5, 4.5)
+[node name="WallTileFade78" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade7" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 3, 0.5, 4.5)
+[node name="WallTileFade79" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade8" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 0.5, 4.5)
+[node name="WallTileFade80" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade10" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 0.5, 4.5)
+[node name="WallTileFade81" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade11" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 0.5, 4.5)
+[node name="WallTileFade82" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade9" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 0)
+[node name="WallTileFade83" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 2)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade12" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 1)
+[node name="WallTileFade84" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 0.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade13" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 2)
+[node name="WallTileFade85" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 0.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade14" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 4)
+[node name="WallTileFade86" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade15" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 4)
+[node name="WallTileFade87" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade16" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 3)
+[node name="WallTileFade88" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 0.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade17" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 1)
+[node name="WallTileFade89" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 3)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade18" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 0)
+[node name="WallTileFade90" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 0.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade19" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 1.5, -0.5)
+[node name="WallTileFade91" parent="Room3" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade20" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 1, 1.5, -0.5)
+[node name="WallTileFade92" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade21" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 1.5, -0.5)
+[node name="WallTileFade93" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade22" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 1.5, -0.5)
+[node name="WallTileFade94" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade23" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 1.5, -0.5)
+[node name="WallTileFade95" parent="Room3" groups=["debug_wall"] instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade24" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 1.5, 4.5)
+[node name="WallTileFade96" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade25" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 3, 1.5, 4.5)
+[node name="WallTileFade97" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade26" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 1.5, 4.5)
+[node name="WallTileFade98" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade27" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 1.5, 4.5)
+[node name="WallTileFade99" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade28" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 1.5, 4.5)
+[node name="WallTileFade100" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade29" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 0)
+[node name="WallTileFade101" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 2)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade30" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 1)
+[node name="WallTileFade102" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 1.5, 4.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade31" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 2)
+[node name="WallTileFade103" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, -0.5, 1.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade32" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 4)
+[node name="WallTileFade104" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 0)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade33" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 4)
+[node name="WallTileFade105" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 1)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade34" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 3)
+[node name="WallTileFade106" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 3, 1.5, -0.5)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade35" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 1)
+[node name="WallTileFade107" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 3)
 visible = false
+skeleton = NodePath("../../Room1")
 
-[node name="WallTileFade36" parent="Room3" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 0)
+[node name="WallTileFade108" parent="Room3" instance=ExtResource("2_144js")]
+transform = Transform3D(-4.37114e-08, 0, -0.01, 0, 1, 0, 1, 0, -4.37114e-10, 4.5, 1.5, 4)
 visible = false
+skeleton = NodePath("../../Room1")
 
 [node name="Hall1" type="Node3D" parent="."]
 
@@ -897,1774 +966,3 @@ visible = false
 [node name="FloorTile3D14" parent="Hall3" instance=ExtResource("1_fequm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
 visible = false
-
-[node name="Room4" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -13)
-
-[node name="FloorTile3D" parent="Room4" instance=ExtResource("1_fequm")]
-visible = false
-
-[node name="FloorTile3D2" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
-
-[node name="FloorTile3D3" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-visible = false
-
-[node name="FloorTile3D4" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-visible = false
-
-[node name="FloorTile3D5" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-visible = false
-
-[node name="FloorTile3D6" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
-
-[node name="FloorTile3D7" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-visible = false
-
-[node name="FloorTile3D8" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
-visible = false
-
-[node name="FloorTile3D9" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-visible = false
-
-[node name="FloorTile3D10" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-visible = false
-
-[node name="FloorTile3D11" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
-
-[node name="FloorTile3D12" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
-visible = false
-
-[node name="FloorTile3D13" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
-
-[node name="FloorTile3D15" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
-visible = false
-
-[node name="FloorTile3D16" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-visible = false
-
-[node name="FloorTile3D17" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-visible = false
-
-[node name="FloorTile3D18" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-visible = false
-
-[node name="FloorTile3D19" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-visible = false
-
-[node name="FloorTile3D20" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-visible = false
-
-[node name="FloorTile3D21" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-visible = false
-
-[node name="FloorTile3D22" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
-visible = false
-
-[node name="FloorTile3D23" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-visible = false
-
-[node name="FloorTile3D24" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
-visible = false
-
-[node name="FloorTile3D25" parent="Room4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-visible = false
-
-[node name="MeshInstance3D" parent="Room4" instance=ExtResource("2_144js")]
-visible = false
-
-[node name="MeshInstance3D2" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 0.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D3" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D4" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D5" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 4.00317, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D6" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 3.00317, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D7" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 2.00317, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D8" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 0.00317383, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D9" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D10" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D11" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D12" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D13" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 4.00317, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D14" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 3.00317, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D15" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 2.00317, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D16" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 0.00317383, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D17" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 0)
-visible = false
-
-[node name="MeshInstance3D18" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 1)
-visible = false
-
-[node name="MeshInstance3D19" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 2)
-visible = false
-
-[node name="MeshInstance3D20" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 3)
-visible = false
-
-[node name="MeshInstance3D21" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 4)
-visible = false
-
-[node name="MeshInstance3D22" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 0)
-visible = false
-
-[node name="MeshInstance3D23" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 1)
-visible = false
-
-[node name="MeshInstance3D24" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 2)
-visible = false
-
-[node name="MeshInstance3D25" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 3)
-visible = false
-
-[node name="MeshInstance3D26" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 4)
-visible = false
-
-[node name="MeshInstance3D27" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 0)
-visible = false
-
-[node name="MeshInstance3D28" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 1)
-visible = false
-
-[node name="MeshInstance3D29" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 2)
-visible = false
-
-[node name="MeshInstance3D30" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 3)
-visible = false
-
-[node name="MeshInstance3D31" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 4)
-visible = false
-
-[node name="MeshInstance3D32" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 0)
-visible = false
-
-[node name="MeshInstance3D33" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 1)
-visible = false
-
-[node name="MeshInstance3D34" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 2)
-visible = false
-
-[node name="MeshInstance3D35" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 3)
-visible = false
-
-[node name="MeshInstance3D36" parent="Room4" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 4)
-visible = false
-
-[node name="Room5" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, -12)
-
-[node name="FloorTile3D" parent="Room5" instance=ExtResource("1_fequm")]
-visible = false
-
-[node name="FloorTile3D2" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
-
-[node name="FloorTile3D3" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-visible = false
-
-[node name="FloorTile3D4" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-visible = false
-
-[node name="FloorTile3D5" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-visible = false
-
-[node name="FloorTile3D6" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
-
-[node name="FloorTile3D8" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
-visible = false
-
-[node name="FloorTile3D9" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-visible = false
-
-[node name="FloorTile3D10" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-visible = false
-
-[node name="FloorTile3D11" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
-
-[node name="FloorTile3D12" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
-visible = false
-
-[node name="FloorTile3D13" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
-
-[node name="FloorTile3D14" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
-visible = false
-
-[node name="FloorTile3D15" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
-visible = false
-
-[node name="FloorTile3D16" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-visible = false
-
-[node name="FloorTile3D17" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-visible = false
-
-[node name="FloorTile3D18" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-visible = false
-
-[node name="FloorTile3D19" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-visible = false
-
-[node name="FloorTile3D20" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-visible = false
-
-[node name="FloorTile3D21" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-visible = false
-
-[node name="FloorTile3D22" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
-visible = false
-
-[node name="FloorTile3D23" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-visible = false
-
-[node name="FloorTile3D24" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
-visible = false
-
-[node name="FloorTile3D25" parent="Room5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-visible = false
-
-[node name="WallTileFade" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade2" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade3" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade4" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade5" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade6" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade7" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade8" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade9" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade10" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade11" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 2)
-visible = false
-
-[node name="WallTileFade12" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 3)
-visible = false
-
-[node name="WallTileFade13" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade14" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade15" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade16" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 2)
-visible = false
-
-[node name="WallTileFade17" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 3)
-visible = false
-
-[node name="WallTileFade18" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade19" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade20" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade21" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade22" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade23" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade24" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade25" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade26" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade27" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 0)
-visible = false
-
-[node name="WallTileFade28" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade29" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 2)
-visible = false
-
-[node name="WallTileFade30" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 3)
-visible = false
-
-[node name="WallTileFade31" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 4)
-visible = false
-
-[node name="WallTileFade32" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 0)
-visible = false
-
-[node name="WallTileFade33" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade34" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 2)
-visible = false
-
-[node name="WallTileFade35" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 3)
-visible = false
-
-[node name="WallTileFade36" parent="Room5" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 4)
-visible = false
-
-[node name="Room6" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -5)
-
-[node name="FloorTile3D" parent="Room6" instance=ExtResource("1_fequm")]
-visible = false
-
-[node name="FloorTile3D2" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
-
-[node name="FloorTile3D3" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-visible = false
-
-[node name="FloorTile3D4" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-visible = false
-
-[node name="FloorTile3D5" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-visible = false
-
-[node name="FloorTile3D6" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
-
-[node name="FloorTile3D7" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-visible = false
-
-[node name="FloorTile3D9" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-visible = false
-
-[node name="FloorTile3D10" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-visible = false
-
-[node name="FloorTile3D11" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
-
-[node name="FloorTile3D12" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
-visible = false
-
-[node name="FloorTile3D13" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
-
-[node name="FloorTile3D14" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
-visible = false
-
-[node name="FloorTile3D15" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
-visible = false
-
-[node name="FloorTile3D16" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-visible = false
-
-[node name="FloorTile3D17" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-visible = false
-
-[node name="FloorTile3D18" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-visible = false
-
-[node name="FloorTile3D19" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-visible = false
-
-[node name="FloorTile3D20" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-visible = false
-
-[node name="FloorTile3D21" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-visible = false
-
-[node name="FloorTile3D22" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
-visible = false
-
-[node name="FloorTile3D23" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-visible = false
-
-[node name="FloorTile3D24" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
-visible = false
-
-[node name="FloorTile3D25" parent="Room6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-visible = false
-
-[node name="WallTileFade" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade2" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 1, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade3" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade4" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade5" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade6" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade7" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 3, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade8" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade10" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade11" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade9" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade12" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade13" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 2)
-visible = false
-
-[node name="WallTileFade14" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade15" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade16" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 3)
-visible = false
-
-[node name="WallTileFade17" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade18" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade19" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade20" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 1, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade21" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade22" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade23" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade24" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade25" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 3, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade26" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade27" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade28" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade29" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 0)
-visible = false
-
-[node name="WallTileFade30" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade31" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 2)
-visible = false
-
-[node name="WallTileFade32" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 4)
-visible = false
-
-[node name="WallTileFade33" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 4)
-visible = false
-
-[node name="WallTileFade34" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 3)
-visible = false
-
-[node name="WallTileFade35" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade36" parent="Room6" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 0)
-visible = false
-
-[node name="Hall4" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -13)
-
-[node name="FloorTile3D" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
-visible = false
-
-[node name="FloorTile3D2" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
-visible = false
-
-[node name="FloorTile3D3" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
-visible = false
-
-[node name="FloorTile3D4" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 9)
-visible = false
-
-[node name="FloorTile3D5" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10)
-visible = false
-
-[node name="FloorTile3D6" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 10)
-visible = false
-
-[node name="FloorTile3D7" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
-visible = false
-
-[node name="FloorTile3D8" parent="Hall4" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 10)
-visible = false
-
-[node name="Hall5" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24, 0, -14)
-
-[node name="FloorTile3D" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
-visible = false
-
-[node name="FloorTile3D2" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
-visible = false
-
-[node name="FloorTile3D5" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
-visible = false
-
-[node name="FloorTile3D6" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 8)
-visible = false
-
-[node name="FloorTile3D7" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
-visible = false
-
-[node name="FloorTile3D8" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
-visible = false
-
-[node name="FloorTile3D9" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
-visible = false
-
-[node name="FloorTile3D10" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
-visible = false
-
-[node name="FloorTile3D11" parent="Hall5" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
-visible = false
-
-[node name="Hall6" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 30, 0, -7)
-
-[node name="FloorTile3D2" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
-visible = false
-
-[node name="FloorTile3D5" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
-visible = false
-
-[node name="FloorTile3D6" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 8)
-visible = false
-
-[node name="FloorTile3D7" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
-visible = false
-
-[node name="FloorTile3D8" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
-visible = false
-
-[node name="FloorTile3D9" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
-visible = false
-
-[node name="FloorTile3D10" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
-visible = false
-
-[node name="FloorTile3D11" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
-visible = false
-
-[node name="FloorTile3D17" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 11)
-visible = false
-
-[node name="FloorTile3D18" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 11)
-visible = false
-
-[node name="FloorTile3D19" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 11)
-visible = false
-
-[node name="FloorTile3D20" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 11)
-visible = false
-
-[node name="FloorTile3D21" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
-visible = false
-
-[node name="FloorTile3D22" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
-visible = false
-
-[node name="FloorTile3D23" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, 0, 11)
-visible = false
-
-[node name="FloorTile3D15" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 9)
-visible = false
-
-[node name="FloorTile3D16" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10)
-visible = false
-
-[node name="FloorTile3D12" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 8)
-visible = false
-
-[node name="FloorTile3D13" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
-visible = false
-
-[node name="FloorTile3D14" parent="Hall6" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
-visible = false
-
-[node name="Room7" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -26)
-
-[node name="FloorTile3D" parent="Room7" instance=ExtResource("1_fequm")]
-visible = false
-
-[node name="FloorTile3D2" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
-
-[node name="FloorTile3D3" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-visible = false
-
-[node name="FloorTile3D4" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-visible = false
-
-[node name="FloorTile3D5" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-visible = false
-
-[node name="FloorTile3D6" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
-
-[node name="FloorTile3D7" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-visible = false
-
-[node name="FloorTile3D8" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
-visible = false
-
-[node name="FloorTile3D9" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-visible = false
-
-[node name="FloorTile3D10" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-visible = false
-
-[node name="FloorTile3D11" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
-
-[node name="FloorTile3D12" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
-visible = false
-
-[node name="FloorTile3D13" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
-
-[node name="FloorTile3D15" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
-visible = false
-
-[node name="FloorTile3D16" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-visible = false
-
-[node name="FloorTile3D17" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-visible = false
-
-[node name="FloorTile3D18" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-visible = false
-
-[node name="FloorTile3D19" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-visible = false
-
-[node name="FloorTile3D20" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-visible = false
-
-[node name="FloorTile3D21" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-visible = false
-
-[node name="FloorTile3D22" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
-visible = false
-
-[node name="FloorTile3D23" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-visible = false
-
-[node name="FloorTile3D24" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
-visible = false
-
-[node name="FloorTile3D25" parent="Room7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-visible = false
-
-[node name="MeshInstance3D" parent="Room7" instance=ExtResource("2_144js")]
-visible = false
-
-[node name="MeshInstance3D2" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 0.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D3" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 0.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D4" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 0.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D5" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 4.00317, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D6" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 3.00317, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D7" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 2.00317, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D8" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 0.00317383, 0.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D9" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D10" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 1, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D11" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 2, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D12" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 4, 1.5, -0.5)
-visible = false
-
-[node name="MeshInstance3D13" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 4.00317, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D14" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 3.00317, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D15" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 2.00317, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D16" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-1, 0, -8.74228e-10, 0, 1, 0, 8.74228e-08, 0, -0.01, 0.00317383, 1.5, 4.5)
-visible = false
-
-[node name="MeshInstance3D17" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 0)
-visible = false
-
-[node name="MeshInstance3D18" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 1)
-visible = false
-
-[node name="MeshInstance3D19" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 2)
-visible = false
-
-[node name="MeshInstance3D20" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 3)
-visible = false
-
-[node name="MeshInstance3D21" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 0.5, 4)
-visible = false
-
-[node name="MeshInstance3D22" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 0)
-visible = false
-
-[node name="MeshInstance3D23" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 1)
-visible = false
-
-[node name="MeshInstance3D24" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 2)
-visible = false
-
-[node name="MeshInstance3D25" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 3)
-visible = false
-
-[node name="MeshInstance3D26" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, -0.5, 1.5, 4)
-visible = false
-
-[node name="MeshInstance3D27" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 0)
-visible = false
-
-[node name="MeshInstance3D28" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 1)
-visible = false
-
-[node name="MeshInstance3D29" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 2)
-visible = false
-
-[node name="MeshInstance3D30" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 3)
-visible = false
-
-[node name="MeshInstance3D31" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 0.5, 4)
-visible = false
-
-[node name="MeshInstance3D32" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 0)
-visible = false
-
-[node name="MeshInstance3D33" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 1)
-visible = false
-
-[node name="MeshInstance3D34" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 2)
-visible = false
-
-[node name="MeshInstance3D35" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 3)
-visible = false
-
-[node name="MeshInstance3D36" parent="Room7" instance=ExtResource("2_144js")]
-transform = Transform3D(-4.37114e-08, 0, 0.01, 0, 1, 0, -1, 0, -4.37114e-10, 4.5, 1.5, 4)
-visible = false
-
-[node name="Room8" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -25)
-
-[node name="FloorTile3D" parent="Room8" instance=ExtResource("1_fequm")]
-visible = false
-
-[node name="FloorTile3D2" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
-
-[node name="FloorTile3D3" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-visible = false
-
-[node name="FloorTile3D4" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-visible = false
-
-[node name="FloorTile3D5" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-visible = false
-
-[node name="FloorTile3D6" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
-
-[node name="FloorTile3D8" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
-visible = false
-
-[node name="FloorTile3D9" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-visible = false
-
-[node name="FloorTile3D10" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-visible = false
-
-[node name="FloorTile3D11" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
-
-[node name="FloorTile3D12" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
-visible = false
-
-[node name="FloorTile3D13" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
-
-[node name="FloorTile3D14" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
-visible = false
-
-[node name="FloorTile3D15" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
-visible = false
-
-[node name="FloorTile3D16" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-visible = false
-
-[node name="FloorTile3D17" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-visible = false
-
-[node name="FloorTile3D18" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-visible = false
-
-[node name="FloorTile3D19" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-visible = false
-
-[node name="FloorTile3D20" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-visible = false
-
-[node name="FloorTile3D21" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-visible = false
-
-[node name="FloorTile3D22" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
-visible = false
-
-[node name="FloorTile3D23" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-visible = false
-
-[node name="FloorTile3D24" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
-visible = false
-
-[node name="FloorTile3D25" parent="Room8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-visible = false
-
-[node name="WallTileFade" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade2" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade3" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade4" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade5" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade6" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade7" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade8" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade9" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade10" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade11" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 2)
-visible = false
-
-[node name="WallTileFade12" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 3)
-visible = false
-
-[node name="WallTileFade13" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade14" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade15" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade16" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 2)
-visible = false
-
-[node name="WallTileFade17" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 3)
-visible = false
-
-[node name="WallTileFade18" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade19" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade20" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade21" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade22" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade23" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade24" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade25" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade26" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade27" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 0)
-visible = false
-
-[node name="WallTileFade28" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade29" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 2)
-visible = false
-
-[node name="WallTileFade30" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 3)
-visible = false
-
-[node name="WallTileFade31" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 4)
-visible = false
-
-[node name="WallTileFade32" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 0)
-visible = false
-
-[node name="WallTileFade33" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade34" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 2)
-visible = false
-
-[node name="WallTileFade35" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 3)
-visible = false
-
-[node name="WallTileFade36" parent="Room8" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, 4.5, 1.5, 4)
-visible = false
-
-[node name="Room9" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, -18)
-
-[node name="FloorTile3D" parent="Room9" instance=ExtResource("1_fequm")]
-visible = false
-
-[node name="FloorTile3D2" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
-visible = false
-
-[node name="FloorTile3D3" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
-visible = false
-
-[node name="FloorTile3D4" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
-visible = false
-
-[node name="FloorTile3D5" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
-visible = false
-
-[node name="FloorTile3D6" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-visible = false
-
-[node name="FloorTile3D7" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
-visible = false
-
-[node name="FloorTile3D9" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
-visible = false
-
-[node name="FloorTile3D10" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
-visible = false
-
-[node name="FloorTile3D11" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
-visible = false
-
-[node name="FloorTile3D12" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
-visible = false
-
-[node name="FloorTile3D13" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
-visible = false
-
-[node name="FloorTile3D14" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
-visible = false
-
-[node name="FloorTile3D15" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
-visible = false
-
-[node name="FloorTile3D16" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
-visible = false
-
-[node name="FloorTile3D17" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
-visible = false
-
-[node name="FloorTile3D18" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
-visible = false
-
-[node name="FloorTile3D19" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
-visible = false
-
-[node name="FloorTile3D20" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
-visible = false
-
-[node name="FloorTile3D21" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-visible = false
-
-[node name="FloorTile3D22" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
-visible = false
-
-[node name="FloorTile3D23" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
-visible = false
-
-[node name="FloorTile3D24" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
-visible = false
-
-[node name="FloorTile3D25" parent="Room9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
-visible = false
-
-[node name="WallTileFade" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade2" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 1, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade3" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade4" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade5" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 0.5, -0.5)
-visible = false
-
-[node name="WallTileFade6" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade7" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 3, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade8" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade10" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade11" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 0.5, 4.5)
-visible = false
-
-[node name="WallTileFade9" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade12" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade13" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 2)
-visible = false
-
-[node name="WallTileFade14" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade15" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 4)
-visible = false
-
-[node name="WallTileFade16" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 3)
-visible = false
-
-[node name="WallTileFade17" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 1)
-visible = false
-
-[node name="WallTileFade18" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 0.5, 0)
-visible = false
-
-[node name="WallTileFade19" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 0, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade20" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 1, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade21" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 2, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade22" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 3, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade23" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.999816, -0.0173533, 8.22281e-05, 0.0173985, 0.999834, -5.45691e-05, -0.00812675, 0.00559897, 0.00999951, 4, 1.5, -0.5)
-visible = false
-
-[node name="WallTileFade24" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 4, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade25" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 3, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade26" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 2, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade27" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 1, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade28" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.999816, 0.0173533, -8.2229e-05, 0.0173985, 0.999834, -5.45691e-05, 0.00812684, -0.00559897, -0.00999951, 0, 1.5, 4.5)
-visible = false
-
-[node name="WallTileFade29" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 0)
-visible = false
-
-[node name="WallTileFade30" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade31" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 2)
-visible = false
-
-[node name="WallTileFade32" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(0.0081267, -0.00559897, -0.00999951, 0.0173985, 0.999834, -5.45691e-05, 0.999816, -0.0173533, 8.22277e-05, -0.5, 1.5, 4)
-visible = false
-
-[node name="WallTileFade33" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 4)
-visible = false
-
-[node name="WallTileFade34" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 3)
-visible = false
-
-[node name="WallTileFade35" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 1)
-visible = false
-
-[node name="WallTileFade36" parent="Room9" instance=ExtResource("2_144js")]
-transform = Transform3D(-0.00812679, 0.00559897, 0.00999951, 0.0173985, 0.999834, -5.45691e-05, -0.999816, 0.0173533, -8.22286e-05, 4.5, 1.5, 0)
-visible = false
-
-[node name="Hall7" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, -26)
-
-[node name="FloorTile3D" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
-visible = false
-
-[node name="FloorTile3D2" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
-visible = false
-
-[node name="FloorTile3D3" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
-visible = false
-
-[node name="FloorTile3D4" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 9)
-visible = false
-
-[node name="FloorTile3D5" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 10)
-visible = false
-
-[node name="FloorTile3D6" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 10)
-visible = false
-
-[node name="FloorTile3D7" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 10)
-visible = false
-
-[node name="FloorTile3D8" parent="Hall7" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 10)
-visible = false
-
-[node name="Hall8" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 39, 0, -27)
-
-[node name="FloorTile3D" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
-visible = false
-
-[node name="FloorTile3D2" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
-visible = false
-
-[node name="FloorTile3D5" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
-visible = false
-
-[node name="FloorTile3D6" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 8)
-visible = false
-
-[node name="FloorTile3D7" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
-visible = false
-
-[node name="FloorTile3D8" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
-visible = false
-
-[node name="FloorTile3D9" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
-visible = false
-
-[node name="FloorTile3D10" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
-visible = false
-
-[node name="FloorTile3D11" parent="Hall8" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
-visible = false
-
-[node name="Hall9" type="Node3D" parent="."]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 45, 0, -20)
-
-[node name="FloorTile3D2" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
-visible = false
-
-[node name="FloorTile3D5" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 8)
-visible = false
-
-[node name="FloorTile3D6" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 8)
-visible = false
-
-[node name="FloorTile3D7" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 8)
-visible = false
-
-[node name="FloorTile3D8" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
-visible = false
-
-[node name="FloorTile3D9" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
-visible = false
-
-[node name="FloorTile3D10" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
-visible = false
-
-[node name="FloorTile3D11" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
-visible = false
-
-[node name="FloorTile3D17" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 11)
-visible = false
-
-[node name="FloorTile3D18" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 11)
-visible = false
-
-[node name="FloorTile3D19" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 11)
-visible = false
-
-[node name="FloorTile3D20" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 11)
-visible = false
-
-[node name="FloorTile3D21" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
-visible = false
-
-[node name="FloorTile3D22" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
-visible = false
-
-[node name="FloorTile3D23" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53674e-07, 0, 11)
-visible = false
-
-[node name="FloorTile3D15" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 9)
-visible = false
-
-[node name="FloorTile3D16" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10)
-visible = false
-
-[node name="FloorTile3D12" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 8)
-visible = false
-
-[node name="FloorTile3D13" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
-visible = false
-
-[node name="FloorTile3D14" parent="Hall9" instance=ExtResource("1_fequm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
-visible = false
-
-[node name="Sprite3D" type="Sprite3D" parent="Hall9"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.999969, 0, 11)
-offset = Vector2(0, 20)
-pixel_size = 0.1
-billboard = 1
-texture = ExtResource("3_4hndk")

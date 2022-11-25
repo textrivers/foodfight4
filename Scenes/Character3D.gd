@@ -274,25 +274,25 @@ func _on_navigation_agent_3d_navigation_finished():
 func _on_area_3d_body_entered(body):
 	if player && body.is_in_group("proximity"):
 		var body_parent = body.get_parent()
-		if body_parent.is_in_group("tile"):
+		if body_parent.is_in_group("tile") || body_parent.is_in_group("wall"):
 			body.input_ray_pickable = true
 			body_parent.visible = true
 			## TODO spawn-in logic for enemies and food
-		elif body_parent.is_in_group("wall"):
-			body_parent.visible = true
-			body.get_node("CollisionShape3D").disabled = false
+#		elif body_parent.is_in_group("wall"):
+#			body_parent.visible = true
+#			body.get_node("CollisionShape3D").disabled = false
 		else:
 			body.visible = true
 
 func _on_area_3d_body_exited(body):
 	if player && body.is_in_group("proximity"):
 		var body_parent = body.get_parent()
-		if body_parent.is_in_group("tile"):
+		if body_parent.is_in_group("tile") || body_parent.is_in_group("wall"):
 			body.input_ray_pickable = false
 			body_parent.visible = false
-		elif body_parent.is_in_group("wall"):
-			body_parent.visible = false
-			body.get_node("CollisionShape3D").set_deferred("disabled", true)
+#		elif body_parent.is_in_group("wall"):
+#			body_parent.visible = false
+#			body.get_node("CollisionShape3D").set_deferred("disabled", true)
 		else:
 			body.visible = false
 			##TODO queue_free this body (enemy, food, whatever), needs spawn-in logic on body entered for tiles

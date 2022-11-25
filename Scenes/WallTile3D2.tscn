@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbbohaepesp4j"]
+[gd_scene load_steps=5 format=3 uid="uid://bbbohaepesp4j"]
+
+[ext_resource type="Script" path="res://Scenes/FloorTile3D.gd" id="1_pehbk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2sjld"]
-depth_draw_mode = 1
 distance_fade_mode = 1
 distance_fade_min_distance = 0.5
 distance_fade_max_distance = 8.0
@@ -11,14 +12,18 @@ distance_fade_max_distance = 8.0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bkuu5"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[node name="WallTileFade" type="MeshInstance3D" groups=["wall"]]
+[node name="WallTileFade" type="MeshInstance3D" groups=["selectable", "wall"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, -0.5)
 material_override = SubResource("StandardMaterial3D_2sjld")
 mesh = SubResource("BoxMesh_8lv1n")
+script = ExtResource("1_pehbk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["proximity"]]
 collision_mask = 17
-input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_bkuu5")
+
+[connection signal="input_event" from="StaticBody3D" to="." method="_on_StaticBody_input_event"]
+[connection signal="mouse_entered" from="StaticBody3D" to="." method="_on_StaticBody_mouse_entered"]
+[connection signal="mouse_exited" from="StaticBody3D" to="." method="_on_StaticBody_mouse_exited"]
