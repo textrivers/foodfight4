@@ -78,7 +78,7 @@ var actions: Array = [
 	["throw", true, 25],
 	["wait", true, 25],
 	]
-var walk_speed: float = 3.0
+var walk_speed: float = 4.0
 var walking: bool = false
 var agent_rid
 var red_light: bool = false
@@ -90,7 +90,8 @@ var throw_clearance = 0.1 #avoid collision with parent
 var current_splat_num: int = 0
 var parent
 var bullseye: Vector3
-
+var ray_cast
+var hunting: bool = false
 var selecting: bool = false
 var selected: bool = false
 var sel = Selection.new()
@@ -104,26 +105,25 @@ func _ready():
 	if player:
 		get_appearance_from_global()
 		visible = true
+		Global.player_node = self
 	else:
 		generate_unique_appearance()
 	revert_color = $SubViewport/Sprite2D.modulate
-	#$Sprite3D.material_override = $Sprite3D.material_override.duplicate(true)
 	$Sprite3D.texture = $SubViewport.get_texture()
-	#$Sprite3D.material_override.albedo_texture = $SubViewport.get_texture()
 	agent_rid = $NavigationAgent3d.get_rid()
+	ray_cast = $RayCast3D
 
 func _physics_process(_delta):
 	bullseye = $TargetPosition.get_global_position()
 	var next_loc = $NavigationAgent3d.get_next_location()
 	if walking:
 		if !red_light:
-			## TODO velocity here if navigating along a path
 			velocity = position.direction_to(next_loc) * walk_speed
-			#$NavigationAgent3d.set_velocity(velocity)
 			move_and_slide()
+			if hunting: 
+				hunting = !acquire_target()
 		else:
-#			if player: 
-#				print("red light")
+#			## leaving this here for error handling potentially
 			pass
 
 func get_appearance_from_global():
@@ -197,6 +197,18 @@ func add_to_food_contacts(floor_food):
 func remove_from_food_contacts(floor_food):
 	if food_contacts.has(floor_food):
 		food_contacts.erase(floor_food)
+
+func acquire_target():
+	ray_cast.target_position = (Global.player_node.position - self.position)
+	if ray_cast.is_colliding():
+		print(ray_cast.get_collider())
+		if ray_cast.get_collider() == Global.player_node:
+			parent.turn_tracker[self] = parent.current_moment
+			return true
+		else:
+			return false
+	else:
+		print("raycast not colliding")
 
 func throw_food(targ):
 	## using target position, solve for velocity vector of thrown thing

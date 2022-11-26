@@ -22,7 +22,7 @@ var cam_rig
 var GUI
 var current_action = []
 var AI_actions = [
-	["wait", null, 100],
+	["wait", null, 50],
 	["pick_up", null, 25],
 	["throw", null, 25],
 	["walk", null, 25],
@@ -142,7 +142,7 @@ func build():
 			self.connect("done_selecting_action_target",Callable(new_tile,"on_target_unselecting"))
 
 func register_character(_char):
-	turn_tracker[_char] = 0
+	turn_tracker[_char] = current_moment
 	self.connect("red_light",Callable(_char,"on_red_light"))
 	self.connect("green_light",Callable(_char,"on_green_light"))
 	_char.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
@@ -205,64 +205,45 @@ func prompt_turns():
 				else:
 					turn.set_deferred("walking", false)
 				await self.GUI_action_taken
-				if whose_turn.player == false:
-					print(current_action[0])
+#				if whose_turn.player == false:
+#					print(current_action[0])
 				resolve_turn()
 
 func AI_action_select():
 	await get_tree().create_timer(Global.AI_turn_delay).timeout
 	## decide action
 	var AI_rand = randi() % 4
-	if AI_rand == 0: ## 1 in 4 chance to just stand there doing nothing
-		current_action = AI_actions[0].duplicate(false) ## wait 100 
-	elif AI_rand == 1:
-		current_action = AI_actions[3].duplicate(false) ## walk somewhere
+	if AI_rand == 0: ## random chance to just stand there doing nothing
+		current_action = AI_actions[0].duplicate(false) ## wait 50 
 	else:
-		if whose_turn.has_node("MyFood"):
-			for i in get_tree().get_nodes_in_group("character"):
-				if i.player:
-					var ray_cast = whose_turn.get_node("RayCast3D")
-					ray_cast.target_position = i.position
-					if ray_cast.is_colliding():
-						print(ray_cast.get_collider())
-						if ray_cast.get_collider() == i:
-							current_action = AI_actions[2].duplicate(false) ## throw
-						else:
-							current_action = AI_actions[3].duplicate(false) ## walk
-					break
-		else:
-			if whose_turn.food_contacts.size() > 0:
-				current_action = AI_actions[1].duplicate(false) ## pick up
-			else:
-				current_action = AI_actions[3].duplicate(false) ## walk
-	## set action parameters
-	if current_action[0] == "wait":
-		pass
-	if current_action[0] == "pick_up":
-		pass
-	if current_action[0] == "throw":
-		var targets = get_tree().get_nodes_in_group("character").duplicate()
-		targets.erase(whose_turn)
-		var throw_target = targets[randi() % targets.size()]
-		current_action[1] = throw_target.bullseye
-	if current_action[0] == "walk":
-		if whose_turn.has_node("MyFood"):
-			for i in get_tree().get_nodes_in_group("character"):
-				if i.player:
-					current_action[1] = i.position
-		elif get_tree().get_nodes_in_group("throwable").size() > 0:
-			action_target = find_closest_food()
-			current_action[1] = action_target
-		else:
-			action_target.x = randi() % int(board_size.x)
-			action_target.y = 0
-			action_target.z = randi() % int(board_size.y)
-			current_action[1] = action_target
-		whose_turn.get_node("NavigationAgent3d").set_target_location(current_action[1])
-		await whose_turn.get_node("NavigationAgent3d").path_changed
-		if debug:
-			display_debug_path()
-		current_action[2] = calculate_walk_duration()
+		if whose_turn.has_node("MyFood"): ## if holding food
+			whose_turn.ray_cast.target_position = Global.player_node.position ## look for player
+			if whose_turn.ray_cast.get_collider() == Global.player_node: ## if can see player
+				current_action = AI_actions[2].duplicate(false) ## throw
+				current_action[1] = Global.player_node.bullseye
+			else: ## can't see player
+				current_action = AI_actions[3].duplicate(false) ## walk to player
+				current_action[1] = Global.player_node.position
+				whose_turn.hunting = true
+		else: ## not holding food
+			if whose_turn.food_contacts.size() > 0: ## if standing on food
+				current_action = AI_actions[1].duplicate(false) ## pick up food
+			else: ## if not standing on food
+				current_action = AI_actions[3].duplicate(false) ## walk 
+				if get_tree().get_nodes_in_group("throwable").size() > 0: ## if food exists
+					action_target = find_closest_food() ## walk to closest food
+					current_action[1] = action_target
+				else: ## if food doesn't exist
+					var tiles = get_tree().get_nodes_in_group("tile") ## walk to random tile
+					var dest_tile = tiles.pick_random()
+					current_action[1] = dest_tile
+		## handle navigation for walking
+		if current_action[0] == "walk":
+			whose_turn.get_node("NavigationAgent3d").set_target_location(current_action[1])
+			await whose_turn.get_node("NavigationAgent3d").path_changed
+			if debug:
+				display_debug_path()
+			current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
 	emit_signal("GUI_action_taken")
@@ -446,10 +427,9 @@ func _on_Proceed_pressed():
 		var nav_agent = whose_turn.get_node("NavigationAgent3d")
 		nav_agent.set_target_location(action_target)
 		await nav_agent.path_changed
-		print("target reachable is " + str(nav_agent.is_target_reachable()))
+		#print("target reachable is " + str(nav_agent.is_target_reachable()))
 		if debug:
 			display_debug_path()
-			#await get_tree().create_timer(3.0).timeout
 		current_action[2] = calculate_walk_duration()
 	reset_character_options()
 	hide_character_options()
