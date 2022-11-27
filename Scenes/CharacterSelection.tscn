@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://ccqjkwq0e5x78"]
+[gd_scene load_steps=19 format=3 uid="uid://ccqjkwq0e5x78"]
 
 [ext_resource type="Texture2D" uid="uid://3x0f7fsgc6r7" path="res://Assets/Screens/character_screen_001.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dj6pafu724o1n" path="res://Assets/CharacterSprites/Uni_Vanilla.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://bty52w0d2lmuq" path="res://Assets/CharacterSprites/Tal_Vanilla.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dshm56h0odu5g" path="res://Assets/PanoramaSky/A_pano_3.png" id="3_n5tuk"]
 [ext_resource type="Texture2D" uid="uid://b2na3rpgqj85e" path="res://Assets/CharacterSprites/Pik_Vanilla.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cfipqrn28cjfo" path="res://Assets/black_sq_100px.png" id="5"]
 [ext_resource type="Script" path="res://Scenes/ColorButton.gd" id="6"]
@@ -45,16 +46,25 @@ script = ExtResource("13")
 texture = ExtResource("1")
 centered = false
 
+[node name="PointLight2D" type="PointLight2D" parent="Backdrop"]
+energy = 1.69
+texture = ExtResource("3_n5tuk")
+offset = Vector2(512, 125)
+texture_scale = 0.5
+
 [node name="CharGUI" type="MarginContainer" parent="."]
+light_mask = 2
 offset_right = 1024.0
 offset_bottom = 600.0
 theme = ExtResource("12")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CharGUI"]
+light_mask = 2
 offset_right = 1024.0
 offset_bottom = 600.0
 
 [node name="CharSelectLabel" type="Label" parent="CharGUI/VBoxContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(0, 72)
 offset_right = 1024.0
 offset_bottom = 72.0
@@ -64,12 +74,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MainChoiceArea" type="HBoxContainer" parent="CharGUI/VBoxContainer"]
+light_mask = 2
 offset_top = 76.0
 offset_right = 1024.0
 offset_bottom = 527.0
 alignment = 1
 
 [node name="ThumbsEtc" type="VBoxContainer" parent="CharGUI/VBoxContainer/MainChoiceArea"]
+light_mask = 3
 offset_left = 18.0
 offset_right = 1006.0
 offset_bottom = 451.0
@@ -82,17 +94,20 @@ offset_right = 988.0
 offset_bottom = 20.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc"]
+light_mask = 2
 offset_top = 24.0
 offset_right = 988.0
 offset_bottom = 144.0
 
 [node name="Thumbs" type="HBoxContainer" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer"]
+light_mask = 2
 offset_right = 988.0
 offset_bottom = 120.0
 theme = ExtResource("15")
 alignment = 1
 
 [node name="Button" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_right = 120.0
 offset_bottom = 120.0
@@ -101,6 +116,7 @@ expand_icon = true
 script = ExtResource("14")
 
 [node name="Button2" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 124.0
 offset_right = 244.0
@@ -111,6 +127,7 @@ script = ExtResource("14")
 thumb_num = 4
 
 [node name="Button3" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 248.0
 offset_right = 368.0
@@ -121,6 +138,7 @@ script = ExtResource("14")
 thumb_num = 8
 
 [node name="Button4" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 372.0
 offset_right = 492.0
@@ -131,6 +149,7 @@ script = ExtResource("14")
 thumb_num = 12
 
 [node name="Button5" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 496.0
 offset_right = 616.0
@@ -141,6 +160,7 @@ script = ExtResource("14")
 thumb_num = 16
 
 [node name="Button6" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 620.0
 offset_right = 740.0
@@ -151,6 +171,7 @@ script = ExtResource("14")
 thumb_num = 20
 
 [node name="Button7" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 744.0
 offset_right = 864.0
@@ -161,6 +182,7 @@ script = ExtResource("14")
 thumb_num = 24
 
 [node name="Button8" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/MarginContainer/Thumbs"]
+light_mask = 2
 custom_minimum_size = Vector2(120, 120)
 offset_left = 868.0
 offset_right = 988.0
@@ -179,6 +201,7 @@ offset_right = 988.0
 offset_bottom = 181.0
 
 [node name="CenterContainer" type="HBoxContainer" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc"]
+light_mask = 2
 offset_top = 185.0
 offset_right = 988.0
 offset_bottom = 425.0
@@ -187,6 +210,7 @@ mouse_filter = 2
 alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer"]
+light_mask = 2
 offset_left = 47.0
 offset_right = 613.0
 offset_bottom = 240.0
@@ -197,6 +221,7 @@ theme_override_constants/v_separation = 8
 columns = 7
 
 [node name="Button2" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_right = 74.0
 offset_bottom = 74.0
@@ -204,12 +229,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button2"]
 show_behind_parent = true
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 
 [node name="Button" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 82.0
 offset_right = 156.0
@@ -219,12 +246,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(1, 0.533333, 0, 1)
 
 [node name="Button3" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 164.0
 offset_right = 238.0
@@ -234,12 +263,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button3"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(1, 0.878431, 0.054902, 1)
 
 [node name="Button4" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 246.0
 offset_right = 320.0
@@ -248,12 +279,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button4"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.0509804, 0.392157, 0.482353, 1)
 
 [node name="Button5" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 328.0
 offset_right = 402.0
@@ -262,6 +295,7 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button5"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 pivot_offset = Vector2(48, 52)
@@ -269,6 +303,7 @@ mouse_filter = 2
 color = Color(0.556863, 0.815686, 0.878431, 1)
 
 [node name="Button6" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 410.0
 offset_right = 484.0
@@ -277,12 +312,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button6"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.443137, 0.615686, 1, 1)
 
 [node name="Button7" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 492.0
 offset_right = 566.0
@@ -291,12 +328,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button7"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.262745, 0.0980392, 0.592157, 1)
 
 [node name="Button9" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_top = 82.0
 offset_right = 74.0
@@ -305,12 +344,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button9"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.819608, 0.819608, 0.819608, 1)
 
 [node name="Button10" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 82.0
 offset_top = 82.0
@@ -320,6 +361,7 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button10"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 pivot_offset = Vector2(24, 48)
@@ -327,6 +369,7 @@ mouse_filter = 2
 color = Color(0.72549, 0.384314, 0.0352941, 1)
 
 [node name="Button11" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 164.0
 offset_top = 82.0
@@ -336,12 +379,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button11"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.788235, 0.694118, 0.0666667, 1)
 
 [node name="Button12" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 246.0
 offset_top = 82.0
@@ -351,12 +396,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button12"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.0784314, 0.270588, 0.321569, 1)
 
 [node name="Button13" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 328.0
 offset_top = 82.0
@@ -366,12 +413,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button13"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.470588, 0.635294, 0.67451, 1)
 
 [node name="Button14" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 410.0
 offset_top = 82.0
@@ -381,12 +430,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button14"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.490196, 0.584314, 0.788235, 1)
 
 [node name="Button15" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 492.0
 offset_top = 82.0
@@ -396,12 +447,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button15"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.192157, 0.133333, 0.266667, 1)
 
 [node name="Button17" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_top = 164.0
 offset_right = 74.0
@@ -410,12 +463,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button17"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.458824, 0.458824, 0.458824, 1)
 
 [node name="Button18" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 82.0
 offset_top = 164.0
@@ -425,12 +480,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button18"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.513726, 0.298039, 0.0313726, 1)
 
 [node name="Button19" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 164.0
 offset_top = 164.0
@@ -440,6 +497,7 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button19"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 pivot_offset = Vector2(52, 52)
@@ -447,6 +505,7 @@ mouse_filter = 2
 color = Color(0.498039, 0.439216, 0.0313726, 1)
 
 [node name="Button20" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 246.0
 offset_top = 164.0
@@ -456,12 +515,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button20"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.0392157, 0.141176, 0.168627, 1)
 
 [node name="Button21" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 328.0
 offset_top = 164.0
@@ -471,6 +532,7 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button21"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 pivot_offset = Vector2(52, 48)
@@ -478,6 +540,7 @@ mouse_filter = 2
 color = Color(0.282353, 0.333333, 0.345098, 1)
 
 [node name="Button22" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 410.0
 offset_top = 164.0
@@ -487,12 +550,14 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button22"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 mouse_filter = 2
 color = Color(0.329412, 0.384314, 0.505882, 1)
 
 [node name="Button23" type="Button" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(74, 74)
 offset_left = 492.0
 offset_top = 164.0
@@ -502,6 +567,7 @@ script = ExtResource("6")
 
 [node name="ColorRect" type="ColorRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/GridContainer/Button23"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 74.0
 offset_bottom = 74.0
 pivot_offset = Vector2(636, 177)
@@ -509,6 +575,7 @@ mouse_filter = 2
 color = Color(0.0823529, 0.0627451, 0.109804, 1)
 
 [node name="Padding" type="Control" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 3
 anchors_preset = 0
@@ -517,30 +584,35 @@ offset_right = 697.0
 offset_bottom = 240.0
 
 [node name="PhotoEtc" type="VBoxContainer" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer"]
+light_mask = 2
 offset_left = 701.0
 offset_right = 941.0
 offset_bottom = 240.0
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/PhotoEtc"]
+light_mask = 2
 offset_right = 240.0
 offset_bottom = 240.0
 texture = ExtResource("9")
 
 [node name="TextureRect" type="TextureRect" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/CenterContainer/PhotoEtc/TextureRect"]
 show_behind_parent = true
+light_mask = 2
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(2.4, 2.4)
 texture = ExtResource("5")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc"]
+light_mask = 2
 offset_top = 429.0
 offset_right = 988.0
 offset_bottom = 451.0
 alignment = 1
 
 [node name="HaloCheck" type="CheckBox" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/HBoxContainer"]
+light_mask = 2
 offset_left = 347.0
 offset_right = 412.0
 offset_bottom = 22.0
@@ -548,6 +620,7 @@ theme = ExtResource("15")
 text = "Halo? "
 
 [node name="HornsCheck" type="CheckBox" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/HBoxContainer"]
+light_mask = 2
 offset_left = 416.0
 offset_right = 487.0
 offset_bottom = 22.0
@@ -555,6 +628,7 @@ theme = ExtResource("15")
 text = "Horns? "
 
 [node name="PoetryCheck" type="CheckBox" parent="CharGUI/VBoxContainer/MainChoiceArea/ThumbsEtc/HBoxContainer"]
+light_mask = 2
 offset_left = 491.0
 offset_right = 640.0
 offset_bottom = 22.0
@@ -563,18 +637,21 @@ disabled = true
 text = "Poetry Integration? "
 
 [node name="Spacer" type="MarginContainer" parent="CharGUI/VBoxContainer"]
+light_mask = 2
 custom_minimum_size = Vector2(0, 9)
 offset_top = 531.0
 offset_right = 1024.0
 offset_bottom = 540.0
 
 [node name="RandomOrDone" type="HBoxContainer" parent="CharGUI/VBoxContainer"]
+light_mask = 2
 offset_top = 544.0
 offset_right = 1024.0
 offset_bottom = 581.0
 alignment = 1
 
 [node name="DoneButton" type="Button" parent="CharGUI/VBoxContainer/RandomOrDone"]
+light_mask = 2
 offset_left = 452.0
 offset_right = 572.0
 offset_bottom = 37.0

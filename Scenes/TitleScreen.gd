@@ -2,7 +2,7 @@ extends Node2D
 
 var next_scene = "res://Scenes/CharacterSelection.tscn"
 var game_start: bool = false
-var ice_cream_speed = 1
+var ice_cream_speed = 0.5
 
 func _ready():
 	pass # Replace with function body.
@@ -11,7 +11,7 @@ func _physics_process(_delta):
 	for ice_cream in $IceCreamLights.get_children():
 		ice_cream.offset.x -= 1 * ice_cream_speed
 		if ice_cream.offset.x < -512:
-			ice_cream.offset.x = 2560
+			ice_cream.offset.x = 1536
 			
 
 func _input(event):

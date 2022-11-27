@@ -199,14 +199,15 @@ func prompt_turns():
 				turn_marker.position.y = turn.position.y + 0.6
 				turn_marker.position.z = turn.position.z
 				whose_turn = turn
-				display_character_options(turn.player)
+				
 				if !turn.player:
 					AI_action_select()
 				else:
 					turn.set_deferred("walking", false)
+					display_character_options(turn.player)
 				await self.GUI_action_taken
-#				if whose_turn.player == false:
-#					print(current_action[0])
+				if whose_turn.player == false:
+					print(str(whose_turn.name) + " is going to " + current_action[0])
 				resolve_turn()
 
 func AI_action_select():
