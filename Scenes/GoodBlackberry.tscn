@@ -1,0 +1,26 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwqoigejsjeym"]
+
+[ext_resource type="PackedScene" uid="uid://bkdb71brh53of" path="res://Scenes/Food.tscn" id="1_1vxfh"]
+[ext_resource type="Texture2D" uid="uid://0w1ebhhwk1qt" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_0.png" id="2_4ek26"]
+[ext_resource type="Texture2D" uid="uid://vv728ffgkpdc" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_1.png" id="3_54jwf"]
+[ext_resource type="Texture2D" uid="uid://dt76wucbn113v" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_2.png" id="4_f2g5i"]
+[ext_resource type="Texture2D" uid="uid://d5t7cxaksmps" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_3.png" id="5_mqfag"]
+[ext_resource type="Texture2D" uid="uid://cck76tt6minet" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_4.png" id="6_oyxn5"]
+[ext_resource type="Texture2D" uid="uid://cg1g415arbc7s" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_5.png" id="7_r7uc7"]
+[ext_resource type="Texture2D" uid="uid://dbve543ldg10r" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_6.png" id="8_n4v73"]
+[ext_resource type="Texture2D" uid="uid://comwh6e56ep1k" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_7.png" id="9_wwalr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jyydl"]
+resource_local_to_scene = true
+animations = [{
+"frames": [ExtResource("2_4ek26"), ExtResource("3_54jwf"), ExtResource("4_f2g5i"), ExtResource("5_mqfag"), ExtResource("6_oyxn5"), ExtResource("7_r7uc7"), ExtResource("8_n4v73"), ExtResource("9_wwalr")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="BetterBlackberry" instance=ExtResource("1_1vxfh")]
+splat_colors = [Color(0.262745, 0.0980392, 0.466667, 1), Color(0.192157, 0.133333, 0.266667, 1), Color(0.0823529, 0.0627451, 0.109804, 1)]
+
+[node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
+frames = SubResource("SpriteFrames_jyydl")

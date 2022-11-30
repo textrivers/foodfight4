@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://epml61t53fa8"]
+
+[ext_resource type="PackedScene" uid="uid://dwqoigejsjeym" path="res://Scenes/GoodBlackberry.tscn" id="1_npp84"]
+
+[node name="ClusterBlackberry" type="Node3D"]
+
+[node name="BetterBlackberry" parent="." instance=ExtResource("1_npp84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.3, 0)
+
+[node name="BetterBlackberry2" parent="." instance=ExtResource("1_npp84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0.1)
+
+[node name="BetterBlackberry3" parent="." instance=ExtResource("1_npp84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+
+[node name="BetterBlackberry4" parent="." instance=ExtResource("1_npp84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.3, 0)
+
+[node name="BetterBlackberry5" parent="." instance=ExtResource("1_npp84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, -0.1)
