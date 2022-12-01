@@ -50,8 +50,10 @@ func _ready():
 	turn_marker = $TurnMarker
 	cam_rig_rot_target = Vector2(cam_rig.rotation.y, cam_rig.rotation.x)
 	cam_rig_zoom_target = $CameraRig/Camera3D.position.z
+	print("pass node setup")
 	#build()
 	place_objects()
+	print("pass object placement")
 	## connect tile signals and checkerboard them
 	for new_tile in get_tree().get_nodes_in_group("tile"):
 		new_tile.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
@@ -66,6 +68,7 @@ func _ready():
 		new_mat.albedo_color = new_tile_color
 		new_tile.set_material_override(new_mat)
 		new_tile.revert_color = new_tile_color
+	print("pass tile signal connect etc")
 	## connect wall signals
 	for new_wall in get_tree().get_nodes_in_group("wall"):
 		new_wall.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
@@ -86,10 +89,13 @@ func _ready():
 		new_mat.distance_fade_max_distance = 8.0
 		new_wall.set_material_override(new_mat)
 		new_wall.revert_color = new_wall_color
+	print("pass wall connect etc")
 	## register characters
 	for character in get_tree().get_nodes_in_group("character"):
 		register_character(character)
+	print("pass character registration")
 	current_action.resize(3)
+	print("now what")
 
 func place_objects():
 	## place food
@@ -208,7 +214,9 @@ func prompt_turns():
 					display_character_options(turn.player)
 				await self.GUI_action_taken
 				if whose_turn.player == false:
-					print(str(whose_turn.name) + " is going to " + current_action[0])
+#					print(str(whose_turn.name) + " is going to " + current_action[0])
+#					print("position = " + str(whose_turn.position) + " | target = " + str(current_action[1]))
+					pass
 				resolve_turn()
 
 func AI_action_select():

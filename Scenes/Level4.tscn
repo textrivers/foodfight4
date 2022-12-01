@@ -213,9 +213,6 @@ shadow_enabled = true
 [node name="Bill" parent="." instance=ExtResource("5_fj7h1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 
-[node name="NavigationAgent3d" parent="Bill" index="4"]
-navigation_layers = 1
-
 [node name="Sully" parent="." instance=ExtResource("5_fj7h1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 9)
 
@@ -225,9 +222,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
 [node name="You" parent="." instance=ExtResource("5_fj7h1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5)
 player = true
-
-[node name="NavigationAgent3d" parent="You" index="4"]
-navigation_layers = 1
 
 [node name="MapDQ4" parent="." instance=ExtResource("6_wa3ox")]
 
@@ -243,5 +237,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, -0.51)
 [connection signal="pressed" from="GUI/Right/ProceedCancel/Cancel" to="." method="_on_Cancel_pressed"]
 
 [editable path="Bill"]
+[editable path="Sully"]
+[editable path="Don"]
 [editable path="You"]
 [editable path="MapDQ4"]

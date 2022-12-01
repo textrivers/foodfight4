@@ -1,5 +1,15 @@
-res://Scenes/ClusterBlackberry.tscn
+res://Scenes/Level4.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
 res://Themes/GUI_Default.tres
-res://Singletons/Global.gd
+res://Scenes/Character4.tscn
+res://Scenes/TitleScreen.tscn
+res://Scenes/Main.tscn
+res://Scenes/GoodBlackberry.tscn
+res://Scenes/GoodOrange.tscn
+res://Scenes/ClusterBanana.tscn
+res://Scenes/ClusterOrange.tscn
+res://Scenes/ClusterBlackberry.tscn
+res://Scenes/Character3D.gd
+res://Scenes/Level4.gd
+res://Scenes/GoodBanana.tscn

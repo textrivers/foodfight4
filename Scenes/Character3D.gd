@@ -201,7 +201,7 @@ func remove_from_food_contacts(floor_food):
 func acquire_target():
 	ray_cast.target_position = (Global.player_node.position - self.position)
 	if ray_cast.is_colliding():
-		print(ray_cast.get_collider())
+		#print(ray_cast.get_collider())
 		if ray_cast.get_collider() == Global.player_node:
 			parent.turn_tracker[self] = parent.current_moment
 			return true

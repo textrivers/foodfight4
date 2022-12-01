@@ -85,7 +85,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 path_desired_distance = 0.1
 target_desired_distance = 0.1
 path_max_distance = 0.5
-navigation_layers = 0
 avoidance_enabled = true
 radius = 0.1
 neighbor_distance = 10.0
