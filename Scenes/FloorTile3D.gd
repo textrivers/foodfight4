@@ -20,7 +20,7 @@ func on_target_unselecting():
 
 func _on_StaticBody_mouse_entered():
 	if selecting == true && selected == false:
-		material_override.albedo_color = Color.HOT_PINK
+		material_override.albedo_color = Global.palette_dict["pink_1"]
 
 func _on_StaticBody_mouse_exited():
 	if selecting == true && selected == false:
@@ -37,5 +37,5 @@ func _on_StaticBody_input_event(_camera, _event, _position, _normal, _shape_idx)
 					else:
 						child.material_override.albedo_color = child.revert_color
 			selected = true
-			material_override.albedo_color = Color.CRIMSON
+			material_override.albedo_color = Global.palette_dict["pink_2"]
 			emit_signal("give_on_select_info", global_position, tile_description)
