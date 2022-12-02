@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ceksb7caso7ve"]
+
+[ext_resource type="PackedScene" uid="uid://mioar457vvmw" path="res://Scenes/GoodWatermelon.tscn" id="1_i8ty0"]
+
+[node name="ClusterWatermelon" type="Node3D"]
+
+[node name="GoodWatermelon" parent="." instance=ExtResource("1_i8ty0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.2, 0)
+
+[node name="GoodWatermelon2" parent="." instance=ExtResource("1_i8ty0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+
+[node name="GoodWatermelon3" parent="." instance=ExtResource("1_i8ty0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="GoodWatermelon4" parent="." instance=ExtResource("1_i8ty0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.2, 0)
+
+[node name="GoodWatermelon5" parent="." instance=ExtResource("1_i8ty0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.1)

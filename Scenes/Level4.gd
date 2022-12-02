@@ -7,7 +7,12 @@ var food_palettes: Dictionary = {
 	#"all_bananas": [preload("res://Scenes/ClusterBanana.tscn"), preload("res://Scenes/ClusterBanana.tscn")],
 	#"all_oranges": [preload("res://Scenes/ClusterOrange.tscn"), preload("res://Scenes/ClusterOrange.tscn")],
 	#"orange_you_glad": [preload("res://Scenes/ClusterOrange.tscn"), preload("res://Scenes/ClusterBanana.tscn")],
-	"all_fruits": [preload("res://Scenes/ClusterOrange.tscn"), preload("res://Scenes/ClusterBanana.tscn"), preload("res://Scenes/ClusterBlackberry.tscn")]
+	"all_fruits": [
+		preload("res://Scenes/ClusterOrange.tscn"), 
+		preload("res://Scenes/ClusterBanana.tscn"), 
+		preload("res://Scenes/ClusterBlackberry.tscn"),
+		preload("res://Scenes/ClusterWatermelon.tscn")
+		]
 }
 var characters: Array = []
 var turn_tracker: Dictionary = {}
