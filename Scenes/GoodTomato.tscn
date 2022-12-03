@@ -1,0 +1,26 @@
+[gd_scene load_steps=11 format=3 uid="uid://b1stamudd62rk"]
+
+[ext_resource type="PackedScene" uid="uid://bkdb71brh53of" path="res://Scenes/Food.tscn" id="1_k363u"]
+[ext_resource type="Texture2D" uid="uid://c4xshdcpd7fn3" path="res://Assets/FoodSprites/bettertomato/bettertomato_0.png" id="2_pwrgr"]
+[ext_resource type="Texture2D" uid="uid://bsyejwbovahav" path="res://Assets/FoodSprites/bettertomato/bettertomato_1.png" id="3_mufcg"]
+[ext_resource type="Texture2D" uid="uid://duofe7rnjheox" path="res://Assets/FoodSprites/bettertomato/bettertomato_2.png" id="4_yband"]
+[ext_resource type="Texture2D" uid="uid://b7lnhv05s8n5c" path="res://Assets/FoodSprites/bettertomato/bettertomato_3.png" id="5_qrt0v"]
+[ext_resource type="Texture2D" uid="uid://piscnorncf2o" path="res://Assets/FoodSprites/bettertomato/bettertomato_4.png" id="6_bauw1"]
+[ext_resource type="Texture2D" uid="uid://hepyp3cv546b" path="res://Assets/FoodSprites/bettertomato/bettertomato_5.png" id="7_qt4s8"]
+[ext_resource type="Texture2D" uid="uid://bci3d8bx5rcdh" path="res://Assets/FoodSprites/bettertomato/bettertomato_6.png" id="8_o855o"]
+[ext_resource type="Texture2D" uid="uid://ca8fgftiereee" path="res://Assets/FoodSprites/bettertomato/bettertomato_7.png" id="9_vyfdo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7wnx"]
+resource_local_to_scene = true
+animations = [{
+"frames": [ExtResource("9_vyfdo"), ExtResource("2_pwrgr"), ExtResource("3_mufcg"), ExtResource("4_yband"), ExtResource("5_qrt0v"), ExtResource("6_bauw1"), ExtResource("7_qt4s8"), ExtResource("8_o855o")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="GoodTomato" instance=ExtResource("1_k363u")]
+splat_colors = [Color(0.831373, 0.239216, 0.262745, 1), Color(0.572549, 0.0980392, 0.129412, 1), Color(0.572549, 0.0980392, 0.129412, 1)]
+
+[node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
+frames = SubResource("SpriteFrames_g7wnx")

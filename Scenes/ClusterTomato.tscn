@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct0qxjd360rwe"]
+
+[ext_resource type="PackedScene" uid="uid://b1stamudd62rk" path="res://Scenes/GoodTomato.tscn" id="1_4w4n4"]
+
+[node name="ClusterTomato" type="Node3D"]
+
+[node name="GoodTomato" parent="." instance=ExtResource("1_4w4n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+
+[node name="GoodTomato2" parent="." instance=ExtResource("1_4w4n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.2, 0)
+
+[node name="GoodTomato3" parent="." instance=ExtResource("1_4w4n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+
+[node name="GoodTomato4" parent="." instance=ExtResource("1_4w4n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.2, 0)
+
+[node name="GoodTomato5" parent="." instance=ExtResource("1_4w4n4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.1)

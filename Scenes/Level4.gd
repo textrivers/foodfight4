@@ -11,7 +11,8 @@ var food_palettes: Dictionary = {
 		preload("res://Scenes/ClusterOrange.tscn"), 
 		preload("res://Scenes/ClusterBanana.tscn"), 
 		preload("res://Scenes/ClusterBlackberry.tscn"),
-		preload("res://Scenes/ClusterWatermelon.tscn")
+		preload("res://Scenes/ClusterWatermelon.tscn"),
+		preload("res://Scenes/ClusterTomato.tscn")
 		]
 }
 var characters: Array = []

@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [node name="GoodWatermelon" instance=ExtResource("1_6llpq")]
-splat_colors = [Color(0.831373, 0.239216, 0.262745, 1), Color(0.572549, 0.0980392, 0.129412, 1), Color(0.831373, 0.239216, 0.262745, 1)]
+splat_colors = [Color(0.831373, 0.239216, 0.262745, 1), Color(0.0509804, 0.392157, 0.482353, 1), Color(0.831373, 0.239216, 0.262745, 1)]
 
 [node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
 frames = SubResource("SpriteFrames_khqru")
