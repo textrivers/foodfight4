@@ -53,5 +53,7 @@ billboard = 1
 double_sided = false
 alpha_cut = 2
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_Area_body_exited"]

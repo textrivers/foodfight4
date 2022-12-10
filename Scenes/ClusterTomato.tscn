@@ -6,15 +6,20 @@
 
 [node name="GoodTomato" parent="." instance=ExtResource("1_4w4n4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+visible = false
 
 [node name="GoodTomato2" parent="." instance=ExtResource("1_4w4n4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.2, 0)
+visible = false
 
 [node name="GoodTomato3" parent="." instance=ExtResource("1_4w4n4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.1)
+visible = false
 
 [node name="GoodTomato4" parent="." instance=ExtResource("1_4w4n4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0.2, 0)
+visible = false
 
 [node name="GoodTomato5" parent="." instance=ExtResource("1_4w4n4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.1)
+visible = false

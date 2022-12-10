@@ -6,6 +6,7 @@ var thrown: bool = false
 var gravity
 var splat = preload("res://Scenes/SplatParticles.tscn")
 var floor_splat = preload("res://Scenes/FloorSplat.tscn")
+var audio_player
 @export var splat_colors: Array
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +15,7 @@ func _ready():
 	get_parent().get_parent().connect("red_light",Callable(self,"on_red_light"))
 	get_parent().get_parent().connect("green_light",Callable(self,"on_green_light"))
 	call_deferred("finish_viewport_setup")
+	audio_player = $AudioStreamPlayer
 
 func finish_viewport_setup():
 	$Sprite3D.texture = $SubViewport.get_texture()
@@ -29,11 +31,19 @@ func _physics_process(delta):
 		var collided = move_and_slide()
 		velocity.y -= gravity * delta
 		if collided: 
-			var last_coll = get_last_slide_collision()
+			var last_coll = get_last_slide_collision().get_collider()
 			for splat_col in splat_colors:
 				spawn_splatter_particles(last_coll.get_position(), splat_col)
-			if last_coll.get_collider().is_in_group("character"):
-				last_coll.get_collider().add_splatter(splat_colors[randi() % splat_colors.size()])
+			if last_coll.is_in_group("character"):
+				last_coll.add_splatter(splat_colors[randi() % splat_colors.size()])
+				last_coll.start_knockback(velocity.normalized())
+				if last_coll == Global.player_node:
+					audio_player.stream = load("res://Assets/Sounds/brrt3.wav")
+				else: 
+					audio_player.stream = load("res://Assets/Sounds/brrt2.wav")
+			else:
+				audio_player.stream = load("res://Assets/Sounds/brrt1.wav")
+			audio_player.play()
 			for i in ((randi() % 3) + 1):
 				var new_floor_splat = floor_splat.instantiate()
 				new_floor_splat.modulate = splat_colors[randi() % splat_colors.size()]
@@ -43,6 +53,9 @@ func _physics_process(delta):
 				new_floor_splat.position.z += randf() - 0.5
 				new_floor_splat.rotation.y += randf() * PI
 				get_parent().add_child(new_floor_splat)
+			$CollisionShape3D.set_deferred("disabled", true)
+			$SubViewport/FoodSprite.hide()
+			await self.audio_player.finished
 			call_deferred("queue_free")
 
 func spawn_splatter_particles(pos, col):

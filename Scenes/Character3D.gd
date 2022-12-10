@@ -79,6 +79,9 @@ var actions: Array = [
 	["wait", true, 25],
 	]
 var walk_speed: float = 4.0
+var knockback: bool = false
+var knockback_dist: float = 3.0
+var knockback_speed: float = 8.0
 var walking: bool = false
 var agent_rid
 var red_light: bool = false
@@ -90,7 +93,10 @@ var throw_clearance = 0.1 #avoid collision with parent
 var current_splat_num: int = 0
 var parent
 var bullseye: Vector3
-var ray_cast
+var ray_cast1
+var ray_cast2
+var ray_cast3
+var ray_cast4
 var hunting: bool = false
 var selecting: bool = false
 var selected: bool = false
@@ -111,7 +117,10 @@ func _ready():
 	revert_color = $SubViewport/Sprite2D.modulate
 	$Sprite3D.texture = $SubViewport.get_texture()
 	agent_rid = $NavigationAgent3d.get_rid()
-	ray_cast = $RayCast3D
+	ray_cast1 = $RayCast1
+	ray_cast2 = $RayCast2
+	ray_cast3 = $RayCast3
+	ray_cast4 = $RayCast4
 
 func _physics_process(_delta):
 	bullseye = $TargetPosition.get_global_position()
@@ -119,6 +128,8 @@ func _physics_process(_delta):
 	if walking:
 		if !red_light:
 			velocity = position.direction_to(next_loc) * walk_speed
+			if knockback:
+				velocity = position.direction_to(next_loc) * knockback_speed
 			move_and_slide()
 			if hunting: 
 				hunting = !acquire_target()
@@ -183,8 +194,6 @@ func handle_action(action):
 		walking = false
 		if self.has_node("MyFood"):
 			throw_food(action[1])
-		else:
-			throw_nothing()
 	if action[0] == "walk":
 		walking = true
 		if $NavigationAgent3d.get_target_location() != action[1]:
@@ -199,16 +208,21 @@ func remove_from_food_contacts(floor_food):
 		food_contacts.erase(floor_food)
 
 func acquire_target():
-	ray_cast.target_position = (Global.player_node.position - self.position)
-	if ray_cast.is_colliding():
-		#print(ray_cast.get_collider())
-		if ray_cast.get_collider() == Global.player_node:
-			parent.turn_tracker[self] = parent.current_moment
-			return true
+	var ray_array: Array = []
+	ray_array.append(ray_cast1)
+	ray_array.append(ray_cast2)
+	ray_array.append(ray_cast3)
+	ray_array.append(ray_cast4)
+	for i in ray_array:
+		#breakpoint
+		i.target_position = (Global.player_node.bullseye - i.global_position)
+		if i.get_collider() == Global.player_node:
+			continue
 		else:
+			#print(i.get_collider())
 			return false
-	else:
-		print("raycast not colliding")
+	parent.turn_tracker[self] = parent.current_moment
+	return true
 
 func throw_food(targ):
 	## using target position, solve for velocity vector of thrown thing
@@ -237,10 +251,6 @@ func throw_food(targ):
 		new_food.add_collision_exception_with(self)
 		new_food.set_collision_layer_value(2, true)
 		get_parent().add_child(new_food)
-
-func throw_nothing():
-	## add throw animation here
-	pass
 
 ## selectability
 func on_target_selecting():
@@ -275,9 +285,16 @@ func add_splatter(color):
 	current_splat_num += 1
 	current_splat_num = current_splat_num % 3
 
+func start_knockback(new_vel):
+	knockback = true
+	walking = true
+	$NavigationAgent3d.set_target_location(global_position + (Vector3(new_vel.x, 0, new_vel.z) * knockback_dist))
+	await $NavigationAgent3d.path_changed
+	parent.turn_tracker[self] = ceilf(parent.current_moment + (knockback_dist / knockback_speed * 60))
+
 func _on_navigation_agent_3d_velocity_computed(safe_velocity):
 	velocity = safe_velocity
-	move_and_slide()
+	#move_and_slide()
 
 func _on_navigation_agent_3d_navigation_finished():
 	pass

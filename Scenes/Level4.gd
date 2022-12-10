@@ -212,11 +212,11 @@ func prompt_turns():
 				turn_marker.position.y = turn.position.y + 0.6
 				turn_marker.position.z = turn.position.z
 				whose_turn = turn
-				
 				if !turn.player:
 					AI_action_select()
 				else:
 					turn.set_deferred("walking", false)
+					turn.set_deferred("knockback", false)
 					display_character_options(turn.player)
 				await self.GUI_action_taken
 				if whose_turn.player == false:
@@ -233,8 +233,7 @@ func AI_action_select():
 		current_action = AI_actions[0].duplicate(false) ## wait 50 
 	else:
 		if whose_turn.has_node("MyFood"): ## if holding food
-			whose_turn.ray_cast.target_position = Global.player_node.position ## look for player
-			if whose_turn.ray_cast.get_collider() == Global.player_node: ## if can see player
+			if whose_turn.acquire_target(): ## if can see player
 				current_action = AI_actions[2].duplicate(false) ## throw
 				current_action[1] = Global.player_node.bullseye
 			else: ## can't see player
