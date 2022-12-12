@@ -28,15 +28,16 @@ func _physics_process(delta):
 		#spawn_splatter_particles(position)
 		call_deferred("queue_free")
 	if moving:
+		var current_vel = velocity
 		var collided = move_and_slide()
 		velocity.y -= gravity * delta
 		if collided: 
 			var last_coll = get_last_slide_collision().get_collider()
 			for splat_col in splat_colors:
-				spawn_splatter_particles(last_coll.get_position(), splat_col)
+				spawn_splatter_particles(get_last_slide_collision().get_position(), splat_col)
 			if last_coll.is_in_group("character"):
 				last_coll.add_splatter(splat_colors[randi() % splat_colors.size()])
-				last_coll.start_knockback(velocity.normalized())
+				last_coll.start_knockback(current_vel.normalized())
 				if last_coll == Global.player_node:
 					audio_player.stream = load("res://Assets/Sounds/brrt3.wav")
 				else: 

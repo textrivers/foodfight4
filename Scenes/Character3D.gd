@@ -80,7 +80,7 @@ var actions: Array = [
 	]
 var walk_speed: float = 4.0
 var knockback: bool = false
-var knockback_dist: float = 3.0
+var knockback_dist: float = 2.0
 var knockback_speed: float = 8.0
 var walking: bool = false
 var agent_rid
@@ -286,9 +286,19 @@ func add_splatter(color):
 	current_splat_num = current_splat_num % 3
 
 func start_knockback(new_vel):
+	#breakpoint
 	knockback = true
 	walking = true
-	$NavigationAgent3d.set_target_location(global_position + (Vector3(new_vel.x, 0, new_vel.z) * knockback_dist))
+	hunting = false
+	var new_pos = global_position + (Vector3(new_vel.x, 0, new_vel.z) * knockback_dist)
+	$NavigationAgent3d.set_target_location(new_pos)
+#	if parent.debug:
+#		var new_sphere = load("res://Scenes/DebugSphere.tscn").instantiate()
+#		new_sphere.position = new_pos
+#		var new_mat = new_sphere.material.duplicate()
+#		new_mat.albedo_color = Global.palette_dict["pink_1"]
+#		new_sphere.material = new_mat
+#		parent.add_child(new_sphere)
 	await $NavigationAgent3d.path_changed
 	parent.turn_tracker[self] = ceilf(parent.current_moment + (knockback_dist / knockback_speed * 60))
 

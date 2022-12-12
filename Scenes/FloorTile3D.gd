@@ -37,5 +37,5 @@ func _on_StaticBody_input_event(_camera, _event, _position, _normal, _shape_idx)
 					else:
 						child.material_override.albedo_color = child.revert_color
 			selected = true
-			material_override.albedo_color = Global.palette_dict["pink_2"]
+			material_override.albedo_color = revert_color
 			emit_signal("give_on_select_info", global_position, tile_description)
