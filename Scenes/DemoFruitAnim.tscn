@@ -1,0 +1,210 @@
+[gd_scene load_steps=65 format=3 uid="uid://cakewa2ic74j0"]
+
+[ext_resource type="Texture2D" uid="uid://c7tgplk74v4tt" path="res://Assets/FoodSprites/betterbanana0.png" id="1_ikwp4"]
+[ext_resource type="Texture2D" uid="uid://drx1ypfhk7b1l" path="res://Assets/Screens/gamedummyscreen01.png" id="1_vw241"]
+[ext_resource type="Texture2D" uid="uid://b4rjgnkxiw4kl" path="res://Assets/FoodSprites/betterbanana1.png" id="2_r0skg"]
+[ext_resource type="Texture2D" uid="uid://cawh2s3iht00e" path="res://Assets/FoodSprites/betterbanana2.png" id="3_wrhjb"]
+[ext_resource type="Texture2D" uid="uid://5qsqmwfdxvq5" path="res://Assets/FoodSprites/betterbanana3.png" id="4_ude1m"]
+[ext_resource type="Texture2D" uid="uid://c3bqhspaqk7ug" path="res://Assets/FoodSprites/betterbanana4.png" id="5_8chgm"]
+[ext_resource type="Texture2D" uid="uid://1xpit3elkhu0" path="res://Assets/FoodSprites/betterbanana5.png" id="6_u1u37"]
+[ext_resource type="Texture2D" uid="uid://cyovul0p0frq7" path="res://Assets/FoodSprites/betterbanana6.png" id="7_sg301"]
+[ext_resource type="Texture2D" uid="uid://r88ho3aqy8ys" path="res://Assets/FoodSprites/betterbanana7.png" id="8_nruq7"]
+[ext_resource type="Texture2D" uid="uid://b8omwfoyunc8v" path="res://Assets/FoodSprites/betterorange0.png" id="10_nek21"]
+[ext_resource type="Texture2D" uid="uid://c3e7t5pkucv3q" path="res://Assets/FoodSprites/betterorange1.png" id="11_7uea1"]
+[ext_resource type="Texture2D" uid="uid://bn1wf2r72xw0h" path="res://Assets/FoodSprites/betterorange1a.png" id="12_5yk5n"]
+[ext_resource type="Texture2D" uid="uid://dc7tmqph1wkre" path="res://Assets/FoodSprites/betterorange2.png" id="13_3se4m"]
+[ext_resource type="Texture2D" uid="uid://dnek8lbv2gma7" path="res://Assets/FoodSprites/betterorange3.png" id="14_vyerg"]
+[ext_resource type="Texture2D" uid="uid://b5ysfkr2icxp5" path="res://Assets/FoodSprites/betterorange4.png" id="15_1cpxb"]
+[ext_resource type="Texture2D" uid="uid://do6jvqo6tery2" path="res://Assets/FoodSprites/betterorange5.png" id="16_bb7x7"]
+[ext_resource type="Texture2D" uid="uid://cv6uy3bhr6oot" path="res://Assets/FoodSprites/betterorange6.png" id="17_ceske"]
+[ext_resource type="Texture2D" uid="uid://qd4q1ngvei7j" path="res://Assets/FoodSprites/betterorange6a.png" id="18_2vhkx"]
+[ext_resource type="Texture2D" uid="uid://brqx6cycuypv3" path="res://Assets/FoodSprites/betterorange7.png" id="19_3v1sw"]
+[ext_resource type="Texture2D" uid="uid://cydxgotui36t1" path="res://Assets/FoodSprites/betterorange8.png" id="20_qc7gi"]
+[ext_resource type="Texture2D" uid="uid://ixbcgj2yyg1m" path="res://Assets/FoodSprites/betterorange9.png" id="21_axipo"]
+[ext_resource type="Texture2D" uid="uid://c4xshdcpd7fn3" path="res://Assets/FoodSprites/bettertomato/bettertomato_0.png" id="22_ynyra"]
+[ext_resource type="Texture2D" uid="uid://bsyejwbovahav" path="res://Assets/FoodSprites/bettertomato/bettertomato_1.png" id="23_4jdn8"]
+[ext_resource type="Texture2D" uid="uid://duofe7rnjheox" path="res://Assets/FoodSprites/bettertomato/bettertomato_2.png" id="24_8w7b1"]
+[ext_resource type="Texture2D" uid="uid://b7lnhv05s8n5c" path="res://Assets/FoodSprites/bettertomato/bettertomato_3.png" id="25_i0bf5"]
+[ext_resource type="Texture2D" uid="uid://piscnorncf2o" path="res://Assets/FoodSprites/bettertomato/bettertomato_4.png" id="26_sgdca"]
+[ext_resource type="Texture2D" uid="uid://hepyp3cv546b" path="res://Assets/FoodSprites/bettertomato/bettertomato_5.png" id="27_1k383"]
+[ext_resource type="Texture2D" uid="uid://bci3d8bx5rcdh" path="res://Assets/FoodSprites/bettertomato/bettertomato_6.png" id="28_gtuwp"]
+[ext_resource type="Texture2D" uid="uid://ca8fgftiereee" path="res://Assets/FoodSprites/bettertomato/bettertomato_7.png" id="29_wdyy8"]
+[ext_resource type="Texture2D" uid="uid://0w1ebhhwk1qt" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_0.png" id="30_ctvyw"]
+[ext_resource type="Texture2D" uid="uid://vv728ffgkpdc" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_1.png" id="31_eb3e4"]
+[ext_resource type="Texture2D" uid="uid://dt76wucbn113v" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_2.png" id="32_4v4cu"]
+[ext_resource type="Texture2D" uid="uid://d5t7cxaksmps" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_3.png" id="33_kdb6c"]
+[ext_resource type="Texture2D" uid="uid://cck76tt6minet" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_4.png" id="34_wtpka"]
+[ext_resource type="Texture2D" uid="uid://cg1g415arbc7s" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_5.png" id="35_yv8kh"]
+[ext_resource type="Texture2D" uid="uid://dbve543ldg10r" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_6.png" id="36_t6dq6"]
+[ext_resource type="Texture2D" uid="uid://comwh6e56ep1k" path="res://Assets/FoodSprites/betterblackberry/betterblackberry_7.png" id="37_s8o5p"]
+[ext_resource type="Texture2D" uid="uid://ul7f1eoiae77" path="res://Assets/FoodSprites/betterwatermelon/betterwatermelon_1.png" id="38_p7qsd"]
+[ext_resource type="Texture2D" uid="uid://dhvk8i5o18sul" path="res://Assets/FoodSprites/betterwatermelon/betterwatermelon_2.png" id="39_e4pav"]
+[ext_resource type="Texture2D" uid="uid://cip7f820v6jeo" path="res://Assets/FoodSprites/betterwatermelon/betterwatermelon_3.png" id="40_smnv0"]
+[ext_resource type="Texture2D" uid="uid://be448ytadeiky" path="res://Assets/FoodSprites/betterwatermelon/betterwatermelon_4.png" id="41_ivcpa"]
+[ext_resource type="Texture2D" uid="uid://bs27sdek0u7lf" path="res://Assets/FoodSprites/betterwatermelon/betterwatermelon_5.png" id="42_6kmmu"]
+[ext_resource type="Texture2D" uid="uid://b724vidlmhnpi" path="res://Assets/FoodSprites/betterwatermelon/betterwatermelon_6.png" id="43_8s67w"]
+[ext_resource type="Texture2D" uid="uid://qxduolmdt6n0" path="res://Assets/FoodSprites/bettericecreamcone/0.PNG" id="44_mk7v0"]
+[ext_resource type="Texture2D" uid="uid://cnbgdjhqvmah4" path="res://Assets/FoodSprites/bettericecreamcone/1.PNG" id="45_ccaen"]
+[ext_resource type="Texture2D" uid="uid://bsby48m5x3a6m" path="res://Assets/FoodSprites/bettericecreamcone/2.PNG" id="46_f7mcw"]
+[ext_resource type="Texture2D" uid="uid://7b268n0l41qq" path="res://Assets/FoodSprites/bettericecreamcone/3.PNG" id="47_tuo10"]
+[ext_resource type="Texture2D" uid="uid://bst8o8i75qlqo" path="res://Assets/FoodSprites/bettericecreamcone/4.PNG" id="48_0ff6o"]
+[ext_resource type="Texture2D" uid="uid://jaa7uceuqtac" path="res://Assets/FoodSprites/bettericecreamcone/5.PNG" id="49_bd52a"]
+[ext_resource type="Texture2D" uid="uid://soajgtjdb8ru" path="res://Assets/FoodSprites/bettericecreamcone/6.PNG" id="50_1emyx"]
+[ext_resource type="Texture2D" uid="uid://c47k0owmyd3pu" path="res://Assets/FoodSprites/bettericecreamcone/7.PNG" id="51_rsns3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2fxwa"]
+animations = [{
+"frames": [ExtResource("1_ikwp4"), ExtResource("2_r0skg"), ExtResource("3_wrhjb"), ExtResource("4_ude1m"), ExtResource("5_8chgm"), ExtResource("6_u1u37"), ExtResource("7_sg301"), ExtResource("8_nruq7")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_d0eot"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3fm7e"]
+viewport_path = NodePath("Banana")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ysr0t"]
+animations = [{
+"frames": [ExtResource("10_nek21"), ExtResource("11_7uea1"), ExtResource("12_5yk5n"), ExtResource("13_3se4m"), ExtResource("14_vyerg"), ExtResource("15_1cpxb"), ExtResource("16_bb7x7"), ExtResource("17_ceske"), ExtResource("18_2vhkx"), ExtResource("19_3v1sw"), ExtResource("20_qc7gi"), ExtResource("21_axipo")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_otrvh"]
+viewport_path = NodePath("Orange")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_now36"]
+animations = [{
+"frames": [ExtResource("22_ynyra"), ExtResource("23_4jdn8"), ExtResource("24_8w7b1"), ExtResource("25_i0bf5"), ExtResource("26_sgdca"), ExtResource("27_1k383"), ExtResource("28_gtuwp"), ExtResource("29_wdyy8")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hm2di"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulorn"]
+animations = [{
+"frames": [ExtResource("30_ctvyw"), ExtResource("31_eb3e4"), ExtResource("32_4v4cu"), ExtResource("33_kdb6c"), ExtResource("34_wtpka"), ExtResource("35_yv8kh"), ExtResource("36_t6dq6"), ExtResource("37_s8o5p")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ia27l"]
+viewport_path = NodePath("Blackberry")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdapq"]
+animations = [{
+"frames": [ExtResource("38_p7qsd"), ExtResource("39_e4pav"), ExtResource("40_smnv0"), ExtResource("41_ivcpa"), ExtResource("42_6kmmu"), ExtResource("43_8s67w")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lxl5t"]
+viewport_path = NodePath("Watermelon")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eh6uh"]
+animations = [{
+"frames": [ExtResource("44_mk7v0"), ExtResource("45_ccaen"), ExtResource("46_f7mcw"), ExtResource("47_tuo10"), ExtResource("48_0ff6o"), ExtResource("49_bd52a"), ExtResource("50_1emyx"), ExtResource("51_rsns3")],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_otadx"]
+viewport_path = NodePath("SubViewport")
+
+[node name="DemoFruitAnim" type="Node2D"]
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_vw241")
+
+[node name="Banana" type="SubViewport" parent="."]
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Banana"]
+frames = SubResource("SpriteFrames_2fxwa")
+playing = true
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_d0eot")
+position = Vector2(48, 48)
+texture = SubResource("ViewportTexture_3fm7e")
+
+[node name="Orange" type="SubViewport" parent="."]
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Orange"]
+frames = SubResource("SpriteFrames_ysr0t")
+playing = true
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(144, 48)
+texture = SubResource("ViewportTexture_otrvh")
+
+[node name="Tomato" type="SubViewport" parent="."]
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tomato"]
+frames = SubResource("SpriteFrames_now36")
+playing = true
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(192, 0)
+texture = SubResource("ViewportTexture_hm2di")
+centered = false
+
+[node name="Blackberry" type="SubViewport" parent="."]
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Blackberry"]
+frames = SubResource("SpriteFrames_ulorn")
+playing = true
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(96, 96)
+texture = SubResource("ViewportTexture_ia27l")
+centered = false
+
+[node name="Watermelon" type="SubViewport" parent="."]
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Watermelon"]
+frames = SubResource("SpriteFrames_jdapq")
+playing = true
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(0, 96)
+texture = SubResource("ViewportTexture_lxl5t")
+centered = false
+
+[node name="IceCream" type="SubViewport" parent="."]
+size = Vector2i(96, 96)
+render_target_update_mode = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="IceCream"]
+frames = SubResource("SpriteFrames_eh6uh")
+playing = true
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(192, 96)
+texture = SubResource("ViewportTexture_otadx")
+centered = false

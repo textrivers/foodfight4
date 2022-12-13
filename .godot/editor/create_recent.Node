@@ -1,10 +1,12 @@
+Sprite2D
+AnimatedSprite2D
+SubViewport
+Node2D
 Area3D
 AudioStreamPlayer
 PointLight2D
 RayCast3D
 Sprite3D
-Sprite2D
-Node2D
 HBoxContainer
 CollisionShape3D
 MeshInstance3D
@@ -19,9 +21,7 @@ Timer
 GPUParticles3D
 CanvasGroup
 Marker3D
-SubViewport
 CharacterBody3D
 Node
 Camera3D
-AnimatedSprite2D
 SubViewportContainer
