@@ -109,6 +109,8 @@ func place_objects():
 	@warning_ignore(integer_division)
 	var food_count: int = ceili(all_tiles.size() / 5)
 	var food_arr: Array = []
+	## TODO this is done in the stupidest way
+	## figure out an easier way to guarantee no duplicate food placement
 	for i in food_count:
 		var new_food_number = randi() % (all_tiles.size() - 1)
 		if !food_arr.has(new_food_number):
@@ -119,7 +121,15 @@ func place_objects():
 		var food_child = new_food.instantiate()
 		add_child(food_child)
 		food_child.global_position = all_tiles[j].global_position
-	## TODO place poems?
+	## TODO when placing ice cream, subscribe to their entered/exited signals
+	## use those signals to enable Read option in GUI
+	## read populates text on screen "somehow"
+	var ice_cream_count: int = 5
+	for k in ice_cream_count:
+		var ice_cream_tile = all_tiles.pick_random()
+		var new_ice_cream = load("res://Scenes/ClusterIceCream.tscn").instantiate()
+		add_child(new_ice_cream)
+		new_ice_cream.global_position = ice_cream_tile.global_position
 
 func build():
 	var tot = board_size.x * board_size.y

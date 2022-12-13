@@ -1,26 +1,29 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://cuafiw2uvybc"]
 
-[ext_resource path="res://Scenes/Food.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/5.PNG" type="Texture2D" id=2]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/6.PNG" type="Texture2D" id=3]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/1.PNG" type="Texture2D" id=4]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/0.PNG" type="Texture2D" id=5]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/7.PNG" type="Texture2D" id=6]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/4.PNG" type="Texture2D" id=7]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/2.PNG" type="Texture2D" id=8]
-[ext_resource path="res://Assets/FoodSprites/bettericecreamcone/3.PNG" type="Texture2D" id=9]
+[ext_resource type="PackedScene" uid="uid://bkdb71brh53of" path="res://Scenes/Food.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://jaa7uceuqtac" path="res://Assets/FoodSprites/bettericecreamcone/5.PNG" id="2"]
+[ext_resource type="Texture2D" uid="uid://soajgtjdb8ru" path="res://Assets/FoodSprites/bettericecreamcone/6.PNG" id="3"]
+[ext_resource type="Texture2D" uid="uid://cnbgdjhqvmah4" path="res://Assets/FoodSprites/bettericecreamcone/1.PNG" id="4"]
+[ext_resource type="Texture2D" uid="uid://qxduolmdt6n0" path="res://Assets/FoodSprites/bettericecreamcone/0.PNG" id="5"]
+[ext_resource type="Texture2D" uid="uid://c47k0owmyd3pu" path="res://Assets/FoodSprites/bettericecreamcone/7.PNG" id="6"]
+[ext_resource type="Texture2D" uid="uid://bst8o8i75qlqo" path="res://Assets/FoodSprites/bettericecreamcone/4.PNG" id="7"]
+[ext_resource type="Texture2D" uid="uid://bsby48m5x3a6m" path="res://Assets/FoodSprites/bettericecreamcone/2.PNG" id="8"]
+[ext_resource type="Texture2D" uid="uid://7b268n0l41qq" path="res://Assets/FoodSprites/bettericecreamcone/3.PNG" id="9"]
+[ext_resource type="PackedScene" uid="uid://dyj7hbupl7ffu" path="res://Scenes/Text.tscn" id="10_e8r6w"]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id="1"]
 resource_local_to_scene = true
-animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 6 ) ],
+animations = [{
+"frames": [ExtResource("5"), ExtResource("4"), ExtResource("8"), ExtResource("9"), ExtResource("7"), ExtResource("2"), ExtResource("3"), ExtResource("6")],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 15.0
-} ]
+}]
 
-[node name="GoodIceCream" instance=ExtResource( 1 )]
-splat_colors = [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.513726, 0.298039, 0.0313726, 1 ) ]
+[node name="GoodIceCream" instance=ExtResource("1")]
+splat_colors = [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.513726, 0.298039, 0.0313726, 1)]
 
 [node name="AnimatedSprite2D" parent="SubViewport/FoodSprite" index="0"]
-frames = SubResource( 1 )
+frames = SubResource("1")
+
+[node name="Text" parent="." index="5" instance=ExtResource("10_e8r6w")]

@@ -44,7 +44,7 @@ func _physics_process(delta):
 					audio_player.stream = load("res://Assets/Sounds/brrt2.wav")
 			else:
 				audio_player.stream = load("res://Assets/Sounds/brrt1.wav")
-			audio_player.play()
+			#audio_player.play()
 			for i in ((randi() % 3) + 1):
 				var new_floor_splat = floor_splat.instantiate()
 				new_floor_splat.modulate = splat_colors[randi() % splat_colors.size()]

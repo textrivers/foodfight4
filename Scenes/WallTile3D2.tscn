@@ -20,6 +20,7 @@ script = ExtResource("1_pehbk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." groups=["proximity"]]
 collision_mask = 17
+input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_bkuu5")

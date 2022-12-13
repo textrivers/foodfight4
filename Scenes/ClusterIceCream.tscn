@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://difpxyycco3m4"]
+
+[ext_resource type="PackedScene" uid="uid://cuafiw2uvybc" path="res://Scenes/GoodIceCream.tscn" id="1_s2eoh"]
+
+[node name="ClusterIceCream" type="Node3D"]
+
+[node name="GoodIceCream" parent="." instance=ExtResource("1_s2eoh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)

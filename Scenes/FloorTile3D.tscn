@@ -4,14 +4,14 @@
 [ext_resource type="Script" path="res://Scenes/FloorTile3D.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://dwf4e44ur7ioj" path="res://Assets/tile3d_black_rim.png" id="3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1f6t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cv3de"]
 albedo_color = Color(0.458824, 0.458824, 0.458824, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_hn8k7"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_hgrb8"]
 size = Vector3(1, 0.06, 1)
 
 [node name="FloorTile3D" type="MeshInstance3D" groups=["selectable", "tile"]]
-material_override = SubResource("StandardMaterial3D_c1f6t")
+material_override = SubResource("StandardMaterial3D_cv3de")
 mesh = ExtResource("1")
 script = ExtResource("2")
 
@@ -20,7 +20,7 @@ collision_mask = 17
 input_ray_pickable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("BoxShape3D_hn8k7")
+shape = SubResource("BoxShape3D_hgrb8")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.055, 0)
