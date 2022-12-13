@@ -236,6 +236,7 @@ func prompt_turns():
 				resolve_turn()
 
 func AI_action_select():
+	
 	await get_tree().create_timer(Global.AI_turn_delay).timeout
 	## decide action
 	var AI_rand = randi() % 4
@@ -439,6 +440,7 @@ func remove_debug_path():
 		sphere.queue_free()
 	
 func _on_Proceed_pressed():
+	whose_turn.knockback = false
 	emit_signal("done_selecting_action_target")
 	if current_action[0] == "wait":
 		if whose_turn.player:

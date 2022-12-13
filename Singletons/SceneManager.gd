@@ -18,44 +18,23 @@ func _ready():
 func goto_scene(current_scene, path):
 	emit_signal("fade_to_black", true)
 	await transition_squares.squares_finished
+	current_scene.call_deferred("queue_free")
+	await current_scene.tree_exited
+	print("previous scene freed")
 	ResourceLoader.load_threaded_request(path)
 	var load_time = Time.get_ticks_msec()
 	while Time.get_ticks_msec() - load_time < max_time: 
 		scene_load_status = ResourceLoader.load_threaded_get_status(path, progress)
-		## TODO update anim here
-#		print(progress[0])
-#		transition_squares.get_node("SquaresContainer/Sprite50/AnimatedSprite2").frame = int(progress[0] * 12)
-#		transition_squares.get_node("SquaresContainer/Sprite28/AnimatedSprite2D").frame = int(progress[0] * 8)
 		if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED: #Load_complete
 			print("done loading")
 			var resource = ResourceLoader.load_threaded_get(path)
-			get_tree().get_root().get_node("Main").call_deferred("add_child", resource.instantiate())
+			var main = get_tree().get_root().get_node("Main")
+			var new_res = resource.instantiate()
+			main.call_deferred("add_child", new_res)
+			## TODO may not need this await statement, it doesn't seem to do anything
+			await new_res.tree_entered
 			break
-		## old stuff from Godot 3
-#		if err == ERR_FILE_EOF: #Load complete
-#			var resource = loader.get_resource()
-#			get_tree().get_root().call_deferred("add_child", resource.instantiate())
-#			current_scene.queue_free()
-#			break
-#		elif err == OK:
-#			var progress = float(loader.get_stage()) / loader.get_stage_count()
-#			progress = int(progress * 12)
-#			print(progress)
-#			transition_squares.get_node("SquaresContainer/Sprite50/AnimatedSprite2").frame = progress
-#			progress = int(progress * 0.67)
-#			transition_squares.get_node("SquaresContainer/Sprite28/AnimatedSprite2D").frame = progress
-#		else: 
-#			print("error, something went wrong during loading?")
-#			break
-		#await get_tree().idle_frame
-
 	await get_tree().create_timer(0.5).timeout
-	current_scene.call_deferred("queue_free")
-	await current_scene.tree_exited
-	print("previous scene freed")
-#	var new_scene = load(path).instantiate()
-#	current_scene.get_parent().add_child(new_scene)
-#	current_scene.get_parent().remove_child(current_scene)
 	emit_signal("fade_to_black", false)
 	print("squares fade out")
 	
