@@ -1,3 +1,4 @@
+CollisionShape3D
 Sprite2D
 AnimatedSprite2D
 SubViewport
@@ -8,7 +9,6 @@ PointLight2D
 RayCast3D
 Sprite3D
 HBoxContainer
-CollisionShape3D
 MeshInstance3D
 Node3D
 NavigationRegion3D

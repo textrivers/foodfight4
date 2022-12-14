@@ -42,7 +42,7 @@ var advancing: bool = true
 var map_rid
 
 var debug: bool = false
-
+var available_text
 signal red_light
 signal green_light
 signal GUI_action_taken
@@ -130,6 +130,9 @@ func place_objects():
 		var new_ice_cream = load("res://Scenes/ClusterIceCream.tscn").instantiate()
 		add_child(new_ice_cream)
 		new_ice_cream.global_position = ice_cream_tile.global_position
+		var ice_cream_text = new_ice_cream.get_node("GoodIceCream/Text")
+		ice_cream_text.connect("enable_read_action",Callable(self, "activate_read_button"))
+		ice_cream_text.connect("disable_read_action",Callable(self, "deactivate_read_button"))
 
 func build():
 	var tot = board_size.x * board_size.y
@@ -158,7 +161,6 @@ func build():
 					new_tile.material_override.albedo_color = Global.palette_dict["black_2"]
 				else:
 					new_tile.material_override.albedo_color = Global.palette_dict["teal_3"]
-			
 			add_child(new_tile)
 			new_tile.connect("give_on_select_info",Callable(self,"on_action_target_selected"))
 			self.connect("selecting_action_target",Callable(new_tile,"on_target_selecting"))
@@ -349,7 +351,7 @@ func display_character_options(_player):
 	if _player == true: 
 		$GUI/Right/PlayerOptions/Label.text = "It is your turn"
 		for button in $GUI/Right/PlayerOptions.get_children():
-			if button is Button:
+			if button is Button && button.name != "Read":
 				button.disabled = false
 		if whose_turn.has_node("MyFood"):
 			$GUI/Right/PlayerOptions/PickUp.disabled = true
@@ -357,10 +359,10 @@ func display_character_options(_player):
 			$GUI/Right/PlayerOptions/Throw.disabled = true
 		if whose_turn.food_contacts.size() == 0:
 			$GUI/Right/PlayerOptions/PickUp.disabled = true
-		if Global.splat_count >= Global.splat_threshold:
-			$GUI/Right/PlayerOptions/Read.disabled = false
-		else:
-			$GUI/Right/PlayerOptions/Read.disabled = true
+#		if Global.splat_count >= Global.splat_threshold:
+#			$GUI/Right/PlayerOptions/Read.disabled = false
+#		else:
+#			$GUI/Right/PlayerOptions/Read.disabled = true
 	else: 
 		$GUI/Right/PlayerOptions/Label.text = "It is " + str(whose_turn.name) + "'s turn"
 		for button in $GUI/Right/PlayerOptions.get_children():
@@ -379,6 +381,16 @@ func reset_character_options():
 func hide_character_options():
 	$Panel.hide()
 	$GUI/Right.hide()
+
+func activate_read_button(text):
+	$GUI/Right/PlayerOptions/Read.disabled = false
+	available_text = text
+
+func deactivate_read_button():
+	$GUI/Right/PlayerOptions/Read.disabled = true
+
+func _on_Read_pressed():
+	print(available_text)
 
 func _on_PickUp_pressed():
 	current_action[0] = "pick_up"
@@ -474,3 +486,6 @@ func _on_CheckButton_toggled(button_pressed):
 		Global.AI_turn_delay = 3
 	else:
 		Global.AI_turn_delay = 0.01
+
+
+

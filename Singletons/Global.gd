@@ -73,6 +73,21 @@ var light_mask_lookup: Dictionary = {
 }
 var character_proximity_radius: float = 5.0
 var player_node
+var poem_text_dict: Dictionary = {
+	0: "Loss", 
+	1: "Heart", 
+	2: "Finger",
+	3: "Toe", 
+	4: "Eyeball",
+	5: "Soup", 
+	7: "Candy",
+	8: "Sandwich",
+	9: "Food", 
+	10: "Glass"
+}
+var texts_found: Dictionary = {
+	
+}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

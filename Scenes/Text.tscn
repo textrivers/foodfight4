@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://dyj7hbupl7ffu"]
+[gd_scene load_steps=3 format=3 uid="uid://dyj7hbupl7ffu"]
+
+[ext_resource type="Script" path="res://Scenes/Text.gd" id="1_xf6hm"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hfyto"]
+radius = 0.15
 
 [node name="Text" type="Area3D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_xf6hm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hfyto")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
