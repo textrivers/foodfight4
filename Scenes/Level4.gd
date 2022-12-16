@@ -397,6 +397,8 @@ func _on_Read_pressed():
 	#$GUI/Right/PoemLabel.show()
 	$CameraRig/Camera3D/PoemTextInWorld.text = available_text[available_text.keys()[0]]
 	$CameraRig/Camera3D/PoemTextInWorld.show()
+	display_character_options(true)
+	deactivate_read_button()
 	#$GUI/Right/ProceedCancel.show()
 	#$GUI/Right/ProceedCancel/Cancel.show()
 	#$GUI/Right/ProceedCancel/Proceed.hide()
