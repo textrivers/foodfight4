@@ -249,7 +249,7 @@ func throw_food(targ):
 		new_food.position = start_pos
 		new_food.thrown = true
 		new_food.add_collision_exception_with(self)
-		new_food.set_collision_layer_value(2, true)
+		#new_food.set_collision_layer_value(2, true)
 		get_parent().add_child(new_food)
 
 ## selectability

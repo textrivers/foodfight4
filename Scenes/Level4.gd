@@ -375,6 +375,7 @@ func reset_character_options():
 	$GUI/Right/WaitOptions.hide()
 	$GUI/Right/WalkOptions.hide()
 	$GUI/Right/ThrowOptions.hide()
+	$GUI/Right/PoemLabel.hide()
 	$GUI/Right/ProceedCancel.hide()
 	$GUI/Right/ProceedCancel/Proceed.hide()
 
@@ -390,7 +391,15 @@ func deactivate_read_button():
 	$GUI/Right/PlayerOptions/Read.disabled = true
 
 func _on_Read_pressed():
-	print(available_text)
+	for child in $GUI/Right.get_children():
+		child.hide()
+	#$GUI/Right/PoemLabel.text = available_text[available_text.keys()[0]]
+	#$GUI/Right/PoemLabel.show()
+	$CameraRig/Camera3D/PoemTextInWorld.text = available_text[available_text.keys()[0]]
+	$CameraRig/Camera3D/PoemTextInWorld.show()
+	#$GUI/Right/ProceedCancel.show()
+	#$GUI/Right/ProceedCancel/Cancel.show()
+	#$GUI/Right/ProceedCancel/Proceed.hide()
 
 func _on_PickUp_pressed():
 	current_action[0] = "pick_up"

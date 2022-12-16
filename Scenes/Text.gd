@@ -21,7 +21,6 @@ func _on_body_entered(body):
 	if body.player == true: 
 		readable = true
 		emit_signal("enable_read_action", poem_text)
-		print("text signal emitted")
 
 
 func _on_body_exited(body):

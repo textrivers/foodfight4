@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://ueq7vy6pfjou"]
+[gd_scene load_steps=11 format=3 uid="uid://ueq7vy6pfjou"]
 
 [ext_resource type="Script" path="res://Scenes/Level4.gd" id="1_ofw3d"]
+[ext_resource type="FontFile" uid="uid://bvepmbfm1dytu" path="res://Assets/Fonts/TCM_____.TTF" id="2_7cvxw"]
 [ext_resource type="PackedScene" uid="uid://msr42fg3peff" path="res://Scenes/TurnMarker.tscn" id="2_oxm5y"]
 [ext_resource type="Theme" uid="uid://c840ow6okr33r" path="res://Themes/GUI_Default.tres" id="3_ybgpg"]
 [ext_resource type="PackedScene" uid="uid://dxdnc7jngsb0o" path="res://Scenes/EnviroIceCream.tscn" id="4_1xvgj"]
@@ -22,6 +23,10 @@ corner_radius_bottom_left = 5
 [sub_resource type="Theme" id="10"]
 Panel/styles/panel = SubResource("9")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gk0mc"]
+content_margin_left = 16.0
+content_margin_top = 16.0
+
 [node name="Level4" type="Node3D"]
 script = ExtResource("1_ofw3d")
 board_size = Vector2(7, 7)
@@ -34,11 +39,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 current = true
 size = 10.0
 
+[node name="PoemTextInWorld" type="Label3D" parent="CameraRig/Camera3D"]
+transform = Transform3D(0.707107, 0, -0.707107, -0.241845, 0.939693, -0.241845, 0.664463, 0.34202, 0.664463, 0, 0, -80)
+visible = false
+pixel_size = 0.1
+offset = Vector2(-200, 200)
+billboard = 1
+modulate = Color(0, 0, 0, 1)
+outline_modulate = Color(1, 1, 1, 1)
+text = "That that lifelike
+eyeball hologram you
+commute through faces
+you both ways
+without turning to?"
+font = ExtResource("2_7cvxw")
+font_size = 64
+horizontal_alignment = 0
+
 [node name="TurnMarker" parent="." instance=ExtResource("2_oxm5y")]
 
 [node name="Panel" type="Panel" parent="."]
 offset_right = 250.0
-offset_bottom = 229.0
+offset_bottom = 230.0
 mouse_filter = 2
 theme = SubResource("10")
 
@@ -50,16 +72,17 @@ theme = ExtResource("3_ybgpg")
 alignment = 1
 
 [node name="Right" type="VBoxContainer" parent="GUI"]
+custom_minimum_size = Vector2(250, 230)
 layout_mode = 2
-offset_left = 36.0
-offset_right = 212.0
-offset_bottom = 228.0
+offset_right = 250.0
+offset_bottom = 230.0
 size_flags_horizontal = 4
 mouse_filter = 2
 
 [node name="PlayerOptions" type="VBoxContainer" parent="GUI/Right"]
 layout_mode = 2
-offset_right = 176.0
+offset_left = 37.0
+offset_right = 213.0
 offset_bottom = 177.0
 size_flags_horizontal = 4
 alignment = 1
@@ -69,6 +92,7 @@ layout_mode = 2
 offset_right = 176.0
 offset_bottom = 21.0
 text = "It is Derp's turn"
+horizontal_alignment = 1
 
 [node name="Read" type="Button" parent="GUI/Right/PlayerOptions"]
 layout_mode = 2
@@ -144,16 +168,17 @@ text = "Pause during all turns"
 [node name="WalkOptions" type="VBoxContainer" parent="GUI/Right"]
 visible = false
 layout_mode = 2
-offset_right = 229.0
-offset_bottom = 49.0
+offset_left = 10.0
+offset_top = 181.0
+offset_right = 165.0
+offset_bottom = 223.0
 size_flags_horizontal = 4
 alignment = 1
 
 [node name="Label" type="Label" parent="GUI/Right/WalkOptions"]
 layout_mode = 2
-offset_left = 17.0
-offset_right = 212.0
-offset_bottom = 49.0
+offset_right = 155.0
+offset_bottom = 42.0
 size_flags_horizontal = 4
 text = "Choose your destination,
 or click \"Cancel\""
@@ -203,26 +228,38 @@ max_value = 300.0
 step = 10.0
 value = 100.0
 
+[node name="PoemLabel" type="RichTextLabel" parent="GUI/Right"]
+visible = false
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 2
+offset_right = 250.0
+offset_bottom = 150.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gk0mc")
+text = "That that lifelike
+eyeball hologram you
+commute through faces
+you both ways
+without turning to?"
+
 [node name="ProceedCancel" type="HBoxContainer" parent="GUI/Right"]
 visible = false
 layout_mode = 2
-offset_top = 226.0
-offset_right = 229.0
-offset_bottom = 253.0
+offset_right = 250.0
+offset_bottom = 22.0
 alignment = 1
 
 [node name="Proceed" type="Button" parent="GUI/Right/ProceedCancel"]
 layout_mode = 2
-offset_left = 37.0
-offset_right = 112.0
-offset_bottom = 27.0
+offset_left = 71.0
+offset_right = 127.0
+offset_bottom = 22.0
 text = "Proceed"
 
 [node name="Cancel" type="Button" parent="GUI/Right/ProceedCancel"]
 layout_mode = 2
-offset_left = 116.0
-offset_right = 191.0
-offset_bottom = 27.0
+offset_left = 131.0
+offset_right = 179.0
+offset_bottom = 22.0
 text = "Cancel"
 
 [node name="WorldEnvironment" parent="." instance=ExtResource("4_1xvgj")]
