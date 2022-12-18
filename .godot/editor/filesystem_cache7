@@ -280,7 +280,7 @@ SplatSpriteParticlesMaterial.tres::ParticleProcessMaterial::5449981545010862192:
 ::res://Resources/::1666532089
 GridMapResource1.tres::MeshLibrary::3583379267696824773::1666637259::0::1::::<><>::
 WallTile3D.tres::QuadMesh::8336759509323853073::1666637661::0::1::::<><>::
-::res://Scenes/::1671376500
+::res://Scenes/::1671381427
 Bananimation.tscn::PackedScene::2723417435205550943::1664634474::0::1::::<><>::uid://cawh2s3iht00e<>uid://1xpit3elkhu0<>uid://c3bqhspaqk7ug<>uid://5qsqmwfdxvq5<>uid://b4rjgnkxiw4kl<>uid://cyovul0p0frq7<>uid://r88ho3aqy8ys<>uid://c7tgplk74v4tt
 BaseTile.tscn::PackedScene::-1::1664633857::0::1::::<><>::res://Assets/tile80x80.png
 BoardBuilder.gd::GDScript::-1::1664633857::0::1::::<>Node<>::
@@ -327,8 +327,6 @@ MapDQ1.tscn::PackedScene::2906134753316502259::1666638364::0::1::::<><>::uid://d
 MapDQ3.tscn::PackedScene::6409447862758656467::1667836177::0::1::::<><>::uid://d1j5t2fieeagr<>uid://biss1eaiks55p
 MapDQ4.tscn::PackedScene::6244894274923634324::1669565263::0::1::::<><>::uid://d1j5t2fieeagr<>uid://bbbohaepesp4j
 MapGridDQ2.tscn::PackedScene::7571034801706764690::1666637613::0::1::::<><>::uid://brb2y6l4h04q0
-Player.gd::GDScript::-1::1664633858::0::1::::<>Area2D<>::
-Player.tscn::PackedScene::-1::1664633858::0::1::::<><>::res://Scenes/Player.gd<>res://Scenes/TurnIndicator.tscn
 SplatParticles.gd::GDScript::-1::1665011456::0::1::::<>GPUParticles3D<>::
 SplatParticles.tscn::PackedScene::4906707307057881504::1665324964::0::1::::<><>::res://Scenes/SplatParticles.gd
 Splatter.gd::GDScript::-1::1665178284::0::1::::<>Sprite2D<>::
