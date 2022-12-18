@@ -33,6 +33,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 		if collided: 
 			var last_coll = get_last_slide_collision().get_collider()
+			print(last_coll.name)
 			for splat_col in splat_colors:
 				spawn_splatter_particles(get_last_slide_collision().get_position(), splat_col)
 			if last_coll.is_in_group("character"):
@@ -56,7 +57,7 @@ func _physics_process(delta):
 				get_parent().add_child(new_floor_splat)
 			$CollisionShape3D.set_deferred("disabled", true)
 			$SubViewport/FoodSprite.hide()
-			await self.audio_player.finished
+			#await self.audio_player.finished
 			call_deferred("queue_free")
 
 func spawn_splatter_particles(pos, col):

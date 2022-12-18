@@ -1,8 +1,7 @@
-res://Scenes/TitleScreen.tscn
+res://Scenes/Level4.tscn
 res://Materials/SplatSpriteParticlesMaterial.tres
 res://Materials/ParticleContainerMatOverrideMaterial.tres
 res://Themes/GUI_Default.tres
-res://Scenes/Level4.tscn
 res://Scenes/Character4.tscn
 res://Scenes/Main.tscn
 res://Scenes/Food.tscn
@@ -10,4 +9,6 @@ res://Scenes/GoodIceCream.tscn
 res://Scenes/Text.tscn
 res://Scenes/ClusterIceCream.tscn
 res://Scenes/WallTile3D2.tscn
-res://Scenes/TitleScreen.gd
+res://Scenes/TitleScreen.tscn
+res://Scenes/Character3D.gd
+res://Scenes/Food.gd

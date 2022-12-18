@@ -88,7 +88,7 @@ var red_light: bool = false
 var food_contacts: Array = []
 var throw_speed: float = 0.1
 var throw_apex: float = 1.5
-var throw_start_height: float = 0.5
+var throw_start_height: float = 0.65
 var throw_clearance = 0.1 #avoid collision with parent
 var current_splat_num: int = 0
 var parent
@@ -249,7 +249,7 @@ func throw_food(targ):
 		new_food.position = start_pos
 		new_food.thrown = true
 		new_food.add_collision_exception_with(self)
-		#new_food.set_collision_layer_value(2, true)
+		new_food.set_collision_mask_value(4, true)
 		get_parent().add_child(new_food)
 
 ## selectability
