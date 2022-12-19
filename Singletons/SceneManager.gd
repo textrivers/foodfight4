@@ -21,19 +21,26 @@ func goto_scene(current_scene, path):
 	current_scene.call_deferred("queue_free")
 	await current_scene.tree_exited
 	print("previous scene freed")
-	ResourceLoader.load_threaded_request(path)
-	var load_time = Time.get_ticks_msec()
-	while Time.get_ticks_msec() - load_time < max_time: 
-		scene_load_status = ResourceLoader.load_threaded_get_status(path, progress)
-		if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED: #Load_complete
-			print("done loading")
-			var resource = ResourceLoader.load_threaded_get(path)
-			var main = get_tree().get_root().get_node("Main")
-			var new_res = resource.instantiate()
-			main.call_deferred("add_child", new_res)
-			## TODO may not need this await statement, it doesn't seem to do anything
-			await new_res.tree_entered
-			break
+	var resource = load(path)
+	print("new scene loaded")
+	var main = get_tree().get_root().get_node("Main")
+	var new_res = resource.instantiate()
+	main.call_deferred("add_child", new_res)
+	await new_res.tree_entered
+	print("new scene added to tree")
+#	ResourceLoader.load_threaded_request(path)
+#	var load_time = Time.get_ticks_msec()
+#	while Time.get_ticks_msec() - load_time < max_time: 
+#		scene_load_status = ResourceLoader.load_threaded_get_status(path, progress)
+#		if scene_load_status == ResourceLoader.THREAD_LOAD_LOADED: #Load_complete
+#			print("done loading")
+#			var resource = ResourceLoader.load_threaded_get(path)
+#			var main = get_tree().get_root().get_node("Main")
+#			var new_res = resource.instantiate()
+#			main.call_deferred("add_child", new_res)
+#			## TODO may not need this await statement, it doesn't seem to do anything
+#			await new_res.tree_entered
+#			break
 	await get_tree().create_timer(0.5).timeout
 	emit_signal("fade_to_black", false)
 	print("squares fade out")

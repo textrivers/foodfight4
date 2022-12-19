@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://c840ow6okr33r" path="res://Themes/GUI_Default.tres" id="3_ybgpg"]
 [ext_resource type="PackedScene" uid="uid://dxdnc7jngsb0o" path="res://Scenes/EnviroIceCream.tscn" id="4_1xvgj"]
 [ext_resource type="PackedScene" uid="uid://ceq8u62gbl5kk" path="res://Scenes/Character4.tscn" id="5_fj7h1"]
-[ext_resource type="PackedScene" uid="uid://cu8cq40i7724o" path="res://Scenes/MapDQ4.tscn" id="6_wa3ox"]
+[ext_resource type="PackedScene" uid="uid://uums2ojqik4a" path="res://Scenes/MapDQ5.tscn" id="7_nrig4"]
 
 [sub_resource type="StyleBoxFlat" id="9"]
 bg_color = Color(0.329412, 0.384314, 0.505882, 0.784314)
@@ -217,10 +217,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5)
 player = true
 
-[node name="MapDQ4" parent="." instance=ExtResource("6_wa3ox")]
-
-[node name="WallTileFade" parent="MapDQ4/Room1" index="24"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, -0.51)
+[node name="MapDQ5" parent="." instance=ExtResource("7_nrig4")]
 
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Read" to="." method="_on_Read_pressed"]
 [connection signal="pressed" from="GUI/Right/PlayerOptions/Walk" to="." method="_on_Walk_pressed"]
@@ -235,4 +232,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.01, 0, 0.5, -0.51)
 [editable path="Sully"]
 [editable path="Don"]
 [editable path="You"]
-[editable path="MapDQ4"]
