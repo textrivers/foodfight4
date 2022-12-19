@@ -20,12 +20,17 @@ func goto_scene(current_scene, path):
 	await transition_squares.squares_finished
 	current_scene.call_deferred("queue_free")
 	await current_scene.tree_exited
+	await get_tree().create_timer(0.1).timeout
 	print("previous scene freed")
 	var resource = load(path)
+	await get_tree().create_timer(0.1).timeout
 	print("new scene loaded")
 	var main = get_tree().get_root().get_node("Main")
+	#await get_tree().create_timer(0.1).timeout
 	var new_res = resource.instantiate()
+	#await get_tree().create_timer(0.1).timeout
 	main.call_deferred("add_child", new_res)
+	#await get_tree().create_timer(0.1).timeout
 	await new_res.tree_entered
 	print("new scene added to tree")
 #	ResourceLoader.load_threaded_request(path)
@@ -41,7 +46,7 @@ func goto_scene(current_scene, path):
 #			## TODO may not need this await statement, it doesn't seem to do anything
 #			await new_res.tree_entered
 #			break
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.1).timeout
 	emit_signal("fade_to_black", false)
 	print("squares fade out")
 	

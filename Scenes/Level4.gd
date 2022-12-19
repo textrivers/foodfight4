@@ -335,7 +335,7 @@ func translate_cam_rig():
 
 func rotate_cam_rig():
 	# clamp value so you can only look so high or low
-	cam_rig_rot_target.y = clamp(cam_rig_rot_target.y, deg_to_rad(-30), deg_to_rad(20))
+	cam_rig_rot_target.y = clamp(cam_rig_rot_target.y, deg_to_rad(-30), deg_to_rad(3.0))
 	if cam_rig.rotation.x != cam_rig_rot_target.y:
 		var new_rad_y = cam_rig_rot_target.y
 		cam_rig.rotation.x = lerp_angle(cam_rig.rotation.x, new_rad_y, 0.1)
